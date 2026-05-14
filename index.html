@@ -49,8 +49,12 @@
         overflow-wrap: break-word;
       }
 
-      h1, h2, h3, h4 {
+      h1, h2, h3 {
         text-wrap: balance;
+      }
+
+      h4 {
+        word-break: keep-all;
       }
 
       .type-display {
@@ -128,9 +132,9 @@
         </a>
         <div class="hidden items-center gap-6 type-body font-medium text-muted lg:flex">
           <a class="transition hover:text-ink" href="#pain">痛點</a>
-          <a class="transition hover:text-ink" href="#value">特色</a>
-          <a class="transition hover:text-ink" href="#workflow">流程</a>
           <a class="transition hover:text-ink" href="#audience">對象</a>
+          <a class="transition hover:text-ink" href="#workflow">流程</a>
+          <a class="transition hover:text-ink" href="#value">特色</a>
           <a class="transition hover:text-ink" href="#pricing">價格</a>
           <a class="transition hover:text-ink" href="#faq">FAQ</a>
         </div>
@@ -141,6 +145,7 @@
     </header>
 
     <main>
+      <!-- 1. Hero -->
       <section class="relative overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
         <div class="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_50%_0%,rgba(11,31,58,0.10),transparent_42%)]"></div>
         <div class="relative mx-auto grid max-w-5xl items-center gap-x-14 gap-y-8 px-6 py-20 sm:py-24 lg:grid-cols-[1fr_0.95fr] lg:px-8 lg:py-28">
@@ -242,6 +247,7 @@
         </div>
       </section>
 
+      <!-- 2. Pain Points -->
       <section id="pain" class="scroll-mt-24 px-6 py-20 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
         <div class="mx-auto w-full max-w-5xl">
         <div>
@@ -287,145 +293,7 @@
         </div>
       </section>
 
-      <section class="px-6 py-20 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
-        <div class="mx-auto w-full max-w-5xl">
-          <div class="mb-8">
-            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Use Cases</p>
-            <h3 class="mt-3 type-title font-semibold text-ink">三個最常見的「看得到，改不到」場景</h3>
-          </div>
-          <div class="grid gap-5 lg:grid-cols-3">
-            <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm">
-              <div class="story-illustration h-48 p-5">
-                <div class="mx-auto h-full max-w-[220px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <div class="mb-3 h-4 w-3/4 rounded bg-slate-300"></div>
-                  <div class="space-y-2">
-                    <div class="h-3 rounded bg-slate-200"></div>
-                    <div class="h-3 w-10/12 rounded bg-slate-200"></div>
-                    <div class="h-16 rounded-xl border-2 border-dashed border-blue-300 bg-blue-50"></div>
-                    <div class="h-3 w-8/12 rounded bg-slate-200"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="p-7">
-                <p class="type-body font-semibold text-muted">NotebookLM / AI 簡報工具</p>
-                <h4 class="mt-3 type-title font-semibold text-ink">林老師只想改一個錯字，卻差點重做 20 頁投影片。</h4>
-                <p class="mt-4 type-body text-muted">
-                  NotebookLM 投影片「看起來可以改」，按下去才發現全是<strong class="text-ink">掃描型圖片</strong>，選不到字。PurrPoint 把每個文字方塊原位還原，改一個字不用五秒。
-                </p>
-                <p class="mt-4 text-sm text-slate-400">— 林老師，高中教師，台北</p>
-              </div>
-            </article>
-
-            <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm" style="transition-delay:0.12s">
-              <div class="story-illustration h-48 p-5">
-                <div class="mx-auto h-full max-w-[220px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <div class="grid grid-cols-2 gap-2">
-                    <div class="h-8 rounded bg-slate-200"></div>
-                    <div class="h-8 rounded bg-slate-100"></div>
-                    <div class="h-8 rounded bg-slate-100"></div>
-                    <div class="h-8 rounded border border-blue-300 bg-blue-50"></div>
-                    <div class="h-8 rounded bg-slate-200"></div>
-                    <div class="h-8 rounded bg-slate-100"></div>
-                  </div>
-                  <div class="mt-4 h-3 w-2/3 rounded bg-slate-300"></div>
-                </div>
-              </div>
-              <div class="p-7">
-                <p class="type-body font-semibold text-muted">法務 / 行政</p>
-                <h4 class="mt-3 type-title font-semibold text-ink">張先生不用再把舊合約重新打成簡報。</h4>
-                <p class="mt-4 type-body text-muted">
-                  掃描合約無法複製，表格一轉檔就亂掉。PurrPoint 保留文字位置與段落邏輯，讓修約對照從重打排版，變成檢查與微調。
-                </p>
-                <p class="mt-4 text-sm text-slate-400">— 張先生，法務專員，台中</p>
-              </div>
-            </article>
-
-            <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm" style="transition-delay:0.24s">
-              <div class="story-illustration h-48 p-5">
-                <div class="mx-auto flex h-full max-w-[220px] items-center justify-center rounded-2xl border border-slate-200 bg-white shadow-sm">
-                  <div class="grid h-24 w-24 place-items-center rounded-full border-8 border-slate-100 bg-ink text-white">
-                    <div class="h-8 w-8 rounded-lg border-2 border-white"></div>
-                  </div>
-                </div>
-              </div>
-              <div class="p-7">
-                <p class="type-body font-semibold text-muted">研發主管 / 資安</p>
-                <h4 class="mt-3 type-title font-semibold text-ink">陳經理不能把機密晶片文件丟上雲端。</h4>
-                <p class="mt-4 type-body text-muted">
-                  需要 AI 效率，但公司政策禁止上傳機密資料。PurrPoint 在 Mac 本機離線解析，關 Wi-Fi 也能完成轉檔。
-                </p>
-                <p class="mt-4 text-sm text-slate-400">— 陳經理，研發主管，新竹</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <section id="workflow" class="bg-cloud scroll-mt-24 py-20 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:py-0">
-        <div class="mx-auto max-w-5xl px-6 lg:px-8">
-          <div>
-            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Workflow</p>
-            <h2 class="mt-3 type-heading font-semibold text-ink">簡單三步驟，解放你的生產力</h2>
-          </div>
-          <div class="mt-6 grid gap-3 rounded-2xl border border-line bg-white p-5 sm:grid-cols-2">
-            <div>
-              <p class="text-xs font-semibold uppercase tracking-wider text-red-500">以前</p>
-              <p class="mt-2 text-sm leading-7 text-muted">PDF → 截圖 → 貼進 PPT → 手動對齊 → 調字體 → 修格式 → 一個下午沒了</p>
-            </div>
-            <div>
-              <p class="text-xs font-semibold uppercase tracking-wider text-emerald-600">現在</p>
-              <p class="mt-2 text-sm leading-7 text-muted">拖進去 → 等 30 秒 → 每個字都可以直接改</p>
-            </div>
-          </div>
-          <div class="mt-10 grid gap-8 lg:grid-cols-3">
-            <div class="reveal border-t border-line pt-6">
-              <span class="type-body font-semibold text-muted">Step 1</span>
-              <h3 class="mt-4 type-title font-semibold">匯入檔案</h3>
-              <p class="mt-4 leading-7 text-muted">將 PDF 檔案直接拖曳進入軟體。</p>
-            </div>
-            <div class="reveal border-t border-line pt-6" style="transition-delay:0.12s">
-              <span class="type-body font-semibold text-muted">Step 2</span>
-              <h3 class="mt-4 type-title font-semibold">精準解析</h3>
-              <p class="mt-4 leading-7 text-muted">透過強大的邊界識別與 OCR 引擎自動處理。</p>
-            </div>
-            <div class="reveal border-t border-line pt-6" style="transition-delay:0.24s">
-              <span class="type-body font-semibold text-muted">Step 3</span>
-              <h3 class="mt-4 type-title font-semibold">完美輸出</h3>
-              <p class="mt-4 leading-7 text-muted">獲得排版完美對齊、字元可完全編輯的簡報檔。</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section id="value" class="mx-auto max-w-5xl scroll-mt-24 px-6 py-20 lg:min-h-[90vh] lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
-        <div class="border-y border-line py-10">
-          <div class="grid gap-12 lg:grid-cols-[0.9fr_1fr] lg:items-center">
-            <div>
-              <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Enterprise Ready</p>
-              <h2 class="mt-4 type-heading font-semibold text-ink">專為嚴謹工作流程打造</h2>
-            </div>
-            <div class="grid gap-6 sm:grid-cols-2">
-              <article class="reveal border-t border-line pt-5">
-                <h3 class="type-title font-semibold">100% 本機離線運作</h3>
-                <p class="mt-4 leading-7 text-muted">所有處理皆在電腦端完成，無需連網，無資料外洩風險。</p>
-              </article>
-              <article class="reveal border-t border-line pt-5" style="transition-delay:0.1s">
-                <h3 class="type-title font-semibold">20 頁 PDF，30 秒完成轉換</h3>
-                <p class="mt-4 leading-7 text-muted">深度整合 macOS 底層架構，本機運算無需上傳等待，速度遠超雲端服務。</p>
-              </article>
-              <article class="reveal border-t border-line pt-5" style="transition-delay:0.2s">
-                <h3 class="type-title font-semibold">繁體中文環境優化</h3>
-                <p class="mt-4 leading-7 text-muted">針對中文換行、標點、段落邊界與掃描文件常見雜訊調整，降低掉字與斷行錯誤。</p>
-              </article>
-              <article class="reveal border-t border-line pt-5 sm:col-span-2" style="transition-delay:0.3s">
-                <h3 class="type-title font-semibold">macOS 原生 Vision 技術背書</h3>
-                <p class="mt-4 leading-7 text-muted">Apple Vision 辨識技術加持，掃描型 PDF 的文字直接還原成可編輯方塊，位置精準不跑位。</p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <!-- 3. Audience — 訪客先確認「這是為我設計的」，再往下看 -->
       <section id="audience" class="mx-auto max-w-5xl scroll-mt-24 px-6 py-20 lg:min-h-[85vh] lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
         <div class="grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:items-start">
           <div>
@@ -469,6 +337,149 @@
         </div>
       </section>
 
+      <!-- 4. Use Cases — 對應前段受眾，用真實場景讓訪客產生共鳴 -->
+      <section id="cases" class="scroll-mt-24 px-6 py-20 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
+        <div class="mx-auto w-full max-w-5xl">
+          <div class="mb-8">
+            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Use Cases</p>
+            <h2 class="mt-3 type-heading font-semibold text-ink">三個最常見的「看得到，改不到」場景</h2>
+          </div>
+          <div class="grid gap-5 lg:grid-cols-3">
+            <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm">
+              <div class="story-illustration h-48 p-5">
+                <div class="mx-auto h-full max-w-[220px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <div class="mb-3 h-4 w-3/4 rounded bg-slate-300"></div>
+                  <div class="space-y-2">
+                    <div class="h-3 rounded bg-slate-200"></div>
+                    <div class="h-3 w-10/12 rounded bg-slate-200"></div>
+                    <div class="h-16 rounded-xl border-2 border-dashed border-blue-300 bg-blue-50"></div>
+                    <div class="h-3 w-8/12 rounded bg-slate-200"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-7">
+                <p class="type-body font-semibold text-muted">NotebookLM / AI 簡報工具</p>
+                <h4 class="mt-3 type-title font-semibold text-ink">林老師只想改一個錯字，卻差點重做 20 頁投影片</h4>
+                <p class="mt-4 type-body text-muted">
+                  NotebookLM 投影片「看起來可以改」，按下去才發現全是<strong class="text-ink">掃描型圖片</strong>，選不到字。PurrPoint 把每個文字方塊原位還原，改一個字不用五秒。
+                </p>
+                <p class="mt-4 text-sm text-slate-400">— 林老師，高中教師，台北</p>
+              </div>
+            </article>
+
+            <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm" style="transition-delay:0.12s">
+              <div class="story-illustration h-48 p-5">
+                <div class="mx-auto h-full max-w-[220px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
+                  <div class="grid grid-cols-2 gap-2">
+                    <div class="h-8 rounded bg-slate-200"></div>
+                    <div class="h-8 rounded bg-slate-100"></div>
+                    <div class="h-8 rounded bg-slate-100"></div>
+                    <div class="h-8 rounded border border-blue-300 bg-blue-50"></div>
+                    <div class="h-8 rounded bg-slate-200"></div>
+                    <div class="h-8 rounded bg-slate-100"></div>
+                  </div>
+                  <div class="mt-4 h-3 w-2/3 rounded bg-slate-300"></div>
+                </div>
+              </div>
+              <div class="p-7">
+                <p class="type-body font-semibold text-muted">法務 / 行政</p>
+                <h4 class="mt-3 type-title font-semibold text-ink">張先生不用再把舊合約<wbr>重新打成簡報</h4>
+                <p class="mt-4 type-body text-muted">
+                  掃描合約無法複製，表格一轉檔就亂掉。PurrPoint 保留文字位置與段落邏輯，讓修約對照從重打排版，變成檢查與微調。
+                </p>
+                <p class="mt-4 text-sm text-slate-400">— 張先生，法務專員，台中</p>
+              </div>
+            </article>
+
+            <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm" style="transition-delay:0.24s">
+              <div class="story-illustration h-48 p-5">
+                <div class="mx-auto flex h-full max-w-[220px] items-center justify-center rounded-2xl border border-slate-200 bg-white shadow-sm">
+                  <div class="grid h-24 w-24 place-items-center rounded-full border-8 border-slate-100 bg-ink text-white">
+                    <div class="h-8 w-8 rounded-lg border-2 border-white"></div>
+                  </div>
+                </div>
+              </div>
+              <div class="p-7">
+                <p class="type-body font-semibold text-muted">研發主管 / 資安</p>
+                <h4 class="mt-3 type-title font-semibold text-ink">陳經理不能把機密晶片<wbr>文件丟上雲端</h4>
+                <p class="mt-4 type-body text-muted">
+                  需要 AI 效率，但公司政策禁止上傳機密資料。PurrPoint 在 Mac 本機離線解析，關 Wi-Fi 也能完成轉檔。
+                </p>
+                <p class="mt-4 text-sm text-slate-400">— 陳經理，研發主管，新竹</p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- 5. Workflow — 確認受眾後，展示操作流程有多簡單 -->
+      <section id="workflow" class="bg-cloud scroll-mt-24 py-20 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:py-0">
+        <div class="mx-auto max-w-5xl px-6 lg:px-8">
+          <div>
+            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Workflow</p>
+            <h2 class="mt-3 type-heading font-semibold text-ink">簡單三步驟，解放你的生產力</h2>
+          </div>
+          <div class="mt-6 grid gap-3 rounded-2xl border border-line bg-white p-5 sm:grid-cols-2">
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-red-500">以前</p>
+              <p class="mt-2 text-sm leading-7 text-muted">PDF → 截圖 → 貼進 PPT → 手動對齊 → 調字體 → 修格式 → 一個下午沒了</p>
+            </div>
+            <div>
+              <p class="text-xs font-semibold uppercase tracking-wider text-emerald-600">現在</p>
+              <p class="mt-2 text-sm leading-7 text-muted">拖進去 → 等 30 秒 → 每個字都可以直接改</p>
+            </div>
+          </div>
+          <div class="mt-10 grid gap-8 lg:grid-cols-3">
+            <div class="reveal border-t border-line pt-6">
+              <span class="type-body font-semibold text-muted">Step 1</span>
+              <h3 class="mt-4 type-title font-semibold">匯入檔案</h3>
+              <p class="mt-4 leading-7 text-muted">將 PDF 檔案直接拖曳進入軟體。</p>
+            </div>
+            <div class="reveal border-t border-line pt-6" style="transition-delay:0.12s">
+              <span class="type-body font-semibold text-muted">Step 2</span>
+              <h3 class="mt-4 type-title font-semibold">精準解析</h3>
+              <p class="mt-4 leading-7 text-muted">透過強大的邊界識別與 OCR 引擎自動處理。</p>
+            </div>
+            <div class="reveal border-t border-line pt-6" style="transition-delay:0.24s">
+              <span class="type-body font-semibold text-muted">Step 3</span>
+              <h3 class="mt-4 type-title font-semibold">完美輸出</h3>
+              <p class="mt-4 leading-7 text-muted">獲得排版完美對齊、字元可完全編輯的簡報檔。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 6. Value / Features — 展示差異化優勢，建立信任 -->
+      <section id="value" class="mx-auto max-w-5xl scroll-mt-24 px-6 py-20 lg:min-h-[90vh] lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
+        <div class="border-y border-line py-10">
+          <div class="grid gap-12 lg:grid-cols-[0.9fr_1fr] lg:items-center">
+            <div>
+              <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Enterprise Ready</p>
+              <h2 class="mt-4 type-heading font-semibold text-ink">專為嚴謹工作流程打造</h2>
+            </div>
+            <div class="grid gap-6 sm:grid-cols-2">
+              <article class="reveal border-t border-line pt-5">
+                <h3 class="type-title font-semibold">100% 本機離線運作</h3>
+                <p class="mt-4 leading-7 text-muted">所有處理皆在電腦端完成，無需連網，無資料外洩風險。</p>
+              </article>
+              <article class="reveal border-t border-line pt-5" style="transition-delay:0.1s">
+                <h3 class="type-title font-semibold">20 頁 PDF，30 秒完成轉換</h3>
+                <p class="mt-4 leading-7 text-muted">深度整合 macOS 底層架構，本機運算無需上傳等待，速度遠超雲端服務。</p>
+              </article>
+              <article class="reveal border-t border-line pt-5" style="transition-delay:0.2s">
+                <h3 class="type-title font-semibold">繁體中文環境優化</h3>
+                <p class="mt-4 leading-7 text-muted">針對中文換行、標點、段落邊界與掃描文件常見雜訊調整，降低掉字與斷行錯誤。</p>
+              </article>
+              <article class="reveal border-t border-line pt-5 sm:col-span-2" style="transition-delay:0.3s">
+                <h3 class="type-title font-semibold">macOS 原生 Vision 技術背書</h3>
+                <p class="mt-4 leading-7 text-muted">Apple Vision 辨識技術加持，掃描型 PDF 的文字直接還原成可編輯方塊，位置精準不跑位。</p>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Pricing — 比較表 + 方案卡片合併在同一 section -->
       <section id="pricing" class="bg-cloud scroll-mt-24 px-6 py-16 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
         <div class="mx-auto w-full max-w-5xl">
           <div>
@@ -479,70 +490,56 @@
             </p>
           </div>
 
-          <div class="reveal mt-12 overflow-x-auto rounded-[2rem] border border-line bg-white shadow-soft">
+          <div class="reveal mt-12 overflow-hidden rounded-[2rem] border border-line bg-white shadow-soft">
             <!-- Header -->
-            <div class="grid min-w-[900px] grid-cols-[1.2fr_0.9fr_0.9fr_1.1fr] border-b border-line bg-ink type-body font-semibold text-white">
-              <div class="p-5">功能 / 服務</div>
-              <div class="border-l border-white/10 p-5 text-slate-400">免費線上工具</div>
-              <div class="border-l border-white/10 p-5 text-slate-300">傳統大廠 Adobe / ABBYY</div>
-              <div class="border-l border-white/10 bg-white/10 p-5">PurrPoint 終身版</div>
+            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line bg-ink text-sm font-semibold text-white">
+              <div class="p-4">功能 / 服務</div>
+              <div class="border-l border-white/10 p-4 text-slate-400">免費線上工具</div>
+              <div class="border-l border-white/10 p-4 text-slate-300">傳統大廠 Adobe / ABBYY</div>
+              <div class="border-l border-white/10 bg-white/10 p-4">PurrPoint 終身版</div>
             </div>
-            <!-- 費用比較組 -->
-            <div class="grid min-w-[900px] grid-cols-[1.2fr_0.9fr_0.9fr_1.1fr] border-b border-line type-body">
-              <div class="p-5 text-sm font-semibold uppercase tracking-wider text-slate-400">費用比較</div>
-              <div class="border-l border-line p-5"></div>
-              <div class="border-l border-line p-5"></div>
-              <div class="border-l border-line bg-emerald-50 p-5"></div>
+            <!-- 費用比較 -->
+            <div class="border-b border-line bg-slate-50 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-400">費用比較</div>
+            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line text-sm">
+              <div class="p-3 pl-5 font-semibold text-ink">每月費用</div>
+              <div class="border-l border-line p-3 text-emerald-600">✅ NT$ 0</div>
+              <div class="border-l border-line p-3 text-red-500">❌ NT$ 450–900 / 月</div>
+              <div class="border-l border-line bg-emerald-50 p-3 font-semibold text-emerald-700">✅ NT$ 0，一次付清</div>
             </div>
-            <div class="grid min-w-[900px] grid-cols-[1.2fr_0.9fr_0.9fr_1.1fr] border-b border-line type-body">
-              <div class="p-5 pl-7 font-semibold text-ink">每月費用</div>
-              <div class="border-l border-line p-5 text-emerald-600">✅ NT$ 0</div>
-              <div class="border-l border-line p-5 text-red-500">❌ 約 NT$ 450–900 / 月</div>
-              <div class="border-l border-line bg-emerald-50 p-5 font-semibold text-emerald-700">✅ NT$ 0，一次付清</div>
-            </div>
-            <div class="grid min-w-[900px] grid-cols-[1.2fr_0.9fr_0.9fr_1.1fr] border-b border-line type-body">
-              <div class="p-5 pl-7 font-semibold text-ink">三年累計花費</div>
-              <div class="border-l border-line p-5 text-amber-600">⚠️ NT$ 0，但資安風險難估</div>
-              <div class="border-l border-line p-5 text-red-500">❌ NT$ 16,200–32,400+</div>
-              <div class="border-l border-line bg-emerald-50 p-5 font-semibold text-emerald-700">✅ NT$ 2,990（省超過 5 倍）</div>
+            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line text-sm">
+              <div class="p-3 pl-5 font-semibold text-ink">三年累計花費</div>
+              <div class="border-l border-line p-3 text-amber-600">⚠️ NT$ 0（資安風險難估）</div>
+              <div class="border-l border-line p-3 text-red-500">❌ NT$ 16,200–32,400+</div>
+              <div class="border-l border-line bg-emerald-50 p-3 font-semibold text-emerald-700">✅ NT$ 2,990（省超過 5 倍）</div>
             </div>
             <!-- 核心差異（高亮列） -->
-            <div class="grid min-w-[900px] grid-cols-[1.2fr_0.9fr_0.9fr_1.1fr] border-b-2 border-t-2 border-ink type-body">
-              <div class="flex items-center gap-2 bg-ink/5 p-5 font-bold text-ink">
+            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b-2 border-t-2 border-ink text-sm">
+              <div class="flex items-center gap-2 bg-ink/5 p-3 pl-5 font-bold text-ink">
                 <span class="rounded bg-ink px-2 py-0.5 text-xs text-white">核心差異</span>
                 掃描型 PDF 支援
               </div>
-              <div class="border-l border-ink/20 bg-red-50 p-5 font-semibold text-red-600">❌ 完全無法處理，輸出空白或亂碼</div>
-              <div class="border-l border-ink/20 bg-red-50 p-5 font-semibold text-red-600">❌ 幾乎無法處理，輸出亂碼或截圖</div>
-              <div class="border-l border-ink/20 bg-emerald-100 p-5 font-bold text-emerald-800">✅ OCR + AI 座標映射，1:1 還原</div>
+              <div class="border-l border-ink/20 bg-red-50 p-3 font-semibold text-red-600">❌ 完全無法處理</div>
+              <div class="border-l border-ink/20 bg-red-50 p-3 font-semibold text-red-600">❌ 幾乎無法處理</div>
+              <div class="border-l border-ink/20 bg-emerald-100 p-3 font-bold text-emerald-800">✅ OCR + AI 座標映射，1:1 還原</div>
             </div>
-            <!-- 其他特色組 -->
-            <div class="grid min-w-[900px] grid-cols-[1.2fr_0.9fr_0.9fr_1.1fr] border-b border-line type-body">
-              <div class="p-5 text-sm font-semibold uppercase tracking-wider text-slate-400">其他特色</div>
-              <div class="border-l border-line p-5"></div>
-              <div class="border-l border-line p-5"></div>
-              <div class="border-l border-line bg-emerald-50 p-5"></div>
+            <!-- 其他特色 -->
+            <div class="border-b border-line bg-slate-50 px-4 py-2 text-xs font-semibold uppercase tracking-wider text-slate-400">其他特色</div>
+            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line text-sm">
+              <div class="p-3 pl-5 font-semibold text-ink">更新與維護</div>
+              <div class="border-l border-line p-3 text-amber-600">⚠️ 服務可能隨時停止</div>
+              <div class="border-l border-line p-3 text-red-500">❌ 停止付費即失去使用權</div>
+              <div class="border-l border-line bg-emerald-50 p-3 font-semibold text-emerald-700">✅ 終身授權，永久基礎維護</div>
             </div>
-            <div class="grid min-w-[900px] grid-cols-[1.2fr_0.9fr_0.9fr_1.1fr] border-b border-line type-body">
-              <div class="p-5 pl-7 font-semibold text-ink">更新與維護</div>
-              <div class="border-l border-line p-5 text-amber-600">⚠️ 服務可能隨時停止</div>
-              <div class="border-l border-line p-5 text-red-500">❌ 停止付費即失去使用權</div>
-              <div class="border-l border-line bg-emerald-50 p-5 font-semibold text-emerald-700">✅ 終身授權，永久基礎維護</div>
-            </div>
-            <div class="grid min-w-[900px] grid-cols-[1.2fr_0.9fr_0.9fr_1.1fr] type-body">
-              <div class="p-5 pl-7 font-semibold text-ink">隱私安全性</div>
-              <div class="border-l border-line p-5 text-red-500">❌ 檔案上傳境外雲端，風險極高</div>
-              <div class="border-l border-line p-5 text-red-500">❌ 檔案須上傳雲端</div>
-              <div class="border-l border-line bg-emerald-50 p-5 font-semibold text-emerald-700">✅ 100% 本機離線</div>
+            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] text-sm">
+              <div class="p-3 pl-5 font-semibold text-ink">隱私安全性</div>
+              <div class="border-l border-line p-3 text-red-500">❌ 上傳境外雲端，風險極高</div>
+              <div class="border-l border-line p-3 text-red-500">❌ 檔案須上傳雲端</div>
+              <div class="border-l border-line bg-emerald-50 p-3 font-semibold text-emerald-700">✅ 100% 本機離線</div>
             </div>
           </div>
 
-        </div>
-      </section>
-
-      <section class="bg-white px-6 py-16 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
-        <div class="mx-auto w-full max-w-5xl">
-          <div class="space-y-5">
+          <!-- 方案卡片 -->
+          <div class="mt-12 space-y-5">
             <div class="reveal rounded-3xl border border-emerald-200 bg-emerald-50/40 p-6 sm:p-8">
               <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
                 <div>
@@ -629,7 +626,8 @@
         </div>
       </section>
 
-      <section id="faq" class="bg-cloud scroll-mt-24 px-6 py-20 lg:px-8 lg:py-28">
+      <!-- 8. FAQ + Final CTA -->
+      <section id="faq" class="bg-white scroll-mt-24 px-6 py-20 lg:px-8 lg:py-28">
         <div class="mx-auto max-w-5xl">
           <div class="grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:items-start">
             <div>
