@@ -29,17 +29,14 @@
       };
     </script>
     <style>
+      .platform-toggle input:checked + span {
+        background-color: #111827;
+        color: white;
+        border-color: #111827;
+      }
+
       html {
         scroll-behavior: smooth;
-        scroll-snap-type: y proximity;
-      }
-
-      section {
-        scroll-snap-align: start;
-      }
-
-      section:last-of-type {
-        scroll-snap-align: none;
       }
 
       body {
@@ -58,9 +55,9 @@
       }
 
       .type-display {
-        font-size: clamp(2.75rem, 6vw, 4.75rem);
-        line-height: 1.02;
-        letter-spacing: -0.045em;
+        font-size: clamp(2.4rem, 4.4vw, 4.25rem);
+        line-height: 1.08;
+        letter-spacing: -0.04em;
       }
 
       .type-heading {
@@ -133,6 +130,7 @@
         <div class="hidden items-center gap-6 type-body font-medium text-muted lg:flex">
           <a class="transition hover:text-ink" href="#pain">痛點</a>
           <a class="transition hover:text-ink" href="#audience">對象</a>
+          <a class="transition hover:text-ink" href="#cases">場景</a>
           <a class="transition hover:text-ink" href="#workflow">流程</a>
           <a class="transition hover:text-ink" href="#value">特色</a>
           <a class="transition hover:text-ink" href="#pricing">價格</a>
@@ -148,7 +146,7 @@
       <!-- 1. Hero -->
       <section class="relative overflow-hidden bg-[linear-gradient(180deg,#ffffff_0%,#f8fafc_100%)] lg:min-h-screen lg:flex lg:flex-col lg:justify-center">
         <div class="pointer-events-none absolute inset-x-0 top-0 h-80 bg-[radial-gradient(circle_at_50%_0%,rgba(11,31,58,0.10),transparent_42%)]"></div>
-        <div class="relative mx-auto grid max-w-5xl items-center gap-x-14 gap-y-8 px-6 py-20 sm:py-24 lg:grid-cols-[1fr_0.95fr] lg:px-8 lg:py-28">
+        <div class="relative mx-auto grid max-w-5xl items-center gap-x-14 gap-y-8 px-6 pt-24 pb-12 sm:pt-28 sm:pb-16 lg:grid-cols-[1fr_0.95fr] lg:px-8 lg:py-20">
           <div class="flex flex-wrap items-center gap-3 lg:col-span-2">
             <div class="inline-flex items-center gap-2 rounded-full border border-line bg-white px-4 py-2 type-body font-medium text-muted shadow-sm">
               <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
@@ -163,23 +161,29 @@
               <span class="block">連掃描型 PDF 都能直接改</span>
               <span class="block text-muted">本機離線，改字不用五秒</span>
             </h1>
-            <p class="mt-5 type-body text-muted">手動重拉一份報告平均耗掉 <strong class="text-ink">2.5 小時</strong>。用 PurrPoint，同樣的事 <strong class="text-ink">30 秒</strong>。</p>
-            <form id="waitlist" class="mt-9 flex w-full max-w-xl flex-col gap-3 rounded-2xl border border-line bg-white p-2 shadow-card sm:flex-row" action="#" method="post">
-              <label class="sr-only" for="hero-email">Email</label>
-              <input
-                id="hero-email"
-                name="email"
-                type="email"
-                required
-                placeholder="輸入 Email"
-                class="min-h-14 flex-1 rounded-xl border border-transparent px-4 type-body outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-4 focus:ring-slate-100"
-              />
-              <button class="min-h-14 rounded-xl bg-ink px-6 type-body font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy focus:outline-none focus:ring-4 focus:ring-slate-300" type="submit">
-                免費搶先體驗
-              </button>
+            <p class="mt-4 type-body text-muted">手動重拉一份報告平均耗掉 <strong class="text-ink">2.5 小時</strong>。用 PurrPoint，同樣的事 <strong class="text-ink">30 秒</strong>。</p>
+            <form id="waitlist" class="mt-6 w-full max-w-xl rounded-2xl border border-line bg-white p-3 shadow-card" action="https://script.google.com/macros/s/AKfycbxu7B59EcfAlwYmgAk-EtScACoPCZC15hgs8mQdZJiuaCX1N2t3D7s9LiD9jCMDDKIhQg/exec" method="post" target="form-hidden-iframe">
+              <div class="hidden"><input name="website" type="text" tabindex="-1" autocomplete="off"></div>
+              <div class="flex flex-col gap-2 sm:flex-row">
+                <label class="sr-only" for="hero-email">Email</label>
+                <input id="hero-email" name="email" type="email" required placeholder="輸入 Email" class="min-h-12 flex-1 rounded-xl border border-transparent px-4 type-body outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-4 focus:ring-slate-100"/>
+                <button type="submit" class="min-h-12 rounded-xl bg-ink px-5 type-body font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy focus:outline-none focus:ring-4 focus:ring-slate-300">成為創始會員</button>
+              </div>
+              <div class="mt-3 flex flex-wrap gap-2 px-1">
+                <label class="platform-toggle cursor-pointer select-none">
+                  <input type="checkbox" name="mac" value="true" checked class="sr-only">
+                  <span class="flex items-center gap-1.5 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-muted transition hover:border-slate-400">Mac 用戶</span>
+                </label>
+                <label class="platform-toggle cursor-pointer select-none">
+                  <input type="checkbox" name="windows" value="true" class="sr-only">
+                  <span class="flex items-center gap-1.5 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-muted transition hover:border-slate-400">Windows 用戶 <span class="text-xs opacity-50">上線通知</span></span>
+                </label>
+              </div>
+              <div id="waitlist-success" class="mt-3 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700">✅ 登記成功！請查收你的 Email。</div>
             </form>
-            <p class="mt-4 type-body text-muted"><span class="font-semibold text-ink">限額 100 名早鳥席位</span> · 10 頁試用 + 14 天完整版體驗 · 不發垃圾郵件</p>
-            <div class="mt-8 grid max-w-2xl divide-y divide-line border-y border-line type-body text-muted sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            <iframe name="form-hidden-iframe" style="display:none" title="form"></iframe>
+            <p class="mt-3 type-body text-muted"><span class="font-semibold text-ink">限額 100 名早鳥席位</span> · 10 頁試用 + 14 天完整版體驗 · 不發垃圾郵件</p>
+            <div class="mt-5 grid max-w-2xl divide-y divide-line border-y border-line type-body text-muted sm:grid-cols-3 sm:divide-x sm:divide-y-0">
               <div class="py-4 sm:px-5">
                 <strong class="block type-body text-ink">前 100 名</strong>
                 填回饋拿正式版 5 折券
@@ -241,7 +245,7 @@
                   </div>
                 </div>
               </div>
-              <p class="mt-5 text-center type-body leading-6 text-muted">產品 Before/After 轉換動圖預留區</p>
+              <p class="mt-5 text-center type-body leading-6 text-slate-300">← 試用後的真實轉換效果</p>
             </div>
           </div>
         </div>
@@ -272,22 +276,60 @@
 
         <div class="mt-8 grid gap-5 md:grid-cols-3">
           <article class="reveal border-t border-line pt-6">
-            <div class="mb-5 type-body font-semibold text-muted">01</div>
-            <h3 class="type-title font-semibold">排版全毀</h3>
-            <p class="mt-1 text-sm font-semibold text-red-500">平均多花 1.5 小時重對齊</p>
-            <p class="mt-3 leading-7 text-muted">複製 PDF 文字貼到簡報，換行跟格式全部跑掉，要一個一個手動對齊。</p>
+            <div class="flex items-start gap-4">
+              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 shrink-0">
+                <rect x="4" y="2" width="30" height="38" rx="4" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
+                <rect x="10" y="10" width="18" height="4" rx="2" fill="#F59E0B"/>
+                <rect x="10" y="18" width="12" height="4" rx="2" fill="#FCD34D"/>
+                <rect x="10" y="26" width="20" height="4" rx="2" fill="#FCD34D"/>
+                <rect x="10" y="34" width="8" height="4" rx="2" fill="#FCD34D"/>
+                <circle cx="32" cy="32" r="10" fill="#EF4444"/>
+                <path d="M27 27 L37 37 M37 27 L27 37" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
+              </svg>
+              <div>
+                <div class="mb-2 type-body font-semibold text-muted">01</div>
+                <h3 class="type-title font-semibold">排版全毀</h3>
+                <p class="mt-1 text-sm font-semibold text-red-500">平均多花 1.5 小時重對齊</p>
+              </div>
+            </div>
+            <p class="mt-4 leading-7 text-muted">複製 PDF 文字貼到簡報，換行跟格式全部跑掉，要一個一個手動對齊。</p>
           </article>
           <article class="reveal border-t border-line pt-6" style="transition-delay:0.1s">
-            <div class="mb-5 type-body font-semibold text-muted">02</div>
-            <h3 class="type-title font-semibold">圖表重製</h3>
-            <p class="mt-1 text-sm font-semibold text-red-500">截圖底圖，數字永遠改不了</p>
-            <p class="mt-3 leading-7 text-muted">遇到複雜的報表，只能截圖當底圖，根本無法修改裡面的數字。</p>
+            <div class="flex items-start gap-4">
+              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 shrink-0">
+                <rect x="4" y="38" width="36" height="3" rx="1.5" fill="#CBD5E1"/>
+                <rect x="6" y="24" width="8" height="14" rx="2" fill="#93C5FD"/>
+                <rect x="18" y="14" width="8" height="24" rx="2" fill="#3B82F6"/>
+                <rect x="30" y="28" width="8" height="10" rx="2" fill="#93C5FD"/>
+                <circle cx="34" cy="12" r="9" fill="#1E293B"/>
+                <circle cx="34" cy="12" r="4.5" stroke="white" stroke-width="1.75" fill="none"/>
+                <circle cx="34" cy="12" r="1.5" fill="white"/>
+                <rect x="30" y="5" width="5" height="3" rx="1" fill="white"/>
+              </svg>
+              <div>
+                <div class="mb-2 type-body font-semibold text-muted">02</div>
+                <h3 class="type-title font-semibold">圖表重製</h3>
+                <p class="mt-1 text-sm font-semibold text-red-500">截圖底圖，數字永遠改不了</p>
+              </div>
+            </div>
+            <p class="mt-4 leading-7 text-muted">遇到複雜的報表，只能截圖當底圖，根本無法修改裡面的數字。</p>
           </article>
           <article class="reveal border-t border-line pt-6" style="transition-delay:0.2s">
-            <div class="mb-5 type-body font-semibold text-muted">03</div>
-            <h3 class="type-title font-semibold">資安疑慮</h3>
-            <p class="mt-1 text-sm font-semibold text-red-500">一旦上傳，就再也不受你控制</p>
-            <p class="mt-3 leading-7 text-muted">不敢上傳到免費線上轉檔網站，深怕公司機密與客戶資料外流。</p>
+            <div class="flex items-start gap-4">
+              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 shrink-0">
+                <path d="M36 22 C39.5 22 42 19 40 15.5 C38 12 32 12 30 15.5 C28 11 20 10 17 15.5 C13 15.5 10 19 12 22 Z" fill="#BFDBFE" stroke="#3B82F6" stroke-width="2"/>
+                <rect x="16" y="28" width="12" height="12" rx="2.5" fill="#EF4444"/>
+                <path d="M18.5 28 V25 A3.5 3.5 0 0 1 25.5 25 V28" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
+                <circle cx="22" cy="33" r="2" fill="white"/>
+                <rect x="21" y="33" width="2" height="3.5" rx="1" fill="white"/>
+              </svg>
+              <div>
+                <div class="mb-2 type-body font-semibold text-muted">03</div>
+                <h3 class="type-title font-semibold">資安疑慮</h3>
+                <p class="mt-1 text-sm font-semibold text-red-500">一旦上傳，就再也不受你控制</p>
+              </div>
+            </div>
+            <p class="mt-4 leading-7 text-muted">不敢上傳到免費線上轉檔網站，深怕公司機密與客戶資料外流。</p>
           </article>
         </div>
         </div>
@@ -346,16 +388,24 @@
           </div>
           <div class="grid gap-5 lg:grid-cols-3">
             <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm">
-              <div class="story-illustration h-48 p-5">
-                <div class="mx-auto h-full max-w-[220px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <div class="mb-3 h-4 w-3/4 rounded bg-slate-300"></div>
-                  <div class="space-y-2">
-                    <div class="h-3 rounded bg-slate-200"></div>
-                    <div class="h-3 w-10/12 rounded bg-slate-200"></div>
-                    <div class="h-16 rounded-xl border-2 border-dashed border-blue-300 bg-blue-50"></div>
-                    <div class="h-3 w-8/12 rounded bg-slate-200"></div>
-                  </div>
-                </div>
+              <div class="story-illustration h-48 flex items-center justify-center p-4">
+                <svg viewBox="0 0 200 152" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto max-h-36">
+                  <rect x="14" y="12" width="130" height="100" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="2"/>
+                  <rect x="14" y="12" width="130" height="26" rx="8" fill="#3B82F6"/>
+                  <rect x="14" y="26" width="130" height="12" fill="#3B82F6"/>
+                  <circle cx="25" cy="22" r="4" fill="#FECDD3"/>
+                  <circle cx="38" cy="22" r="4" fill="#FDE68A"/>
+                  <circle cx="51" cy="22" r="4" fill="#A7F3D0"/>
+                  <rect x="24" y="48" width="70" height="7" rx="3.5" fill="#93C5FD"/>
+                  <rect x="24" y="62" width="110" height="4" rx="2" fill="#BFDBFE"/>
+                  <rect x="24" y="71" width="90" height="4" rx="2" fill="#BFDBFE"/>
+                  <rect x="24" y="80" width="110" height="4" rx="2" fill="#BFDBFE"/>
+                  <rect x="24" y="89" width="55" height="4" rx="2" fill="#BFDBFE"/>
+                  <circle cx="155" cy="100" r="32" fill="#FEF2F2"/>
+                  <circle cx="155" cy="100" r="32" stroke="#FECACA" stroke-width="2"/>
+                  <path d="M143 88 L143 110 L148.5 104 L152 112 L156 110 L152.5 102 L159 102 Z" fill="#374151"/>
+                  <line x1="130" y1="124" x2="180" y2="74" stroke="#EF4444" stroke-width="4" stroke-linecap="round"/>
+                </svg>
               </div>
               <div class="p-7">
                 <p class="type-body font-semibold text-muted">NotebookLM / AI 簡報工具</p>
@@ -368,18 +418,22 @@
             </article>
 
             <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm" style="transition-delay:0.12s">
-              <div class="story-illustration h-48 p-5">
-                <div class="mx-auto h-full max-w-[220px] rounded-2xl border border-slate-200 bg-white p-4 shadow-sm">
-                  <div class="grid grid-cols-2 gap-2">
-                    <div class="h-8 rounded bg-slate-200"></div>
-                    <div class="h-8 rounded bg-slate-100"></div>
-                    <div class="h-8 rounded bg-slate-100"></div>
-                    <div class="h-8 rounded border border-blue-300 bg-blue-50"></div>
-                    <div class="h-8 rounded bg-slate-200"></div>
-                    <div class="h-8 rounded bg-slate-100"></div>
-                  </div>
-                  <div class="mt-4 h-3 w-2/3 rounded bg-slate-300"></div>
-                </div>
+              <div class="story-illustration h-48 flex items-center justify-center p-4">
+                <svg viewBox="0 0 200 152" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto max-h-36">
+                  <rect x="68" y="12" width="80" height="112" rx="6" fill="#FDE68A" stroke="#F59E0B" stroke-width="1.5"/>
+                  <rect x="52" y="8" width="80" height="112" rx="6" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
+                  <path d="M112 8 L132 28 L112 28 Z" fill="#FDE68A" stroke="#F59E0B" stroke-width="1.5" stroke-linejoin="round"/>
+                  <path d="M126 32 C126 26 132 24 134 28 C136 32 132 42 126 40 C120 38 120 28 126 26 C132 24 138 30 134 42" stroke="#D97706" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+                  <rect x="62" y="36" width="56" height="6" rx="3" fill="#F59E0B" fill-opacity="0.7"/>
+                  <rect x="62" y="50" width="64" height="4" rx="2" fill="#FCD34D" fill-opacity="0.8"/>
+                  <rect x="62" y="59" width="50" height="4" rx="2" fill="#FCD34D" fill-opacity="0.6"/>
+                  <rect x="62" y="68" width="64" height="4" rx="2" fill="#FCD34D" fill-opacity="0.6"/>
+                  <rect x="52" y="66" width="80" height="6" rx="1" fill="#F59E0B" fill-opacity="0.2"/>
+                  <line x1="58" y1="82" x2="126" y2="82" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.5"/>
+                  <rect x="62" y="90" width="64" height="4" rx="2" fill="#FCD34D" fill-opacity="0.4"/>
+                  <rect x="62" y="99" width="40" height="4" rx="2" fill="#FCD34D" fill-opacity="0.4"/>
+                  <rect x="62" y="108" width="56" height="4" rx="2" fill="#FCD34D" fill-opacity="0.4"/>
+                </svg>
               </div>
               <div class="p-7">
                 <p class="type-body font-semibold text-muted">法務 / 行政</p>
@@ -392,12 +446,20 @@
             </article>
 
             <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm" style="transition-delay:0.24s">
-              <div class="story-illustration h-48 p-5">
-                <div class="mx-auto flex h-full max-w-[220px] items-center justify-center rounded-2xl border border-slate-200 bg-white shadow-sm">
-                  <div class="grid h-24 w-24 place-items-center rounded-full border-8 border-slate-100 bg-ink text-white">
-                    <div class="h-8 w-8 rounded-lg border-2 border-white"></div>
-                  </div>
-                </div>
+              <div class="story-illustration h-48 flex items-center justify-center p-4">
+                <svg viewBox="0 0 200 152" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto max-h-36">
+                  <rect x="30" y="112" width="140" height="10" rx="3" fill="#CBD5E1"/>
+                  <rect x="18" y="120" width="164" height="7" rx="3.5" fill="#94A3B8"/>
+                  <rect x="42" y="14" width="116" height="100" rx="8" fill="#1E293B"/>
+                  <rect x="50" y="22" width="100" height="86" rx="5" fill="#0F172A"/>
+                  <path d="M100 30 L76 40 L76 60 C76 74 88 84 100 88 C112 84 124 74 124 60 L124 40 Z" fill="#10B981" fill-opacity="0.12" stroke="#10B981" stroke-width="2.5"/>
+                  <path d="M86 60 L95 69 L115 49" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="148" cy="28" r="20" fill="#FEF2F2"/>
+                  <circle cx="148" cy="28" r="20" stroke="#FECACA" stroke-width="1.5"/>
+                  <path d="M158 30 C160.5 30 162 27.5 160 25.5 C158.5 22 152 22 150 25.5 C146 25.5 144 28 146 30 Z" fill="#CBD5E1"/>
+                  <line x1="135" y1="38" x2="161" y2="18" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="161" y1="38" x2="135" y2="18" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"/>
+                </svg>
               </div>
               <div class="p-7">
                 <p class="type-body font-semibold text-muted">研發主管 / 資安</p>
@@ -419,7 +481,7 @@
             <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Workflow</p>
             <h2 class="mt-3 type-heading font-semibold text-ink">簡單三步驟，解放你的生產力</h2>
           </div>
-          <div class="mt-6 grid gap-3 rounded-2xl border border-line bg-white p-5 sm:grid-cols-2">
+          <div class="mt-8 grid gap-3 rounded-2xl border border-line bg-white p-6 sm:grid-cols-2">
             <div>
               <p class="text-xs font-semibold uppercase tracking-wider text-red-500">以前</p>
               <p class="mt-2 text-sm leading-7 text-muted">PDF → 截圖 → 貼進 PPT → 手動對齊 → 調字體 → 修格式 → 一個下午沒了</p>
@@ -429,21 +491,59 @@
               <p class="mt-2 text-sm leading-7 text-muted">拖進去 → 等 30 秒 → 每個字都可以直接改</p>
             </div>
           </div>
-          <div class="mt-10 grid gap-8 lg:grid-cols-3">
-            <div class="reveal border-t border-line pt-6">
-              <span class="type-body font-semibold text-muted">Step 1</span>
-              <h3 class="mt-4 type-title font-semibold">匯入檔案</h3>
-              <p class="mt-4 leading-7 text-muted">將 PDF 檔案直接拖曳進入軟體。</p>
+          <div class="mt-10 grid gap-5 lg:grid-cols-3">
+            <!-- Step 1 -->
+            <div class="reveal flex flex-col items-center rounded-2xl border border-line bg-white p-8 text-center">
+              <div class="relative mb-6 flex h-28 w-28 items-center justify-center rounded-2xl bg-red-50">
+                <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-16">
+                  <rect x="6" y="4" width="26" height="34" rx="4" fill="#FEF2F2" stroke="#EF4444" stroke-width="2"/>
+                  <path d="M24 4 L32 12 L24 12 Z" fill="#FECACA" stroke="#EF4444" stroke-width="1.5" stroke-linejoin="round"/>
+                  <rect x="10" y="20" width="14" height="8" rx="2" fill="#EF4444"/>
+                  <path d="M36 28 L47 28" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round"/>
+                  <path d="M43 23 L48 28 L43 33" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-ink text-xs font-bold text-white">1</span>
+              </div>
+              <p class="text-xs font-semibold uppercase tracking-widest text-muted">Step 1</p>
+              <h3 class="mt-3 type-title font-semibold">匯入檔案</h3>
+              <p class="mt-3 text-sm leading-7 text-muted">將 PDF 檔案直接拖曳進入軟體，支援批次多頁匯入。</p>
             </div>
-            <div class="reveal border-t border-line pt-6" style="transition-delay:0.12s">
-              <span class="type-body font-semibold text-muted">Step 2</span>
-              <h3 class="mt-4 type-title font-semibold">精準解析</h3>
-              <p class="mt-4 leading-7 text-muted">透過強大的邊界識別與 OCR 引擎自動處理。</p>
+            <!-- Step 2 -->
+            <div class="reveal flex flex-col items-center rounded-2xl border border-line bg-white p-8 text-center" style="transition-delay:0.12s">
+              <div class="relative mb-6 flex h-28 w-28 items-center justify-center rounded-2xl bg-blue-50">
+                <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-16">
+                  <rect x="4" y="4" width="28" height="36" rx="4" fill="#F8FAFC" stroke="#94A3B8" stroke-width="2"/>
+                  <rect x="10" y="14" width="16" height="3.5" rx="1.75" fill="#CBD5E1"/>
+                  <rect x="10" y="21" width="20" height="3.5" rx="1.75" fill="#CBD5E1"/>
+                  <rect x="10" y="28" width="14" height="3.5" rx="1.75" fill="#CBD5E1"/>
+                  <circle cx="36" cy="36" r="13" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2.5"/>
+                  <circle cx="34" cy="34" r="7" fill="none" stroke="#3B82F6" stroke-width="2"/>
+                  <line x1="39" y1="39" x2="46" y2="46" stroke="#3B82F6" stroke-width="2.5" stroke-linecap="round"/>
+                  <line x1="30" y1="32" x2="38" y2="32" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round"/>
+                  <line x1="30" y1="36" x2="38" y2="36" stroke="#93C5FD" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                <span class="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-ink text-xs font-bold text-white">2</span>
+              </div>
+              <p class="text-xs font-semibold uppercase tracking-widest text-muted">Step 2</p>
+              <h3 class="mt-3 type-title font-semibold">精準解析</h3>
+              <p class="mt-3 text-sm leading-7 text-muted">邊界識別與 Apple Vision OCR 引擎同步運算，文字座標精準還原。</p>
             </div>
-            <div class="reveal border-t border-line pt-6" style="transition-delay:0.24s">
-              <span class="type-body font-semibold text-muted">Step 3</span>
-              <h3 class="mt-4 type-title font-semibold">完美輸出</h3>
-              <p class="mt-4 leading-7 text-muted">獲得排版完美對齊、字元可完全編輯的簡報檔。</p>
+            <!-- Step 3 -->
+            <div class="reveal flex flex-col items-center rounded-2xl border border-line bg-white p-8 text-center" style="transition-delay:0.24s">
+              <div class="relative mb-6 flex h-28 w-28 items-center justify-center rounded-2xl bg-emerald-50">
+                <svg viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-16">
+                  <rect x="4" y="6" width="28" height="36" rx="4" fill="#EFF6FF" stroke="#3B82F6" stroke-width="2"/>
+                  <path d="M24 6 L32 14 L24 14 Z" fill="#BFDBFE" stroke="#3B82F6" stroke-width="1.5" stroke-linejoin="round"/>
+                  <rect x="8" y="22" width="16" height="8" rx="2" fill="#3B82F6"/>
+                  <rect x="8" y="35" width="20" height="3" rx="1.5" fill="#BFDBFE"/>
+                  <circle cx="38" cy="38" r="12" fill="#ECFDF5" stroke="#10B981" stroke-width="2.5"/>
+                  <path d="M31 38 L36 43 L45 31" stroke="#10B981" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-ink text-xs font-bold text-white">3</span>
+              </div>
+              <p class="text-xs font-semibold uppercase tracking-widest text-muted">Step 3</p>
+              <h3 class="mt-3 type-title font-semibold">完美輸出</h3>
+              <p class="mt-3 text-sm leading-7 text-muted">獲得排版完美對齊、字元可完全編輯的 .pptx 簡報檔。</p>
             </div>
           </div>
         </div>
@@ -705,19 +805,24 @@
             <h2 class="type-heading font-semibold text-ink">立刻告別手動排版的夢魘</h2>
             <p class="mx-auto mt-4 max-w-xl leading-7 text-muted">下一次遇到改不了的 PDF，你已經有答案了。</p>
             <p class="mt-3 type-body font-semibold text-ink">100 個創始人名額・現正開放登記</p>
-            <form class="mx-auto mt-8 flex w-full max-w-xl flex-col gap-3 rounded-2xl border border-line bg-white p-2 shadow-sm sm:flex-row" action="#" method="post">
-              <label class="sr-only" for="final-email">Email</label>
-              <input
-                id="final-email"
-                name="email"
-                type="email"
-                required
-                placeholder="輸入 Email"
-                class="min-h-14 flex-1 rounded-xl border border-transparent px-4 type-body outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-4 focus:ring-slate-100"
-              />
-              <button class="min-h-14 rounded-xl bg-ink px-6 type-body font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy focus:outline-none focus:ring-4 focus:ring-slate-300" type="submit">
-                成為創始會員
-              </button>
+            <form id="final-waitlist" class="mx-auto mt-8 w-full max-w-xl rounded-2xl border border-line bg-white p-3 shadow-sm" action="https://script.google.com/macros/s/AKfycbxu7B59EcfAlwYmgAk-EtScACoPCZC15hgs8mQdZJiuaCX1N2t3D7s9LiD9jCMDDKIhQg/exec" method="post" target="form-hidden-iframe">
+              <div class="hidden"><input name="website" type="text" tabindex="-1" autocomplete="off"></div>
+              <div class="flex flex-col gap-2 sm:flex-row">
+                <label class="sr-only" for="final-email">Email</label>
+                <input id="final-email" name="email" type="email" required placeholder="輸入 Email" class="min-h-12 flex-1 rounded-xl border border-transparent px-4 type-body outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-4 focus:ring-slate-100"/>
+                <button type="submit" class="min-h-12 rounded-xl bg-ink px-6 type-body font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy focus:outline-none focus:ring-4 focus:ring-slate-300">成為創始會員</button>
+              </div>
+              <div class="mt-3 flex flex-wrap gap-2 px-1">
+                <label class="platform-toggle cursor-pointer select-none">
+                  <input type="checkbox" name="mac" value="true" checked class="sr-only">
+                  <span class="flex items-center gap-1.5 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-muted transition hover:border-slate-400">Mac 用戶</span>
+                </label>
+                <label class="platform-toggle cursor-pointer select-none">
+                  <input type="checkbox" name="windows" value="true" class="sr-only">
+                  <span class="flex items-center gap-1.5 rounded-full border border-line bg-white px-4 py-2 text-sm font-medium text-muted transition hover:border-slate-400">Windows 用戶 <span class="text-xs opacity-50">上線通知</span></span>
+                </label>
+              </div>
+              <div id="final-waitlist-success" class="mt-3 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700">✅ 登記成功！請查收你的 Email。</div>
             </form>
           </div>
         </div>
@@ -764,6 +869,32 @@
       }, { threshold: 0.05, rootMargin: '0px 0px -20px 0px' });
 
       document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+      // Form handling
+      (function () {
+        function initForm(formId, successId) {
+          var form = document.getElementById(formId);
+          if (!form) return;
+          form.addEventListener('submit', function (e) {
+            var macEl = form.querySelector('[name="mac"]');
+            var winEl = form.querySelector('[name="windows"]');
+            if (macEl && winEl && !macEl.checked && !winEl.checked) {
+              e.preventDefault();
+              macEl.closest('label').style.color = '#EF4444';
+              winEl.closest('label').style.color = '#EF4444';
+              return;
+            }
+            setTimeout(function () {
+              var success = document.getElementById(successId);
+              if (success) success.classList.remove('hidden');
+              var btn = form.querySelector('button[type="submit"]');
+              if (btn) { btn.disabled = true; btn.classList.add('opacity-50'); }
+            }, 500);
+          });
+        }
+        initForm('waitlist', 'waitlist-success');
+        initForm('final-waitlist', 'final-waitlist-success');
+      })();
     </script>
   </body>
 </html>
