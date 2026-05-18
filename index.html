@@ -9,7 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta
       name="description"
-      content="PurrPoint 是專為管顧業與研究員打造的 Mac 單機版 PDF 轉 PPTX 工具，一鍵還原精美排版，100% 離線守護商業機密。"
+      content="PurrPoint 是專為管顧業、法務與 AI 簡報使用者打造的 Mac 單機版 PDF 轉 PPTX 工具，100% 離線處理，完整還原可編輯文字方塊。"
     />
     <title>PurrPoint | PDF 轉 PPTX 告別手動重拉</title>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -70,10 +70,9 @@
 
       html {
         scroll-behavior: smooth;
-        scroll-snap-type: y proximity;
       }
-      section {
-        scroll-snap-align: start;
+      section[id] {
+        border-top: 1px solid #E2E8F0;
       }
 
       body {
@@ -228,7 +227,7 @@
               <div id="waitlist-success" class="mt-3 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700">✅ 登記成功！請查收你的 Email。</div>
             </form>
             <iframe name="form-hidden-iframe" style="display:none" title="form"></iframe>
-            <p class="mt-3 text-sm text-muted"><span class="font-semibold text-ink">限額 100 名早鳥席位</span> · 10 頁試用 + 14 天完整版體驗 · 不發垃圾郵件</p>
+            <p class="mt-3 text-sm text-muted">10 頁試用 + 14 天完整版體驗 · 前 100 名填問卷者享 NT$500 折扣 · 不發垃圾郵件</p>
           </div>
 
           <div class="hero-visual-placeholder reveal relative mt-6 min-h-[300px] overflow-hidden rounded-[2rem] border border-white/80 p-5 shadow-soft sm:min-h-[380px]" style="transition-delay:0.2s">
@@ -295,15 +294,15 @@
           <h3 class="mt-3 type-title font-semibold text-ink">你的 PDF，文字可以框選嗎？</h3>
           <div class="mt-5 grid gap-4 sm:grid-cols-2">
             <div class="rounded-xl border border-slate-200 bg-white p-4">
-              <p class="font-semibold text-ink">✅ 能選取 → 數位 PDF</p>
-              <p class="mt-2 text-sm leading-6 text-muted">由軟體直接輸出，文字是真正的文字。大多數工具都能處理。</p>
+              <p class="font-semibold text-ink">✅ 轉出後可直接在 PPT 編輯 → 數位 PDF</p>
+              <p class="mt-2 text-sm leading-6 text-muted">由軟體直接輸出的真實文字，轉換後可正常編輯。</p>
             </div>
             <div class="rounded-xl border border-red-200 bg-white p-4">
-              <p class="font-semibold text-ink">❌ 選不到 → 掃描型 PDF</p>
-              <p class="mt-2 text-sm leading-6 text-muted">文字其實是一張圖片。<strong class="text-red-700">市面上絕大多數轉檔工具遇到這種類型就直接失效。</strong></p>
+              <p class="font-semibold text-ink">❌ 轉出後格式全毀、字選不到 → 掃描型 PDF</p>
+              <p class="mt-2 text-sm leading-6 text-muted">文字其實是圖片。<strong class="text-red-700">在 Mac Preview 能選字也不代表是數位型——macOS 會自動 OCR，轉出後還是壞的。</strong></p>
             </div>
           </div>
-          <p class="mt-5 type-body text-muted"><strong class="text-ink">NotebookLM 輸出的 PPTX、紙本掃描件、部分研究報告——這些幾乎都是掃描型。</strong>你以為「轉好了」卻還是改不了，問題就出在這裡。PurrPoint 專門為掃描型 PDF 設計，這是大多數競品做不到的地方。</p>
+          <p class="mt-5 type-body text-muted"><strong class="text-ink">NotebookLM 輸出、紙本掃描件、研究報告——幾乎都是掃描型。</strong>你以為轉好了，其實還是改不了。</p>
         </div>
 
         <div class="mt-8 grid gap-5 md:grid-cols-3">
@@ -375,36 +374,28 @@
             <h2 class="mt-4 type-heading font-semibold text-ink">最適合誰來使用？</h2>
           </div>
           <div class="grid gap-0 border-t border-line">
-            <article class="flex gap-5 border-b border-line py-6">
-              <div class="shrink-0 font-semibold text-muted">01</div>
+            <article class="flex gap-6 border-b border-line py-8">
+              <div class="shrink-0 type-title font-semibold text-muted">01</div>
               <div>
-                <p class="text-sm font-semibold text-muted">還在截圖底圖做報告？</p>
-                <h3 class="mt-1 type-title font-semibold">管理顧問 / 分析師</h3>
-                <p class="mt-2 leading-7 text-muted">需大量彙整外部研究報告，快速產出提案簡報。</p>
+                <p class="type-body font-semibold text-muted">還在截圖底圖做報告？</p>
+                <h3 class="mt-2 type-heading font-semibold">管理顧問 / 分析師</h3>
+                <p class="mt-3 type-body text-muted">彙整外部報告、快速產出提案簡報。</p>
               </div>
             </article>
-            <article class="flex gap-5 border-b border-line py-6">
-              <div class="shrink-0 font-semibold text-muted">02</div>
+            <article class="flex gap-6 border-b border-line py-8">
+              <div class="shrink-0 type-title font-semibold text-muted">02</div>
               <div>
-                <p class="text-sm font-semibold text-muted">合約掃描，表格一轉就亂掉？</p>
-                <h3 class="mt-1 type-title font-semibold">行政助理 / 法務</h3>
-                <p class="mt-2 leading-7 text-muted">每天處理各種格式不一的會議資料、掃描合約與報表。</p>
+                <p class="type-body font-semibold text-muted">合約掃描，表格一轉就亂掉？</p>
+                <h3 class="mt-2 type-heading font-semibold">行政助理 / 法務</h3>
+                <p class="mt-3 type-body text-muted">處理掃描合約、各式格式文件的日常工作。</p>
               </div>
             </article>
-            <article class="flex gap-5 border-b border-line py-6">
-              <div class="shrink-0 font-semibold text-muted">03</div>
+            <article class="flex gap-6 border-b border-line py-8">
+              <div class="shrink-0 type-title font-semibold text-muted">03</div>
               <div>
-                <p class="text-sm font-semibold text-muted">文獻圖表只能截圖，數字改不了？</p>
-                <h3 class="mt-1 type-title font-semibold">研究人員 / 學術工作者</h3>
-                <p class="mt-2 leading-7 text-muted">需要將大量文獻與統計圖表快速轉化為簡報素材。</p>
-              </div>
-            </article>
-            <article class="flex gap-5 border-b border-line py-6">
-              <div class="shrink-0 font-semibold text-muted">04</div>
-              <div>
-                <p class="text-sm font-semibold text-muted">AI 做的簡報，卻連一個字都改不了？</p>
-                <h3 class="mt-1 type-title font-semibold">NotebookLM / AI 簡報使用者</h3>
-                <p class="mt-2 leading-7 text-muted">已用 AI 產出簡報，只需快速修錯字、調版面，不想再為小修改和 AI 來回溝通。</p>
+                <p class="type-body font-semibold text-muted">AI 做的簡報，卻連一個字都改不了？</p>
+                <h3 class="mt-2 type-heading font-semibold">NotebookLM / AI 簡報使用者</h3>
+                <p class="mt-3 type-body text-muted">AI 產出後想小改，不想再和 AI 來回。</p>
               </div>
             </article>
           </div>
@@ -513,14 +504,14 @@
             <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Workflow</p>
             <h2 class="mt-3 type-heading font-semibold text-ink">簡單三步驟，解放你的生產力</h2>
           </div>
-          <div class="mt-8 grid gap-3 rounded-2xl border border-line bg-white p-6 sm:grid-cols-2">
-            <div>
-              <p class="text-xs font-semibold uppercase tracking-wider text-slate-400">以前</p>
-              <p class="mt-2 text-sm leading-7 text-muted">PDF → 截圖 → 貼進 PPT → 手動對齊 → 調字體 → 修格式 → 一個下午沒了</p>
+          <div class="mt-8 grid rounded-2xl border border-line bg-white sm:grid-cols-2 sm:divide-x sm:divide-line">
+            <div class="p-8">
+              <p class="text-sm font-semibold uppercase tracking-wider text-slate-400">以前</p>
+              <p class="mt-4 type-body leading-8 text-muted">PDF → 截圖 → 貼進 PPT → 手動對齊 → 調字體 → 修格式 → 一個下午沒了</p>
             </div>
-            <div>
-              <p class="text-xs font-semibold uppercase tracking-wider text-emerald-600">現在</p>
-              <p class="mt-2 text-sm leading-7 text-muted">拖進去 → 等 30 秒 → 每個字都可以直接改</p>
+            <div class="p-8">
+              <p class="text-sm font-semibold uppercase tracking-wider text-emerald-600">現在</p>
+              <p class="mt-4 type-body leading-8 text-muted">拖進去 → 等 30 秒 → 每個字都可以直接改</p>
             </div>
           </div>
           <div class="mt-10 grid gap-5 lg:grid-cols-3">
@@ -538,7 +529,7 @@
               </div>
               <p class="text-xs font-semibold uppercase tracking-widest text-muted">Step 1</p>
               <h3 class="mt-3 type-title font-semibold">匯入檔案</h3>
-              <p class="mt-3 text-sm leading-7 text-muted">將 PDF 檔案直接拖曳進入軟體，支援批次多頁匯入。</p>
+              <p class="mt-3 type-body text-muted">拖曳 PDF 進軟體，支援批次多頁。</p>
             </div>
             <!-- Step 2 -->
             <div class="reveal flex flex-col items-center rounded-2xl border border-line bg-white p-8 text-center" style="transition-delay:0.12s">
@@ -558,7 +549,7 @@
               </div>
               <p class="text-xs font-semibold uppercase tracking-widest text-muted">Step 2</p>
               <h3 class="mt-3 type-title font-semibold">精準解析</h3>
-              <p class="mt-3 text-sm leading-7 text-muted">邊界識別與 Apple Vision OCR 引擎同步運算，文字座標精準還原。</p>
+              <p class="mt-3 type-body text-muted">Apple Vision OCR 識別，文字座標原位還原。</p>
             </div>
             <!-- Step 3 -->
             <div class="reveal flex flex-col items-center rounded-2xl border border-line bg-white p-8 text-center" style="transition-delay:0.24s">
@@ -575,7 +566,7 @@
               </div>
               <p class="text-xs font-semibold uppercase tracking-widest text-muted">Step 3</p>
               <h3 class="mt-3 type-title font-semibold">完美輸出</h3>
-              <p class="mt-3 text-sm leading-7 text-muted">獲得排版完美對齊、字元可完全編輯的 .pptx 簡報檔。</p>
+              <p class="mt-3 type-body text-muted">輸出可完整編輯的 .pptx，排版原位對齊。</p>
             </div>
           </div>
         </div>
@@ -592,19 +583,19 @@
             <div class="divide-y divide-line border-t border-line">
               <article class="reveal py-6">
                 <h3 class="type-title font-semibold">100% 本機離線運作</h3>
-                <p class="mt-3 leading-7 text-muted">所有處理皆在電腦端完成，無需連網，無資料外洩風險。</p>
+                <p class="mt-3 leading-7 text-muted">不上雲、不聯網，文件不離開你的電腦。</p>
               </article>
               <article class="reveal py-6" style="transition-delay:0.1s">
                 <h3 class="type-title font-semibold">20 頁 PDF，30 秒完成轉換</h3>
-                <p class="mt-3 leading-7 text-muted">深度整合 macOS 底層架構，本機運算無需上傳等待，速度遠超雲端服務。</p>
+                <p class="mt-3 leading-7 text-muted">整合 macOS 底層，本機運算，不用等待上傳。</p>
               </article>
               <article class="reveal py-6" style="transition-delay:0.2s">
                 <h3 class="type-title font-semibold">繁體中文環境優化</h3>
-                <p class="mt-3 leading-7 text-muted">針對中文換行、標點、段落邊界與掃描文件常見雜訊調整，降低掉字與斷行錯誤。</p>
+                <p class="mt-3 leading-7 text-muted">針對中文換行、標點與掃描雜訊調整，大幅降低掉字。</p>
               </article>
               <article class="reveal py-6" style="transition-delay:0.3s">
                 <h3 class="type-title font-semibold">macOS 原生 Vision 技術背書</h3>
-                <p class="mt-3 leading-7 text-muted">Apple Vision 辨識技術加持，掃描型 PDF 的文字直接還原成可編輯方塊，位置精準不跑位。</p>
+                <p class="mt-3 leading-7 text-muted">Apple Vision 技術，文字原位還原成可編輯方塊，精準不跑位。</p>
               </article>
             </div>
           </div>
@@ -617,9 +608,6 @@
           <div>
             <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Pricing</p>
             <h2 class="mt-3 type-heading font-semibold text-ink">別再為檔案格式付一輩子的稅</h2>
-            <p class="mt-6 type-body text-muted">
-              針對 PDF 解析需求，PurrPoint 用一次買斷的方式，為您省下不必要的訂閱開支。
-            </p>
           </div>
 
           <div class="reveal mt-12 overflow-hidden rounded-[2rem] border border-line bg-white shadow-soft">
@@ -687,7 +675,7 @@
               <article class="reveal relative flex flex-col rounded-3xl border-2 border-ink bg-white p-7 shadow-soft">
                 <span class="absolute right-6 top-6 rounded-full bg-ink px-4 py-2 type-body font-semibold text-white">強烈推薦</span>
                 <p class="type-body font-semibold text-muted">方案 A</p>
-                <h3 class="mt-3 type-title font-semibold text-ink">創始人永久版</h3>
+                <h3 class="mt-3 type-title font-semibold text-ink">創始會員永久版</h3>
                 <div class="mt-5">
                   <p class="type-body font-semibold text-slate-400 line-through">原價 NT$ 5,990</p>
                   <p class="type-heading font-semibold text-ink">NT$ 2,990</p>
@@ -765,7 +753,7 @@
           <div class="divide-y divide-line border-y border-line bg-white">
             <article class="accordion-item" data-open="true">
               <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="true">
-                <span>轉換後的文字和圖表都可以自由編輯嗎？</span>
+                <span>轉換後的文字可以自由編輯嗎？</span>
                 <span class="accordion-icon type-body leading-none transition">+</span>
               </button>
               <div class="accordion-panel px-6 sm:px-8">
@@ -805,7 +793,7 @@
                 <span class="accordion-icon type-body leading-none transition">+</span>
               </button>
               <div class="accordion-panel px-6 sm:px-8">
-                <p class="pb-6 leading-7 text-muted">不需要。創始人永久版包含終身基礎維護更新，核心轉換功能永久可用。若未來推出重大功能升級版本，創始人會員將享有優先折扣資格。</p>
+                <p class="pb-6 leading-7 text-muted">不需要。創始會員永久版包含終身基礎維護更新，核心轉換功能永久可用。若未來推出重大功能升級版本，創始會員將享有優先折扣資格。</p>
               </div>
             </article>
             <article class="accordion-item" data-open="false">
@@ -819,11 +807,47 @@
             </article>
             <article class="accordion-item" data-open="false">
               <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
+                <span>打開時 Mac 說「無法驗證開發者」，怎麼辦？</span>
+                <span class="accordion-icon type-body leading-none transition">+</span>
+              </button>
+              <div class="accordion-panel px-6 sm:px-8">
+                <p class="pb-6 leading-7 text-muted">這是正常現象。PurrPoint 目前尚未申請 Apple 開發者憑證，macOS Gatekeeper 會顯示此警告。解法：在 Finder 找到 PurrPoint.app，<strong class="text-ink">按右鍵 → 選「打開」</strong>，在彈出視窗再選「打開」一次即可，之後不會再出現。軟體完全本機運作，無網路存取，無法讀取你的其他檔案。</p>
+              </div>
+            </article>
+            <article class="accordion-item" data-open="false">
+              <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
+                <span>PDF 裡的圖表（長條圖、圓餅圖）可以編輯嗎？</span>
+                <span class="accordion-icon type-body leading-none transition">+</span>
+              </button>
+              <div class="accordion-panel px-6 sm:px-8">
+                <p class="pb-6 leading-7 text-muted">圖表會以圖片形式完整保留在 PPTX 中，位置與原始 PDF 對應，但<strong class="text-ink">無法點入修改數據</strong>。這是刻意的設計取捨：圖表數據的來源有其嚴謹性，若能在簡報層輕易改動，反而容易扭曲原始資料的意義。若確實需要修改圖表數字，建議在 PowerPoint 重新製作，以確保數據可信度。文字內容（標題、說明、數字標籤）仍可正常編輯。</p>
+              </div>
+            </article>
+            <article class="accordion-item" data-open="false">
+              <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
+                <span>項目符號（• 點點）和清單格式會保留嗎？</span>
+                <span class="accordion-icon type-body leading-none transition">+</span>
+              </button>
+              <div class="accordion-panel px-6 sm:px-8">
+                <p class="pb-6 leading-7 text-muted">文字內容完整保留，但轉出的是<strong class="text-ink">文字方塊，不是 PowerPoint 的清單排版</strong>。黑點（•）是文字的一部分，無法直接套用清單樣式一鍵替換符號。若需更改符號格式，需手動調整。</p>
+              </div>
+            </article>
+            <article class="accordion-item" data-open="false">
+              <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
+                <span>轉出後字體會改變嗎？排版會跑掉嗎？</span>
+                <span class="accordion-icon type-body leading-none transition">+</span>
+              </button>
+              <div class="accordion-panel px-6 sm:px-8">
+                <p class="pb-6 leading-7 text-muted">會。OCR 只還原文字內容與座標，無法識別原始字體，<strong class="text-ink">輸出統一使用系統字體</strong>。若原 PDF 使用特殊窄體字，同樣文字在系統字體下可能較寬，文字方塊寬度需要手動微調。建議用 14 天試用先測試你手邊的 PDF 是否符合需求再購買。</p>
+              </div>
+            </article>
+            <article class="accordion-item" data-open="false">
+              <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
                 <span>什麼時候可以開始測試？購買後不滿意怎麼辦？</span>
                 <span class="accordion-icon type-body leading-none transition">+</span>
               </button>
               <div class="accordion-panel px-6 sm:px-8">
-                <p class="pb-6 leading-7 text-muted">我們預計 5/24 開放第一波 Mac 封測，請留下 Email 加入早鳥名單，優先取得 10 頁免費試用與 14 天完整版體驗。我們建議先完整試用再決定購買，14 天已足夠評估所有核心功能。</p>
+                <p class="pb-6 leading-7 text-muted">我們預計 5/24 開放第一波 Mac 封測，請留下 Email 加入創始會員名單，優先取得 10 頁免費試用與 14 天完整版體驗。我們建議先完整試用再決定購買，14 天已足夠評估所有核心功能。</p>
               </div>
             </article>
           </div>
@@ -832,7 +856,7 @@
           <div class="reveal mt-16 border-t border-line pt-12 text-center">
             <h2 class="type-heading font-semibold text-ink">立刻告別手動排版的夢魘</h2>
             <p class="mx-auto mt-4 max-w-xl leading-7 text-muted">下一次遇到改不了的 PDF，你已經有答案了。</p>
-            <p class="mt-3 type-body font-semibold text-ink">100 個創始人名額・現正開放登記</p>
+            <p class="mt-3 type-body font-semibold text-ink">現正開放登記・前 100 名填問卷享 NT$500 折扣</p>
             <form id="final-waitlist" class="mx-auto mt-8 w-full max-w-xl rounded-2xl border border-line bg-white p-3 shadow-sm" action="https://script.google.com/macros/s/AKfycbxu7B59EcfAlwYmgAk-EtScACoPCZC15hgs8mQdZJiuaCX1N2t3D7s9LiD9jCMDDKIhQg/exec" method="post" target="form-hidden-iframe">
               <div class="hidden"><input name="website" type="text" tabindex="-1" autocomplete="off"></div>
               <div class="flex flex-col gap-2 sm:flex-row">
