@@ -133,7 +133,7 @@
       }
 
       .accordion-item[data-open="true"] .accordion-panel {
-        max-height: 180px;
+        max-height: 480px;
       }
 
       .accordion-item[data-open="true"] .accordion-icon {
@@ -166,17 +166,36 @@
         <div class="hidden items-center gap-6 type-body font-medium text-muted lg:flex">
           <a class="transition hover:text-ink" href="#pain">痛點</a>
           <a class="transition hover:text-ink" href="#audience">對象</a>
-          <a class="transition hover:text-ink" href="#cases">場景</a>
           <a class="transition hover:text-ink" href="#workflow">流程</a>
           <a class="transition hover:text-ink" href="#value">特色</a>
           <a class="transition hover:text-ink" href="#pricing">價格</a>
           <a class="transition hover:text-ink" href="#faq">FAQ</a>
           <a class="transition hover:text-ink" href="#about">關於</a>
         </div>
-        <a href="#waitlist" class="hidden rounded-full bg-ink px-5 py-2.5 type-body font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-navy sm:inline-flex">
-          成為創始會員
-        </a>
+        <div class="flex items-center gap-3">
+          <a href="#waitlist" class="hidden rounded-full bg-ink px-5 py-2.5 type-body font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-navy sm:inline-flex">
+            成為創始會員
+          </a>
+          <!-- 漢堡按鈕，lg 以上隱藏 -->
+          <button id="mobile-menu-btn" class="lg:hidden flex h-10 w-10 items-center justify-center rounded-xl border border-line text-ink transition hover:bg-cloud" aria-label="開啟選單" aria-expanded="false" aria-controls="mobile-menu">
+            <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+            <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+          </button>
+        </div>
       </nav>
+      <!-- 手機展開選單 -->
+      <div id="mobile-menu" class="hidden border-t border-line bg-white/95 backdrop-blur-xl lg:hidden">
+        <div class="mx-auto max-w-5xl px-6 py-4 flex flex-col gap-1">
+          <a href="#pain"     class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">痛點</a>
+          <a href="#audience" class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">對象</a>
+          <a href="#workflow" class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">流程</a>
+          <a href="#value"    class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">特色</a>
+          <a href="#pricing"  class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">價格</a>
+          <a href="#faq"      class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">FAQ</a>
+          <a href="#about"    class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">關於</a>
+          <a href="#waitlist" class="mobile-nav-link mt-2 rounded-xl bg-ink px-4 py-3 text-center font-semibold text-white transition hover:bg-navy">成為創始會員</a>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -201,7 +220,17 @@
           </h1>
           <!-- left: desc + form -->
           <div class="mt-6">
-            <p class="type-body text-muted">手動重拉一份報告平均耗掉 <strong class="text-ink">2.5 小時</strong>。用 PurrPoint，同樣的事 <strong class="text-ink">30 秒</strong>。</p>
+            <div class="flex items-center gap-4 mb-5">
+              <div class="text-center">
+                <p class="text-3xl font-semibold tracking-tight text-muted line-through decoration-red-400">2.5 <span class="text-xl">小時</span></p>
+                <p class="mt-0.5 text-xs font-medium text-muted">手動重排版</p>
+              </div>
+              <div class="text-muted text-xl">→</div>
+              <div class="text-center">
+                <p class="text-3xl font-semibold tracking-tight text-emerald-600">30 <span class="text-xl">秒</span></p>
+                <p class="mt-0.5 text-xs font-medium text-muted">用 PurrPoint</p>
+              </div>
+            </div>
             <form id="waitlist" class="mt-5 w-full max-w-xl rounded-2xl border border-line bg-white p-3 shadow-card" action="https://script.google.com/macros/s/AKfycbxu7B59EcfAlwYmgAk-EtScACoPCZC15hgs8mQdZJiuaCX1N2t3D7s9LiD9jCMDDKIhQg/exec" method="post" target="form-hidden-iframe">
               <div class="hidden"><input name="website" type="text" tabindex="-1" autocomplete="off"></div>
               <div class="flex flex-col gap-2 sm:flex-row">
@@ -291,25 +320,30 @@
           <h2 class="mt-3 type-heading font-semibold text-ink">每次遇到這些狀況，都在無意義地浪費下班時間？</h2>
         </div>
         <div class="reveal mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 lg:p-6">
-          <p class="type-body font-semibold uppercase tracking-[0.18em] text-amber-700">先確認一件事</p>
-          <h3 class="mt-3 type-title font-semibold text-ink">你的 PDF，文字可以框選嗎？</h3>
-          <div class="mt-5 grid gap-4 sm:grid-cols-2">
-            <div class="rounded-xl border border-slate-200 bg-white p-4">
-              <p class="font-semibold text-ink">✅ 轉出後可直接在 PPT 編輯 → 數位 PDF</p>
-              <p class="mt-2 text-sm leading-6 text-muted">由軟體直接輸出的真實文字，轉換後可正常編輯。</p>
+          <p class="text-sm font-semibold uppercase tracking-[0.18em] text-amber-700">先確認一件事</p>
+          <h3 class="mt-2 type-title font-semibold text-ink">你的 PDF 能選字，不代表轉出來可以改</h3>
+          <div class="mt-4 grid gap-3 sm:grid-cols-2">
+            <div class="rounded-xl border border-slate-200 bg-white px-4 py-3 flex items-center gap-3">
+              <span class="text-lg">✅</span>
+              <div>
+                <p class="font-semibold text-ink">數位 PDF</p>
+                <p class="text-muted">轉出後文字可直接編輯</p>
+              </div>
             </div>
-            <div class="rounded-xl border border-red-200 bg-white p-4">
-              <p class="font-semibold text-ink">❌ 轉出後格式全毀、字選不到 → 掃描型 PDF</p>
-              <p class="mt-2 text-sm leading-6 text-muted">文字其實是圖片。<strong class="text-red-700">在 Mac Preview 能選字也不代表是數位型——macOS 會自動 OCR，轉出後還是壞的。</strong></p>
+            <div class="rounded-xl border border-red-200 bg-white px-4 py-3 flex items-center gap-3">
+              <span class="text-lg">❌</span>
+              <div>
+                <p class="font-semibold text-ink">掃描型 PDF</p>
+                <p class="text-muted">文字是圖片，macOS 自動 OCR 讓它看起來能選，轉出後還是壞的</p>
+              </div>
             </div>
           </div>
-          <p class="mt-5 type-body text-muted"><strong class="text-ink">NotebookLM 輸出、紙本掃描件、研究報告——幾乎都是掃描型。</strong>你以為轉好了，其實還是改不了。</p>
         </div>
 
-        <div class="mt-8 grid gap-5 md:grid-cols-3">
+        <div class="mt-8 grid gap-5 md:grid-cols-2">
           <article class="reveal border-t border-line pt-6">
             <div class="flex items-start gap-4">
-              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 shrink-0">
+              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 shrink-0">
                 <rect x="4" y="2" width="30" height="38" rx="4" fill="#FEF3C7" stroke="#F59E0B" stroke-width="2"/>
                 <rect x="10" y="10" width="18" height="4" rx="2" fill="#F59E0B"/>
                 <rect x="10" y="18" width="12" height="4" rx="2" fill="#FCD34D"/>
@@ -319,36 +353,14 @@
                 <path d="M27 27 L37 37 M37 27 L27 37" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
               <div>
-                <div class="mb-2 type-body font-semibold text-muted">01</div>
-                <h3 class="type-title font-semibold">排版全毀</h3>
-                <p class="mt-1 text-sm font-semibold text-amber-700">平均多花 1.5 小時重對齊</p>
+                <h3 class="type-title font-semibold">貼進去，排版就毀了</h3>
+                <p class="mt-1 text-muted">換行、縮排、字體全跑掉，要一格一格手動對齊</p>
               </div>
             </div>
-            <p class="mt-4 leading-7 text-muted">複製 PDF 文字貼到簡報，換行跟格式全部跑掉，要一個一個手動對齊。</p>
           </article>
           <article class="reveal border-t border-line pt-6" style="transition-delay:0.1s">
             <div class="flex items-start gap-4">
-              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 shrink-0">
-                <rect x="4" y="38" width="36" height="3" rx="1.5" fill="#CBD5E1"/>
-                <rect x="6" y="24" width="8" height="14" rx="2" fill="#93C5FD"/>
-                <rect x="18" y="14" width="8" height="24" rx="2" fill="#3B82F6"/>
-                <rect x="30" y="28" width="8" height="10" rx="2" fill="#93C5FD"/>
-                <circle cx="34" cy="12" r="9" fill="#1E293B"/>
-                <circle cx="34" cy="12" r="4.5" stroke="white" stroke-width="1.75" fill="none"/>
-                <circle cx="34" cy="12" r="1.5" fill="white"/>
-                <rect x="30" y="5" width="5" height="3" rx="1" fill="white"/>
-              </svg>
-              <div>
-                <div class="mb-2 type-body font-semibold text-muted">02</div>
-                <h3 class="type-title font-semibold">圖表重製</h3>
-                <p class="mt-1 text-sm font-semibold text-amber-700">截圖底圖，數字永遠改不了</p>
-              </div>
-            </div>
-            <p class="mt-4 leading-7 text-muted">遇到複雜的報表，只能截圖當底圖，根本無法修改裡面的數字。</p>
-          </article>
-          <article class="reveal border-t border-line pt-6" style="transition-delay:0.2s">
-            <div class="flex items-start gap-4">
-              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 shrink-0">
+              <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-14 w-14 shrink-0">
                 <path d="M36 22 C39.5 22 42 19 40 15.5 C38 12 32 12 30 15.5 C28 11 20 10 17 15.5 C13 15.5 10 19 12 22 Z" fill="#BFDBFE" stroke="#3B82F6" stroke-width="2"/>
                 <rect x="16" y="28" width="12" height="12" rx="2.5" fill="#EF4444"/>
                 <path d="M18.5 28 V25 A3.5 3.5 0 0 1 25.5 25 V28" fill="none" stroke="#DC2626" stroke-width="2" stroke-linecap="round"/>
@@ -356,12 +368,10 @@
                 <rect x="21" y="33" width="2" height="3.5" rx="1" fill="white"/>
               </svg>
               <div>
-                <div class="mb-2 type-body font-semibold text-muted">03</div>
-                <h3 class="type-title font-semibold">資安疑慮</h3>
-                <p class="mt-1 text-sm font-semibold text-amber-700">一旦上傳，就再也不受你控制</p>
+                <h3 class="type-title font-semibold">機密文件不敢上傳</h3>
+                <p class="mt-1 text-muted">免費線上工具把你的 PDF 送上境外伺服器，一旦上傳就不受控制</p>
               </div>
             </div>
-            <p class="mt-4 leading-7 text-muted">不敢上傳到免費線上轉檔網站，深怕公司機密與客戶資料外流。</p>
           </article>
         </div>
         </div>
@@ -369,7 +379,7 @@
 
       <!-- 3. Audience — 訪客先確認「這是為我設計的」，再往下看 -->
       <section id="audience" class="mx-auto max-w-5xl scroll-mt-24 px-6 py-20 lg:min-h-[85vh] lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
-        <div class="grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:items-start">
+        <div class="grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:items-center">
           <div>
             <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Audience</p>
             <h2 class="mt-4 type-heading font-semibold text-ink">最適合誰來使用？</h2>
@@ -381,6 +391,7 @@
                 <p class="type-body font-semibold text-muted">還在截圖底圖做報告？</p>
                 <h3 class="mt-2 type-heading font-semibold">管理顧問 / 分析師</h3>
                 <p class="mt-3 type-body text-muted">彙整外部報告、快速產出提案簡報。</p>
+                <p class="mt-3 leading-7 text-muted">→ 把外部 PDF 報告直接轉成可編輯簡報，不用重排版，直接改數字交差。</p>
               </div>
             </article>
             <article class="flex gap-6 border-b border-line py-8">
@@ -389,109 +400,16 @@
                 <p class="type-body font-semibold text-muted">合約掃描，表格一轉就亂掉？</p>
                 <h3 class="mt-2 type-heading font-semibold">行政助理 / 法務</h3>
                 <p class="mt-3 type-body text-muted">處理掃描合約、各式格式文件的日常工作。</p>
+                <p class="mt-3 leading-7 text-muted">→ 掃描版合約原位還原成文字方塊，修約對照從重打排版變成直接微調。</p>
               </div>
             </article>
             <article class="flex gap-6 border-b border-line py-8">
               <div class="shrink-0 type-title font-semibold text-muted">03</div>
               <div>
-                <p class="type-body font-semibold text-muted">AI 做的簡報，卻連一個字都改不了？</p>
-                <h3 class="mt-2 type-heading font-semibold">NotebookLM / AI 簡報使用者</h3>
-                <p class="mt-3 type-body text-muted">AI 產出後想小改，不想再和 AI 來回。</p>
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-
-      <!-- 4. Use Cases — 對應前段受眾，用真實場景讓訪客產生共鳴 -->
-      <section id="cases" class="scroll-mt-24 px-6 py-20 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
-        <div class="mx-auto w-full max-w-5xl">
-          <div class="mb-8">
-            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Use Cases</p>
-            <h2 class="mt-3 type-heading font-semibold text-ink">三個最常見的「看得到，改不到」場景</h2>
-          </div>
-          <div class="grid gap-5 lg:grid-cols-3">
-            <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm">
-              <div class="story-illustration h-48 flex items-center justify-center p-4">
-                <svg viewBox="0 0 200 152" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto max-h-36">
-                  <rect x="14" y="12" width="130" height="100" rx="8" fill="#EFF6FF" stroke="#BFDBFE" stroke-width="2"/>
-                  <rect x="14" y="12" width="130" height="26" rx="8" fill="#3B82F6"/>
-                  <rect x="14" y="26" width="130" height="12" fill="#3B82F6"/>
-                  <circle cx="25" cy="22" r="4" fill="#FECDD3"/>
-                  <circle cx="38" cy="22" r="4" fill="#FDE68A"/>
-                  <circle cx="51" cy="22" r="4" fill="#A7F3D0"/>
-                  <rect x="24" y="48" width="70" height="7" rx="3.5" fill="#93C5FD"/>
-                  <rect x="24" y="62" width="110" height="4" rx="2" fill="#BFDBFE"/>
-                  <rect x="24" y="71" width="90" height="4" rx="2" fill="#BFDBFE"/>
-                  <rect x="24" y="80" width="110" height="4" rx="2" fill="#BFDBFE"/>
-                  <rect x="24" y="89" width="55" height="4" rx="2" fill="#BFDBFE"/>
-                  <circle cx="155" cy="100" r="32" fill="#FEF2F2"/>
-                  <circle cx="155" cy="100" r="32" stroke="#FECACA" stroke-width="2"/>
-                  <path d="M143 88 L143 110 L148.5 104 L152 112 L156 110 L152.5 102 L159 102 Z" fill="#374151"/>
-                  <line x1="130" y1="124" x2="180" y2="74" stroke="#EF4444" stroke-width="4" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="p-7">
-                <p class="type-body font-semibold text-muted">NotebookLM / AI 簡報工具</p>
-                <h4 class="mt-3 type-title font-semibold text-ink">林老師只想改一個錯字，卻差點重做 20 頁投影片</h4>
-                <p class="mt-4 type-body text-muted">
-                  NotebookLM 投影片「看起來可以改」，按下去才發現全是<strong class="text-ink">掃描型圖片</strong>，選不到字。PurrPoint 把每個文字方塊原位還原，改一個字不用五秒。
-                </p>
-                <p class="mt-4 text-sm text-slate-400">— 林老師，高中教師，台北</p>
-              </div>
-            </article>
-
-            <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm" style="transition-delay:0.12s">
-              <div class="story-illustration h-48 flex items-center justify-center p-4">
-                <svg viewBox="0 0 200 152" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto max-h-36">
-                  <rect x="68" y="12" width="80" height="112" rx="6" fill="#FDE68A" stroke="#F59E0B" stroke-width="1.5"/>
-                  <rect x="52" y="8" width="80" height="112" rx="6" fill="#FFFBEB" stroke="#F59E0B" stroke-width="2"/>
-                  <path d="M112 8 L132 28 L112 28 Z" fill="#FDE68A" stroke="#F59E0B" stroke-width="1.5" stroke-linejoin="round"/>
-                  <path d="M126 32 C126 26 132 24 134 28 C136 32 132 42 126 40 C120 38 120 28 126 26 C132 24 138 30 134 42" stroke="#D97706" stroke-width="2.5" stroke-linecap="round" fill="none"/>
-                  <rect x="62" y="36" width="56" height="6" rx="3" fill="#F59E0B" fill-opacity="0.7"/>
-                  <rect x="62" y="50" width="64" height="4" rx="2" fill="#FCD34D" fill-opacity="0.8"/>
-                  <rect x="62" y="59" width="50" height="4" rx="2" fill="#FCD34D" fill-opacity="0.6"/>
-                  <rect x="62" y="68" width="64" height="4" rx="2" fill="#FCD34D" fill-opacity="0.6"/>
-                  <rect x="52" y="66" width="80" height="6" rx="1" fill="#F59E0B" fill-opacity="0.2"/>
-                  <line x1="58" y1="82" x2="126" y2="82" stroke="#F59E0B" stroke-width="1" stroke-opacity="0.5"/>
-                  <rect x="62" y="90" width="64" height="4" rx="2" fill="#FCD34D" fill-opacity="0.4"/>
-                  <rect x="62" y="99" width="40" height="4" rx="2" fill="#FCD34D" fill-opacity="0.4"/>
-                  <rect x="62" y="108" width="56" height="4" rx="2" fill="#FCD34D" fill-opacity="0.4"/>
-                </svg>
-              </div>
-              <div class="p-7">
-                <p class="type-body font-semibold text-muted">法務 / 行政</p>
-                <h4 class="mt-3 type-title font-semibold text-ink">張先生不用再把舊合約<wbr>重新打成簡報</h4>
-                <p class="mt-4 type-body text-muted">
-                  掃描合約無法複製，表格一轉檔就亂掉。PurrPoint 保留文字位置與段落邏輯，讓修約對照從重打排版，變成檢查與微調。
-                </p>
-                <p class="mt-4 text-sm text-slate-400">— 張先生，法務專員，台中</p>
-              </div>
-            </article>
-
-            <article class="reveal overflow-hidden rounded-3xl border border-line bg-white shadow-sm" style="transition-delay:0.24s">
-              <div class="story-illustration h-48 flex items-center justify-center p-4">
-                <svg viewBox="0 0 200 152" fill="none" xmlns="http://www.w3.org/2000/svg" class="h-full w-auto max-h-36">
-                  <rect x="30" y="112" width="140" height="10" rx="3" fill="#CBD5E1"/>
-                  <rect x="18" y="120" width="164" height="7" rx="3.5" fill="#94A3B8"/>
-                  <rect x="42" y="14" width="116" height="100" rx="8" fill="#1E293B"/>
-                  <rect x="50" y="22" width="100" height="86" rx="5" fill="#0F172A"/>
-                  <path d="M100 30 L76 40 L76 60 C76 74 88 84 100 88 C112 84 124 74 124 60 L124 40 Z" fill="#10B981" fill-opacity="0.12" stroke="#10B981" stroke-width="2.5"/>
-                  <path d="M86 60 L95 69 L115 49" stroke="#10B981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="148" cy="28" r="20" fill="#FEF2F2"/>
-                  <circle cx="148" cy="28" r="20" stroke="#FECACA" stroke-width="1.5"/>
-                  <path d="M158 30 C160.5 30 162 27.5 160 25.5 C158.5 22 152 22 150 25.5 C146 25.5 144 28 146 30 Z" fill="#CBD5E1"/>
-                  <line x1="135" y1="38" x2="161" y2="18" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"/>
-                  <line x1="161" y1="38" x2="135" y2="18" stroke="#EF4444" stroke-width="2.5" stroke-linecap="round"/>
-                </svg>
-              </div>
-              <div class="p-7">
-                <p class="type-body font-semibold text-muted">研發主管 / 資安</p>
-                <h4 class="mt-3 type-title font-semibold text-ink">陳經理不能把機密晶片<wbr>文件丟上雲端</h4>
-                <p class="mt-4 type-body text-muted">
-                  需要 AI 效率，但公司政策禁止上傳機密資料。PurrPoint 在 Mac 本機離線解析，關 Wi-Fi 也能完成轉檔。
-                </p>
-                <p class="mt-4 text-sm text-slate-400">— 陳經理，研發主管，新竹</p>
+                <p class="type-body font-semibold text-muted">AI 生成的講義或報告，改不了一個字？</p>
+                <h3 class="mt-2 type-heading font-semibold">教師 / 學生</h3>
+                <p class="mt-3 type-body text-muted">用 AI 產出課堂講義或學期報告，想微調內容卻完全無法編輯。</p>
+                <p class="mt-3 leading-7 text-muted">→ AI 輸出的投影片看起來能改，其實文字是圖片。PurrPoint 原位還原，改一個字不用五秒。</p>
               </div>
             </article>
           </div>
@@ -578,7 +496,7 @@
         <div class="border-y border-line py-10">
           <div class="grid gap-12 lg:grid-cols-[0.9fr_1fr] lg:items-center">
             <div>
-              <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Enterprise Ready</p>
+              <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Features</p>
               <h2 class="mt-4 type-heading font-semibold text-ink">專為嚴謹工作流程打造</h2>
             </div>
             <div class="divide-y divide-line border-t border-line">
@@ -657,30 +575,30 @@
 
           <!-- 方案卡片 -->
           <div class="mt-12 space-y-5">
-            <div class="reveal rounded-3xl border border-emerald-200 bg-emerald-50/40 p-6 sm:p-8">
-              <div class="flex flex-col gap-6 sm:flex-row sm:items-center sm:justify-between">
-                <div>
-                  <span class="rounded-full border border-emerald-200 bg-white px-3 py-1 text-sm font-semibold text-emerald-700">所有人皆可使用・無需信用卡</span>
-                  <h3 class="mt-4 type-title font-semibold text-ink">免費體驗</h3>
-                  <p class="mt-2 type-body text-muted">先親自感受轉換品質，滿意再決定方案。</p>
-                </div>
-                <div class="flex flex-wrap gap-3 sm:justify-end">
-                  <span class="rounded-full border border-emerald-200 bg-white px-4 py-2 type-body text-muted">✅ 10 頁掃描檔完整還原</span>
-                  <span class="rounded-full border border-emerald-200 bg-white px-4 py-2 type-body text-muted">✅ AI 文字座標映射技術</span>
-                  <span class="rounded-full border border-emerald-200 bg-white px-4 py-2 type-body text-muted">✅ 14 天完整版功能開放</span>
-                </div>
+
+            <!-- 免費體驗（緊湊橫條）-->
+            <div class="reveal rounded-2xl border border-emerald-200 bg-emerald-50/40 px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <span class="rounded-full border border-emerald-200 bg-white px-3 py-1 text-sm font-semibold text-emerald-700">免費體驗・無需信用卡</span>
+                <p class="mt-3 type-body font-semibold text-ink">先試用，滿意再選方案</p>
               </div>
+              <ul class="flex flex-wrap gap-x-6 gap-y-1 text-sm text-muted">
+                <li>✅ 前 10 頁完整轉換</li>
+                <li>✅ 14 天完整版開放</li>
+                <li>✅ 下載即試</li>
+              </ul>
             </div>
 
-            <div class="grid gap-5 lg:grid-cols-3">
-              <article class="reveal relative flex flex-col rounded-3xl border-2 border-ink bg-white p-7 shadow-soft">
-                <span class="absolute right-6 top-6 rounded-full bg-ink px-4 py-2 type-body font-semibold text-white">強烈推薦</span>
-                <p class="type-body font-semibold text-muted">方案 A</p>
-                <h3 class="mt-3 type-title font-semibold text-ink">創始會員永久版</h3>
+            <!-- 個人三方案 -->
+            <div class="grid gap-5 lg:grid-cols-[1.35fr_1fr_1fr]">
+              <article class="reveal relative flex flex-col rounded-3xl border-2 border-ink bg-white p-7 shadow-soft lg:col-span-1">
+                <span class="absolute right-5 top-5 rounded-full bg-ink px-3 py-1.5 text-sm font-semibold text-white">強烈推薦</span>
+                <h3 class="mt-1 type-heading font-semibold text-ink leading-tight">創始會員<br>永久版</h3>
                 <div class="mt-5">
                   <p class="type-body font-semibold text-slate-400 line-through">原價 NT$ 5,990</p>
                   <p class="type-heading font-semibold text-ink">NT$ 2,990</p>
                   <p class="mt-1 text-sm font-semibold text-amber-700">⏰ 早鳥優惠至 6/7・結束後恢復原價</p>
+                  <p class="mt-1 text-sm text-muted">月訂閱用滿 11 個月即回本，之後永遠免費</p>
                   <div class="mt-3 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3">
                     <p class="type-body font-semibold text-emerald-800">填回饋問卷？獲 NT$500 回饋金</p>
                     <p class="mt-1 text-sm text-emerald-700">以 NT$2,490 購入正式版，優於原價五折・6/7 前限 100 名</p>
@@ -693,15 +611,14 @@
                   <li>✅ 終身基礎維護更新</li>
                   <li>✅ 先免費試用 14 天，滿意再買</li>
                 </ul>
-                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-700 px-6 py-4 type-body font-semibold text-white transition hover:-translate-y-0.5 hover:bg-slate-600">
-                  成為創始會員
+                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700">
+                  待正式上線・先登記
                 </a>
               </article>
 
               <article class="reveal relative flex flex-col rounded-3xl border border-amber-200 bg-amber-50/30 p-7" style="transition-delay:0.12s">
-                <span class="absolute right-6 top-6 rounded-full border border-amber-200 bg-amber-50 px-4 py-2 type-body font-semibold text-amber-700">短期彈性</span>
-                <p class="type-body font-semibold text-muted">方案 B</p>
-                <h3 class="mt-3 type-title font-semibold text-ink">月訂閱</h3>
+                <span class="absolute right-5 top-5 rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-sm font-semibold text-amber-700">短期彈性</span>
+                <h3 class="mt-1 type-heading font-semibold text-ink">月訂閱</h3>
                 <div class="mt-5">
                   <p class="type-body font-semibold text-slate-300">—</p>
                   <p class="type-heading font-semibold text-ink">NT$ 290 <span class="text-xl font-medium text-muted">/ 月</span></p>
@@ -713,15 +630,14 @@
                   <li>✅ 低門檻入門，隨時可升級</li>
                   <li>✅ 按月計費，彈性控制支出</li>
                 </ul>
-                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-amber-100 border border-amber-300 px-6 py-4 type-body font-semibold text-amber-800 transition hover:-translate-y-0.5 hover:bg-amber-200">
-                  選擇月訂閱
+                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700">
+                  待正式上線・先登記
                 </a>
               </article>
 
               <article class="reveal relative flex flex-col rounded-3xl border border-blue-200 bg-blue-50/40 p-7" style="transition-delay:0.24s">
-                <span class="absolute right-6 top-6 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 type-body font-semibold text-blue-700">長期省最多</span>
-                <p class="type-body font-semibold text-muted">方案 C</p>
-                <h3 class="mt-3 type-title font-semibold text-ink">年訂閱</h3>
+                <span class="absolute right-5 top-5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-700">長期省最多</span>
+                <h3 class="mt-1 type-heading font-semibold text-ink">年訂閱</h3>
                 <div class="mt-5">
                   <p class="type-body font-semibold text-slate-400 line-through">月繳合計 NT$ 3,480</p>
                   <p class="type-heading font-semibold text-ink">NT$ 2,690 <span class="text-xl font-medium text-muted">/ 年</span></p>
@@ -733,11 +649,25 @@
                   <li>✅ 長期需求的最佳彈性選擇</li>
                   <li>✅ 隨時可升級至永久版</li>
                 </ul>
-                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-blue-100 border border-blue-300 px-6 py-4 type-body font-semibold text-blue-800 transition hover:-translate-y-0.5 hover:bg-blue-200">
-                  選擇年訂閱
+                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700">
+                  待正式上線・先登記
                 </a>
               </article>
+
             </div>
+
+            <!-- 企業方案橫條 -->
+            <div class="reveal rounded-2xl border border-slate-200 bg-white px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
+              <div>
+                <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-600">企業授權</span>
+                <p class="mt-3 type-body font-semibold text-ink">企業方案</p>
+                <p class="mt-1 text-muted">N 席多人授權・優先技術支援・價格依人數議定</p>
+              </div>
+              <a href="mailto:finleycatniplabs@gmail.com?subject=PurrPoint%20企業授權洽詢" class="shrink-0 inline-flex items-center justify-center rounded-xl border border-slate-300 bg-slate-50 px-6 py-3 text-sm font-semibold text-slate-700 transition hover:bg-slate-100">
+                洽詢報價
+              </a>
+            </div>
+
           </div>
 
         </div>
@@ -748,8 +678,10 @@
         <div class="mx-auto max-w-5xl">
           <div class="grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:items-start">
             <div>
-            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">FAQ</p>
-            <h2 class="mt-4 type-heading font-semibold text-ink">常見問題</h2>
+              <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">FAQ</p>
+              <h2 class="mt-4 type-heading font-semibold text-ink">常見問題</h2>
+              <p class="mt-4 type-body text-muted">購買前最常被問到的事，我們都寫清楚了。</p>
+              <p class="mt-6 text-sm text-muted">還有疑問？<a href="mailto:finleycatniplabs@gmail.com" class="underline underline-offset-2 hover:text-ink transition">寄信給我們</a></p>
             </div>
           <div class="divide-y divide-line border-y border-line bg-white">
             <article class="accordion-item" data-open="true">
@@ -851,12 +783,11 @@
             <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">About</p>
             <h2 class="mt-4 type-heading font-semibold text-ink">芬利貓草創意<br>Finley Catnip Labs</h2>
             <p class="mt-4 type-body text-muted">獨立開發者・台灣</p>
+            <p class="mt-4 text-base italic text-muted">養隻貓，伸個懶腰，享受當下的美好</p>
             <p class="mt-6 type-body text-muted">finleycatniplabs@gmail.com</p>
           </div>
-          <div class="space-y-6 type-body text-muted leading-8">
-            <p>有一天，我用 NotebookLM 生成了一份七頁投影片。其中一頁有個字——「醫」——被辨識成另一個字。其他都還行，我只想改那一個字。但 PPT 改不了。我不想跟 AI 重新來回，怕又跑出另一個版本的錯誤。我只想打開檔案，把那個字改掉，繼續過我的人生。</p>
-            <p>這種感覺我很熟悉。做過數據分析、在私人企業和公家機關都工作過，見識過各種資料保密需求——有些 PDF 根本不能上傳到任何地方。市場上找不到一個既精準、又完全不用上網的轉換工具，所以我自己做了一個。不用 AI，不聯網，全程在你的 Mac 上完成。</p>
-            <p>品牌叫芬利貓草創意，因為我很喜歡貓，希望有一天能養一隻。PurrPoint 是目前這間研究室唯一的產品，也是唯一研究員的心血。</p>
+          <div class="type-body text-muted leading-8">
+            <p>有一天，我用 NotebookLM 生成了一份七頁投影片。其中一頁有個字——「醫」——被辨識成另一個字。其他都還行，我只想改那一個字。但 PPT 改不了。我不想跟 AI 重新來回，怕又跑出另一個版本的錯誤。我只想打開檔案，把那個字改掉，繼續過我的人生。所以我自己做了 PurrPoint。</p>
           </div>
         </div>
       </div>
@@ -868,15 +799,44 @@
           <p>© 2026 PurrPoint. All rights reserved.</p>
           <div class="flex gap-5 type-body">
             <a href="#about" class="transition hover:text-ink">關於我們</a>
-            <a href="PRIVACY.md" target="_blank" class="transition hover:text-ink">隱私政策</a>
-            <a href="TERMS.md" target="_blank" class="transition hover:text-ink">使用條款</a>
+            <a href="privacy.html" target="_blank" class="transition hover:text-ink">隱私政策</a>
+            <a href="terms.html" target="_blank" class="transition hover:text-ink">使用條款</a>
           </div>
         </div>
-        <p class="mt-4 text-center text-sm text-muted">PurrPoint 為 PDF 格式轉換工具，協助使用者處理其合法持有之文件。使用者須自行確認對所轉換之檔案具有合法使用或修改權限，本軟體不鼓勵任何著作權侵害行為。</p>
+        <p class="mt-4 text-center text-sm italic text-muted">養隻貓，伸個懶腰，享受當下的美好</p>
+        <p class="mt-3 text-center text-sm text-muted">PurrPoint 為 PDF 格式轉換工具，協助使用者處理其合法持有之文件。使用者須自行確認對所轉換之檔案具有合法使用或修改權限，本軟體不鼓勵任何著作權侵害行為。</p>
       </div>
     </footer>
 
     <script>
+      // 漢堡選單
+      (function () {
+        var btn = document.getElementById('mobile-menu-btn');
+        var menu = document.getElementById('mobile-menu');
+        var iconOpen = document.getElementById('menu-icon-open');
+        var iconClose = document.getElementById('menu-icon-close');
+        function closeMenu() {
+          menu.classList.add('hidden');
+          iconOpen.classList.remove('hidden');
+          iconClose.classList.add('hidden');
+          btn.setAttribute('aria-expanded', 'false');
+        }
+        btn.addEventListener('click', function () {
+          var isOpen = !menu.classList.contains('hidden');
+          if (isOpen) {
+            closeMenu();
+          } else {
+            menu.classList.remove('hidden');
+            iconOpen.classList.add('hidden');
+            iconClose.classList.remove('hidden');
+            btn.setAttribute('aria-expanded', 'true');
+          }
+        });
+        document.querySelectorAll('.mobile-nav-link').forEach(function (link) {
+          link.addEventListener('click', closeMenu);
+        });
+      })();
+
       document.querySelectorAll('.accordion-item button').forEach((button) => {
         button.addEventListener('click', () => {
           const item = button.closest('.accordion-item');

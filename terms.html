@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>使用條款 | PurrPoint</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#111827',
+              muted: '#5b6472',
+              cloud: '#f7f8fb',
+              line: '#e6e8ee',
+              navy: '#0b1f3a',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+        font-size: 1.0625rem;
+        line-height: 1.8;
+        overflow-wrap: break-word;
+        color: #111827;
+      }
+      h1, h2, h3 { text-wrap: balance; }
+      .prose h2 {
+        font-size: 1.25rem;
+        font-weight: 600;
+        letter-spacing: -0.02em;
+        margin-top: 2.5rem;
+        margin-bottom: 0.75rem;
+        color: #111827;
+      }
+      .prose h3 {
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: 1.5rem;
+        margin-bottom: 0.5rem;
+        color: #111827;
+      }
+      .prose p { margin-bottom: 1rem; color: #5b6472; }
+      .prose ul {
+        list-style: disc;
+        padding-left: 1.5rem;
+        margin-bottom: 1rem;
+        color: #5b6472;
+      }
+      .prose ul li { margin-bottom: 0.25rem; }
+      .prose strong { color: #111827; font-weight: 600; }
+      .prose a { color: #111827; text-decoration: underline; text-underline-offset: 3px; }
+      .prose table { width: 100%; border-collapse: collapse; margin-bottom: 1.5rem; font-size: 0.9375rem; }
+      .prose th { text-align: left; padding: 0.6rem 0.75rem; background: #f7f8fb; font-weight: 600; color: #111827; border: 1px solid #e6e8ee; }
+      .prose td { padding: 0.6rem 0.75rem; color: #5b6472; border: 1px solid #e6e8ee; }
+      hr.section-divider { border: none; border-top: 1px solid #e6e8ee; margin: 0; }
+    </style>
+  </head>
+  <body class="bg-white">
+
+    <!-- Nav -->
+    <header class="sticky top-0 z-50 bg-white/90 backdrop-blur border-b border-line">
+      <div class="mx-auto flex max-w-3xl items-center justify-between px-6 py-4 lg:px-8">
+        <a href="index.html" class="text-base font-semibold text-ink tracking-tight">PurrPoint</a>
+        <a href="index.html" class="text-sm text-muted hover:text-ink transition-colors">← 回首頁</a>
+      </div>
+    </header>
+
+    <!-- Content -->
+    <main class="mx-auto max-w-3xl px-6 py-16 lg:px-8 lg:py-24">
+
+      <div class="mb-10">
+        <p class="text-sm font-semibold uppercase tracking-widest text-muted">Legal</p>
+        <h1 class="mt-3 text-3xl font-semibold tracking-tight text-ink" style="letter-spacing:-0.03em">使用條款與軟體限制說明</h1>
+        <p class="mt-2 text-sm text-muted">PurrPoint｜Finley Catnip Labs 芬利貓草創意　最後更新：2026 年 5 月</p>
+      </div>
+
+      <hr class="section-divider" />
+
+      <div class="prose mt-10">
+
+        <h2>一、授權範圍</h2>
+        <p>購買 PurrPoint 創始會員永久版後，你取得：</p>
+        <ul>
+          <li>個人單機使用授權（非商業大量轉授權）</li>
+          <li>終身核心轉換功能使用權</li>
+          <li>基礎維護更新（不含重大版本升級）</li>
+        </ul>
+        <p>本軟體<strong>不得</strong>：再轉售、再授權給第三方、用於未經授權的 PDF 文件。</p>
+
+        <hr class="section-divider" style="margin-top:2rem;margin-bottom:2rem" />
+
+        <h2>二、支援的 PDF 類型</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>類型</th>
+              <th>支援程度</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>掃描型 PDF（圖片文字）</td>
+              <td>✅ 核心功能，透過 Apple Vision OCR 還原</td>
+            </tr>
+            <tr>
+              <td>數位原生 PDF</td>
+              <td>✅ 支援，速度與準確度更高</td>
+            </tr>
+            <tr>
+              <td>含加密保護的 PDF</td>
+              <td>❌ 不支援</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr class="section-divider" style="margin-top:2rem;margin-bottom:2rem" />
+
+        <h2>三、目前已知限制</h2>
+        <p>購買前請確認以下限制是否符合你的使用需求。建議先完整使用 14 天試用版再決定購買。</p>
+
+        <h3>3.1 語言支援</h3>
+        <ul>
+          <li><strong>主要優化</strong>：繁體中文、英文</li>
+          <li><strong>部分支援</strong>：簡體中文、日文等其他語系（準確度較低）</li>
+          <li>若文件以非優化語系為主，建議先用試用版測試</li>
+        </ul>
+
+        <h3>3.2 圖表（長條圖、圓餅圖等）</h3>
+        <ul>
+          <li>圖表以<strong>圖片形式</strong>保留在輸出的 PPTX 中，位置與原始 PDF 對應</li>
+          <li><strong>無法點入修改圖表數據</strong></li>
+          <li>圖表的文字標籤（標題、說明文字）可正常編輯</li>
+          <li>如需修改圖表數字，建議在 PowerPoint 重新製作</li>
+        </ul>
+
+        <h3>3.3 項目符號與清單</h3>
+        <ul>
+          <li>文字內容<strong>完整保留</strong></li>
+          <li>輸出為文字方塊，<strong>非 PowerPoint 原生清單排版</strong></li>
+          <li>黑點（•）、數字（1. 2. 3.）為文字的一部分，無法一鍵套用清單樣式</li>
+          <li>如需更改符號格式，需手動調整</li>
+        </ul>
+
+        <h3>3.4 字體</h3>
+        <ul>
+          <li>OCR 辨識只還原文字內容與座標，<strong>無法識別原始字體</strong></li>
+          <li>輸出統一使用 macOS 系統字體</li>
+          <li>若原 PDF 使用特殊窄體字，同樣文字在系統字體下可能較寬，部分文字方塊需手動微調寬度</li>
+        </ul>
+
+        <h3>3.5 平台</h3>
+        <ul>
+          <li>目前<strong>僅支援 macOS</strong>（Apple Vision Framework 限定）</li>
+          <li>Windows 版本評估中，尚無確定時程</li>
+        </ul>
+
+        <h3>3.6 試用限制</h3>
+        <ul>
+          <li>免費試用版：每次轉換上限 <strong>10 頁</strong></li>
+          <li>正式版（購買後）：無頁數限制</li>
+        </ul>
+
+        <hr class="section-divider" style="margin-top:2rem;margin-bottom:2rem" />
+
+        <h2>四、安裝說明：Gatekeeper 警告</h2>
+        <p>由於 PurrPoint 目前尚未申請 Apple 開發者憑證，首次開啟時 macOS 會顯示「無法驗證開發者」警告。</p>
+        <p><strong>解決方法：</strong></p>
+        <ol style="list-style:decimal;padding-left:1.5rem;margin-bottom:1rem;color:#5b6472;">
+          <li style="margin-bottom:0.25rem">在 Finder 找到 PurrPoint.app</li>
+          <li style="margin-bottom:0.25rem">按住 Control 鍵（或右鍵）點選 → 選「打開」</li>
+          <li style="margin-bottom:0.25rem">在彈出視窗再選「打開」</li>
+          <li style="margin-bottom:0.25rem">之後正常雙擊即可開啟，不會再出現警告</li>
+        </ol>
+        <p>軟體完全本機運作，無網路存取，無法讀取你電腦上的其他檔案。</p>
+
+        <hr class="section-divider" style="margin-top:2rem;margin-bottom:2rem" />
+
+        <h2>五、退款政策</h2>
+        <p>我們提供 <strong>14 天完整版免費試用</strong>，建議先充分測試再購買。</p>
+        <p>由於數位商品的特殊性，<strong>購買後原則上不提供退款</strong>。如有特殊情況，請在購買後 7 日內聯絡我們說明，我們將個案評估處理。</p>
+
+        <hr class="section-divider" style="margin-top:2rem;margin-bottom:2rem" />
+
+        <h2>六、免責聲明</h2>
+        <p>PurrPoint 為 PDF 格式轉換工具，協助使用者處理其合法持有之文件。使用者須自行確認對所轉換之檔案具有合法使用或修改權限。本軟體不鼓勵任何著作權侵害行為。</p>
+        <p>轉換結果的準確度因 PDF 品質、掃描解析度及內容複雜度而異。Finley Catnip Labs 不對轉換結果的完整性或準確性承擔法律責任。</p>
+
+        <hr class="section-divider" style="margin-top:2rem;margin-bottom:2rem" />
+
+        <h2>七、聯絡方式</h2>
+        <p>
+          <strong>Finley Catnip Labs 芬利貓草創意</strong><br>
+          Email：<a href="mailto:finleycatniplabs@gmail.com">finleycatniplabs@gmail.com</a>
+        </p>
+
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-line bg-cloud px-6 py-10 text-center text-sm text-muted">
+      <p>© 2026 Finley Catnip Labs 芬利貓草創意</p>
+      <div class="mt-3 flex justify-center gap-6">
+        <a href="index.html#about" class="hover:text-ink transition-colors">關於我們</a>
+        <a href="privacy.html" class="hover:text-ink transition-colors">隱私政策</a>
+        <a href="terms.html" class="hover:text-ink transition-colors font-semibold text-ink">使用條款</a>
+      </div>
+    </footer>
+
+  </body>
+</html>
