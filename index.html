@@ -164,20 +164,20 @@
           <span>PurrPoint</span>
         </a>
         <div class="hidden items-center gap-6 type-body font-medium text-muted lg:flex">
-          <a class="transition hover:text-ink" href="#pain">痛點</a>
-          <a class="transition hover:text-ink" href="#audience">對象</a>
-          <a class="transition hover:text-ink" href="#workflow">流程</a>
-          <a class="transition hover:text-ink" href="#value">特色</a>
-          <a class="transition hover:text-ink" href="#pricing">價格</a>
-          <a class="transition hover:text-ink" href="#faq">FAQ</a>
-          <a class="transition hover:text-ink" href="#about">關於</a>
+          <a class="transition hover:text-ink" href="#pain" data-i18n="nav.pain">痛點</a>
+          <a class="transition hover:text-ink" href="#audience" data-i18n="nav.audience">對象</a>
+          <a class="transition hover:text-ink" href="#workflow" data-i18n="nav.workflow">流程</a>
+          <a class="transition hover:text-ink" href="#value" data-i18n="nav.value">特色</a>
+          <a class="transition hover:text-ink" href="#pricing" data-i18n="nav.pricing">價格</a>
+          <a class="transition hover:text-ink" href="#faq" data-i18n="nav.faq">FAQ</a>
+          <a class="transition hover:text-ink" href="#about" data-i18n="nav.about">關於</a>
         </div>
         <div class="flex items-center gap-3">
-          <a href="#waitlist" class="hidden rounded-full bg-ink px-5 py-2.5 type-body font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-navy sm:inline-flex">
+          <a href="#waitlist" class="hidden rounded-full bg-ink px-5 py-2.5 type-body font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-navy sm:inline-flex" data-i18n="nav.cta">
             成為創始會員
           </a>
           <!-- 漢堡按鈕，lg 以上隱藏 -->
-          <button id="mobile-menu-btn" class="lg:hidden flex h-10 w-10 items-center justify-center rounded-xl border border-line text-ink transition hover:bg-cloud" aria-label="開啟選單" aria-expanded="false" aria-controls="mobile-menu">
+          <button id="mobile-menu-btn" class="lg:hidden flex h-10 w-10 items-center justify-center rounded-xl border border-line text-ink transition hover:bg-cloud" aria-label="開啟選單" data-i18n-aria="nav.menu_aria" aria-expanded="false" aria-controls="mobile-menu">
             <svg id="menu-icon-open" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
             <svg id="menu-icon-close" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
           </button>
@@ -186,14 +186,14 @@
       <!-- 手機展開選單 -->
       <div id="mobile-menu" class="hidden border-t border-line bg-white/95 backdrop-blur-xl lg:hidden">
         <div class="mx-auto max-w-5xl px-6 py-4 flex flex-col gap-1">
-          <a href="#pain"     class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">痛點</a>
-          <a href="#audience" class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">對象</a>
-          <a href="#workflow" class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">流程</a>
-          <a href="#value"    class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">特色</a>
-          <a href="#pricing"  class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">價格</a>
-          <a href="#faq"      class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">FAQ</a>
-          <a href="#about"    class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud">關於</a>
-          <a href="#waitlist" class="mobile-nav-link mt-2 rounded-xl bg-ink px-4 py-3 text-center font-semibold text-white transition hover:bg-navy">成為創始會員</a>
+          <a href="#pain"     class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud" data-i18n="nav.pain">痛點</a>
+          <a href="#audience" class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud" data-i18n="nav.audience">對象</a>
+          <a href="#workflow" class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud" data-i18n="nav.workflow">流程</a>
+          <a href="#value"    class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud" data-i18n="nav.value">特色</a>
+          <a href="#pricing"  class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud" data-i18n="nav.pricing">價格</a>
+          <a href="#faq"      class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud" data-i18n="nav.faq">FAQ</a>
+          <a href="#about"    class="mobile-nav-link rounded-xl px-4 py-3 font-medium text-ink transition hover:bg-cloud" data-i18n="nav.about">關於</a>
+          <a href="#waitlist" class="mobile-nav-link mt-2 rounded-xl bg-ink px-4 py-3 text-center font-semibold text-white transition hover:bg-navy" data-i18n="nav.cta">成為創始會員</a>
         </div>
       </div>
     </header>
@@ -207,57 +207,57 @@
           <div class="flex flex-wrap items-center gap-2 lg:col-span-2">
             <div class="inline-flex items-center gap-2 rounded-full border border-line bg-white px-3 py-1.5 text-sm font-medium text-muted shadow-sm">
               <span class="h-2 w-2 rounded-full bg-emerald-500"></span>
-              專為 Mac 用戶打造的 PDF 轉 PPTX 編輯工具
+              <span data-i18n="hero.badge_main">專為 Mac 用戶打造的 PDF 轉 PPTX 編輯工具</span>
             </div>
-            <span class="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted shadow-sm">本機離線處理</span>
-            <span class="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted shadow-sm">繁中排版優化</span>
-            <span class="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted shadow-sm">文字方塊可編輯</span>
+            <span class="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted shadow-sm" data-i18n="hero.badge_offline">本機離線處理</span>
+            <span class="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted shadow-sm" data-i18n="hero.badge_cjk">繁中排版優化</span>
+            <span class="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted shadow-sm" data-i18n="hero.badge_editable">文字方塊可編輯</span>
           </div>
           <!-- title: full width -->
           <h1 class="mt-5 lg:col-span-2 type-display font-semibold text-ink">
-            <span class="block">PDF 能選字，卻還是改不了？</span>
-            <span class="block text-muted">本機離線，完整還原每個文字方塊</span>
+            <span class="block" data-i18n="hero.h1_line1">PDF 能選字，卻還是改不了？</span>
+            <span class="block text-muted" data-i18n="hero.h1_line2">30 秒轉好，每個字直接改，不用重排版</span>
           </h1>
           <!-- left: desc + form -->
           <div class="mt-6">
             <div class="flex items-center gap-4 mb-5">
               <div class="text-center">
                 <p class="text-3xl font-semibold tracking-tight text-muted line-through decoration-red-400">2.5 <span class="text-xl">小時</span></p>
-                <p class="mt-0.5 text-base font-medium text-muted">手動重排版</p>
+                <p class="mt-0.5 text-base font-medium text-muted" data-i18n="hero.before_sub">手動重排版</p>
               </div>
               <div class="text-muted text-xl">→</div>
               <div class="text-center">
                 <p class="text-3xl font-semibold tracking-tight text-emerald-600">30 <span class="text-xl">秒</span></p>
-                <p class="mt-0.5 text-base font-medium text-muted">用 PurrPoint</p>
+                <p class="mt-0.5 text-base font-medium text-muted" data-i18n="hero.after_sub">用 PurrPoint</p>
               </div>
             </div>
             <form id="waitlist" class="mt-5 w-full max-w-xl rounded-2xl border border-line bg-white p-3 shadow-card" action="https://script.google.com/macros/s/AKfycbxu7B59EcfAlwYmgAk-EtScACoPCZC15hgs8mQdZJiuaCX1N2t3D7s9LiD9jCMDDKIhQg/exec" method="post" target="form-hidden-iframe">
               <div class="hidden"><input name="website" type="text" tabindex="-1" autocomplete="off"></div>
               <div class="flex flex-col gap-2 sm:flex-row">
                 <label class="sr-only" for="hero-email">Email</label>
-                <input id="hero-email" name="email" type="email" required placeholder="輸入 Email" class="min-h-12 flex-1 rounded-xl border border-transparent px-4 type-body outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-4 focus:ring-slate-100"/>
-                <button type="submit" class="min-h-12 rounded-xl bg-ink px-5 type-body font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy focus:outline-none focus:ring-4 focus:ring-slate-300">成為創始會員</button>
+                <input id="hero-email" name="email" type="email" required placeholder="輸入 Email" data-i18n-placeholder="hero.form_placeholder" class="min-h-12 flex-1 rounded-xl border border-transparent px-4 type-body outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-4 focus:ring-slate-100"/>
+                <button type="submit" class="min-h-12 rounded-xl bg-ink px-5 type-body font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy focus:outline-none focus:ring-4 focus:ring-slate-300" data-i18n="hero.form_cta">成為創始會員</button>
               </div>
               <div class="mt-3 flex flex-wrap gap-2 px-1">
                 <label class="platform-toggle cursor-pointer select-none">
                   <input type="checkbox" name="mac" value="true" checked class="sr-only">
                   <span class="flex items-center gap-2.5 rounded-xl border-2 border-line bg-white px-4 py-2 text-base text-muted transition">
                     <span class="platform-check"></span>
-                    Mac 用戶
+                    <span data-i18n="hero.mac_label">Mac 用戶</span>
                   </span>
                 </label>
                 <label class="platform-toggle cursor-pointer select-none">
                   <input type="checkbox" name="windows" value="true" class="sr-only">
                   <span class="flex items-center gap-2.5 rounded-xl border-2 border-line bg-white px-4 py-2 text-base text-muted transition">
                     <span class="platform-check"></span>
-                    Windows 用戶 <span class="text-sm opacity-50">上線通知</span>
+                    <span data-i18n="hero.windows_label">Windows 用戶</span> <span class="text-sm opacity-50" data-i18n="hero.windows_note">上線通知</span>
                   </span>
                 </label>
               </div>
-              <div id="waitlist-success" class="mt-3 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700">✅ 登記成功！請查收你的 Email。</div>
+              <div id="waitlist-success" class="mt-3 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700" data-i18n="hero.form_success">✅ 登記成功！請查收你的 Email。</div>
             </form>
             <iframe name="form-hidden-iframe" style="display:none" title="form"></iframe>
-            <p class="mt-3 text-base text-muted">10 頁試用 + 14 天完整版體驗 · 前 100 名填問卷者享 NT$500 折扣 · 不發垃圾郵件</p>
+            <p class="mt-3 text-base text-muted" data-i18n="hero.footnote">10 頁試用 + 14 天完整版體驗 · 前 100 名填問卷者享 NT$500 折扣 · 不發垃圾郵件</p>
           </div>
 
           <div class="hero-visual-placeholder reveal relative mt-6 min-h-[300px] overflow-hidden rounded-[2rem] border border-white/80 p-5 shadow-soft sm:min-h-[380px]" style="transition-delay:0.2s">
@@ -306,7 +306,7 @@
                   </div>
                 </div>
               </div>
-              <p class="mt-5 text-center type-body leading-6 text-slate-300">← 試用後的真實轉換效果</p>
+              <p class="mt-5 text-center type-body leading-6 text-slate-300" data-i18n="hero.preview_caption">← 概念示意，上線後更新為真實截圖</p>
             </div>
           </div>
         </div>
@@ -316,25 +316,25 @@
       <section id="pain" class="scroll-mt-24 px-6 py-20 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
         <div class="mx-auto w-full max-w-5xl">
         <div>
-          <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Pain Points</p>
-          <h2 class="mt-3 type-heading font-semibold text-ink">每次遇到這些狀況，都在無意義地浪費下班時間？</h2>
+          <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted" data-i18n="pain.eyebrow">Pain Points</p>
+          <h2 class="mt-3 type-heading font-semibold text-ink" data-i18n="pain.h2">每次遇到這些狀況，都在無意義地浪費下班時間？</h2>
         </div>
         <div class="reveal mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5 lg:p-6">
-          <p class="text-base font-semibold uppercase tracking-[0.18em] text-amber-700">先確認一件事</p>
-          <h3 class="mt-2 type-title font-semibold text-ink">你的 PDF 能選字，不代表轉出來可以改</h3>
+          <p class="text-base font-semibold uppercase tracking-[0.18em] text-amber-700" data-i18n="pain.card_eyebrow">先確認一件事</p>
+          <h3 class="mt-2 type-title font-semibold text-ink" data-i18n="pain.card_h3">你的 PDF 能選字，不代表轉出來可以改</h3>
           <div class="mt-4 grid gap-3 sm:grid-cols-2">
             <div class="rounded-xl border border-slate-200 bg-white px-4 py-3 flex items-center gap-3">
               <span class="text-lg">✅</span>
               <div>
-                <p class="font-semibold text-ink">數位 PDF</p>
-                <p class="text-muted">轉出後文字可直接編輯</p>
+                <p class="font-semibold text-ink" data-i18n="pain.digital_title">數位 PDF</p>
+                <p class="text-muted" data-i18n="pain.digital_desc">轉出後文字可直接編輯</p>
               </div>
             </div>
             <div class="rounded-xl border border-red-200 bg-white px-4 py-3 flex items-center gap-3">
               <span class="text-lg">❌</span>
               <div>
-                <p class="font-semibold text-ink">掃描型 PDF</p>
-                <p class="text-muted">文字是圖片，macOS 自動 OCR 讓它看起來能選，轉出後還是壞的</p>
+                <p class="font-semibold text-ink" data-i18n="pain.scan_title">掃描型 PDF</p>
+                <p class="text-muted" data-i18n="pain.scan_desc">文字是圖片，macOS 自動 OCR 讓它看起來能選，轉出後還是壞的</p>
               </div>
             </div>
           </div>
@@ -353,8 +353,8 @@
                 <path d="M27 27 L37 37 M37 27 L27 37" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
               </svg>
               <div>
-                <h3 class="type-title font-semibold">貼進去，排版就毀了</h3>
-                <p class="mt-1 text-muted">換行、縮排、字體全跑掉，要一格一格手動對齊</p>
+                <h3 class="type-title font-semibold" data-i18n="pain.p1_title">貼進去，排版就毀了</h3>
+                <p class="mt-2 leading-7 text-muted" data-i18n="pain.p1_desc">截圖、貼上、對齊、調字體——改一份 15 頁簡報，輕鬆花掉整個下午。</p>
               </div>
             </div>
           </article>
@@ -368,8 +368,8 @@
                 <rect x="21" y="33" width="2" height="3.5" rx="1" fill="white"/>
               </svg>
               <div>
-                <h3 class="type-title font-semibold">機密文件不敢上傳</h3>
-                <p class="mt-1 text-muted">免費線上工具把你的 PDF 送上境外伺服器，一旦上傳就不受控制</p>
+                <h3 class="type-title font-semibold" data-i18n="pain.p2_title">AI 簡報不敢上傳</h3>
+                <p class="mt-2 leading-7 text-muted" data-i18n="pain.p2_desc">AI 生成的簡報含有你的工作資料。傳到陌生工具，你不知道它存了什麼、傳去哪裡。</p>
               </div>
             </div>
           </article>
@@ -381,33 +381,32 @@
       <section id="audience" class="mx-auto max-w-5xl scroll-mt-24 px-6 py-20 lg:min-h-[85vh] lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
         <div class="grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:items-center">
           <div>
-            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Audience</p>
-            <h2 class="mt-4 type-heading font-semibold text-ink">最適合誰來使用？</h2>
+            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted" data-i18n="audience.eyebrow">Audience</p>
+            <h2 class="mt-4 type-heading font-semibold text-ink" data-i18n="audience.h2">最適合誰來使用？</h2>
           </div>
           <div class="grid gap-0 border-t border-line">
             <article class="flex gap-6 border-b border-line py-8">
               <div class="shrink-0 type-title font-semibold text-muted">01</div>
               <div>
-                <p class="type-body font-semibold text-muted">還在截圖底圖做報告？</p>
-                <h3 class="mt-2 type-title font-semibold">管理顧問 / 分析師</h3>
-                <p class="mt-3 leading-7 text-muted">→ 把外部 PDF 報告直接轉成可編輯簡報，不用重排版，直接改數字交差。</p>
+                <p class="type-body font-semibold text-muted" data-i18n="audience.i1_hook">自己做的 PDF 分析，還要重新貼進簡報？</p>
+                <h3 class="mt-2 type-title font-semibold" data-i18n="audience.i1_title">顧問 / 分析師</h3>
+                <p class="mt-3 leading-7 text-muted" data-i18n="audience.i1_scenario">→ 把整理好的 PDF 報告直接轉成可編輯投影片，改數字、調架構，不用重排版。</p>
               </div>
             </article>
             <article class="flex gap-6 border-b border-line py-8">
               <div class="shrink-0 type-title font-semibold text-muted">02</div>
               <div>
-                <p class="type-body font-semibold text-muted">合約掃描，表格一轉就亂掉？</p>
-                <h3 class="mt-2 type-title font-semibold">行政助理 / 法務</h3>
-                <p class="mt-3 leading-7 text-muted">→ 掃描版合約原位還原成文字方塊，修約對照從重打排版變成直接微調。</p>
+                <p class="type-body font-semibold text-muted" data-i18n="audience.i2_hook">每次微調課程投影片都要重做整份？</p>
+                <h3 class="mt-2 type-title font-semibold" data-i18n="audience.i2_title">講師 / 課程設計師</h3>
+                <p class="mt-3 leading-7 text-muted" data-i18n="audience.i2_scenario">→ AI 產出的課程 PDF 轉成可編輯 PPTX，加說明、換錯字，不用從頭來。</p>
               </div>
             </article>
             <article class="flex gap-6 border-b border-line py-8">
               <div class="shrink-0 type-title font-semibold text-muted">03</div>
               <div>
-                <p class="type-body font-semibold text-muted">AI 生成的講義或報告，改不了一個字？</p>
-                <h3 class="mt-2 type-title font-semibold">教師 / 學生</h3>
-                <p class="mt-3 type-body text-muted">用 AI 產出課堂講義或學期報告，想微調內容卻完全無法編輯。</p>
-                <p class="mt-3 leading-7 text-muted">→ AI 輸出的投影片看起來能改，其實文字是圖片。PurrPoint 原位還原，改一個字不用五秒。</p>
+                <p class="type-body font-semibold text-muted" data-i18n="audience.i3_hook">NotebookLM 生成的投影片，改不了一個字？</p>
+                <h3 class="mt-2 type-title font-semibold" data-i18n="audience.i3_title">學生 / 研究者</h3>
+                <p class="mt-3 leading-7 text-muted" data-i18n="audience.i3_scenario">→ AI 輸出的投影片看起來能選字，其實是圖片。PurrPoint 原位還原，改一個字不用五秒。</p>
               </div>
             </article>
           </div>
@@ -418,17 +417,17 @@
       <section id="workflow" class="bg-cloud scroll-mt-24 py-20 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:py-0">
         <div class="mx-auto max-w-5xl px-6 lg:px-8">
           <div>
-            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Workflow</p>
-            <h2 class="mt-3 type-heading font-semibold text-ink">簡單三步驟，解放你的生產力</h2>
+            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted" data-i18n="workflow.eyebrow">Workflow</p>
+            <h2 class="mt-3 type-heading font-semibold text-ink" data-i18n="workflow.h2">簡單三步驟，解放你的生產力</h2>
           </div>
           <div class="mt-8 grid rounded-2xl border border-line bg-white sm:grid-cols-2 sm:divide-x sm:divide-line">
             <div class="p-8">
-              <p class="type-body font-semibold uppercase tracking-wider text-slate-400">以前</p>
-              <p class="mt-4 type-body leading-8 text-muted">PDF → 截圖 → 貼進 PPT → 手動對齊 → 調字體 → 修格式 → 一個下午沒了</p>
+              <p class="type-body font-semibold uppercase tracking-wider text-slate-400" data-i18n="workflow.before_label">以前</p>
+              <p class="mt-4 type-body leading-8 text-muted" data-i18n="workflow.before_text">PDF → 截圖 → 貼進 PPT → 手動對齊 → 調字體 → 修格式 → 一個下午沒了</p>
             </div>
             <div class="p-8">
-              <p class="type-body font-semibold uppercase tracking-wider text-emerald-600">現在</p>
-              <p class="mt-4 type-body leading-8 text-muted">拖進去 → 等 30 秒 → 每個字都可以直接改</p>
+              <p class="type-body font-semibold uppercase tracking-wider text-emerald-600" data-i18n="workflow.after_label">現在</p>
+              <p class="mt-4 type-body leading-8 text-muted" data-i18n="workflow.after_text">拖進去 → 等 30 秒 → 每個字都可以直接改</p>
             </div>
           </div>
           <div class="mt-10 grid gap-5 lg:grid-cols-3">
@@ -444,9 +443,9 @@
                 </svg>
                 <span class="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-ink text-xs font-bold text-white">1</span>
               </div>
-              <p class="text-base font-semibold uppercase tracking-widest text-muted">Step 1</p>
-              <h3 class="mt-3 type-title font-semibold">匯入檔案</h3>
-              <p class="mt-3 type-body text-muted">拖曳 PDF 進軟體，支援批次多頁。</p>
+              <p class="text-base font-semibold uppercase tracking-widest text-muted" data-i18n="workflow.step1_label">Step 1</p>
+              <h3 class="mt-3 type-title font-semibold" data-i18n="workflow.step1_title">匯入檔案</h3>
+              <p class="mt-3 type-body text-muted" data-i18n="workflow.step1_desc">拖曳 PDF 進軟體，支援批次多頁。</p>
             </div>
             <!-- Step 2 -->
             <div class="reveal flex flex-col items-center rounded-2xl border border-line bg-white p-8 text-center" style="transition-delay:0.12s">
@@ -464,9 +463,9 @@
                 </svg>
                 <span class="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-ink text-xs font-bold text-white">2</span>
               </div>
-              <p class="text-base font-semibold uppercase tracking-widest text-muted">Step 2</p>
-              <h3 class="mt-3 type-title font-semibold">精準解析</h3>
-              <p class="mt-3 type-body text-muted">Apple Vision OCR 識別，文字座標原位還原。</p>
+              <p class="text-base font-semibold uppercase tracking-widest text-muted" data-i18n="workflow.step2_label">Step 2</p>
+              <h3 class="mt-3 type-title font-semibold" data-i18n="workflow.step2_title">精準解析</h3>
+              <p class="mt-3 type-body text-muted" data-i18n="workflow.step2_desc">Apple Vision OCR 識別，文字座標原位還原。</p>
             </div>
             <!-- Step 3 -->
             <div class="reveal flex flex-col items-center rounded-2xl border border-line bg-white p-8 text-center" style="transition-delay:0.24s">
@@ -481,9 +480,9 @@
                 </svg>
                 <span class="absolute -right-2 -top-2 flex h-6 w-6 items-center justify-center rounded-full bg-ink text-xs font-bold text-white">3</span>
               </div>
-              <p class="text-base font-semibold uppercase tracking-widest text-muted">Step 3</p>
-              <h3 class="mt-3 type-title font-semibold">完美輸出</h3>
-              <p class="mt-3 type-body text-muted">輸出可完整編輯的 .pptx，排版原位對齊。</p>
+              <p class="text-base font-semibold uppercase tracking-widest text-muted" data-i18n="workflow.step3_label">Step 3</p>
+              <h3 class="mt-3 type-title font-semibold" data-i18n="workflow.step3_title">完美輸出</h3>
+              <p class="mt-3 type-body text-muted" data-i18n="workflow.step3_desc">輸出可完整編輯的 .pptx，排版原位對齊。</p>
             </div>
           </div>
         </div>
@@ -494,25 +493,23 @@
         <div class="border-y border-line py-10">
           <div class="grid gap-12 lg:grid-cols-[0.9fr_1fr] lg:items-center">
             <div>
-              <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Features</p>
-              <h2 class="mt-4 type-heading font-semibold text-ink">專為嚴謹工作流程打造</h2>
+              <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted" data-i18n="features.eyebrow">Features</p>
+              <h2 class="mt-4 type-heading font-semibold text-ink" data-i18n="features.h2">專為嚴謹工作流程打造</h2>
             </div>
             <div class="divide-y divide-line border-t border-line">
               <article class="reveal py-6">
-                <h3 class="type-title font-semibold">100% 本機離線運作</h3>
-                <p class="mt-3 leading-7 text-muted">不上雲、不聯網，文件不離開你的電腦。</p>
+                <h3 class="type-title font-semibold" data-i18n="features.f1_title">100% 本機離線運作</h3>
               </article>
               <article class="reveal py-6" style="transition-delay:0.1s">
-                <h3 class="type-title font-semibold">20 頁 PDF，30 秒完成轉換</h3>
-                <p class="mt-3 leading-7 text-muted">整合 macOS 底層，本機運算，不用等待上傳。</p>
+                <h3 class="type-title font-semibold" data-i18n="features.f2_title">20 頁 PDF，30 秒完成轉換</h3>
               </article>
               <article class="reveal py-6" style="transition-delay:0.2s">
-                <h3 class="type-title font-semibold">繁體中文環境優化</h3>
-                <p class="mt-3 leading-7 text-muted">針對中文換行、標點與掃描雜訊調整，大幅降低掉字。</p>
+                <h3 class="type-title font-semibold" data-i18n="features.f3_title">繁體中文環境優化</h3>
+                <p class="mt-3 leading-7 text-muted" data-i18n="features.f3_desc">針對 AI 工具常見的中文斷行與標點問題調整，轉出後幾乎不需要手動修正。</p>
               </article>
               <article class="reveal py-6" style="transition-delay:0.3s">
-                <h3 class="type-title font-semibold">macOS 原生 Vision 技術背書</h3>
-                <p class="mt-3 leading-7 text-muted">Apple Vision 技術，文字原位還原成可編輯方塊，精準不跑位。</p>
+                <h3 class="type-title font-semibold" data-i18n="features.f4_title">macOS 原生 Vision 技術背書</h3>
+                <p class="mt-3 leading-7 text-muted" data-i18n="features.f4_desc">Apple Vision 技術，文字原位還原成可編輯方塊，精準不跑位。</p>
               </article>
             </div>
           </div>
@@ -523,37 +520,37 @@
       <section id="pricing" class="bg-cloud scroll-mt-24 px-6 py-16 lg:min-h-screen lg:flex lg:flex-col lg:justify-center lg:px-8 lg:py-0">
         <div class="mx-auto w-full max-w-5xl">
           <div>
-            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">Pricing</p>
-            <h2 class="mt-3 type-heading font-semibold text-ink">別再為檔案格式付一輩子的稅</h2>
+            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted" data-i18n="pricing.eyebrow">Pricing</p>
+            <h2 class="mt-3 type-heading font-semibold text-ink" data-i18n="pricing.h2">別再為檔案格式付一輩子的稅</h2>
           </div>
 
           <!-- 手機版：條列卡片 -->
           <div class="reveal mt-12 block lg:hidden overflow-hidden rounded-[2rem] border border-line bg-white shadow-soft">
             <div class="bg-ink px-6 py-5">
-              <p class="type-body font-semibold text-white">PurrPoint 贏在哪裡</p>
-              <p class="mt-1 text-base text-slate-400">對比免費工具與 Adobe / ABBYY</p>
+              <p class="type-body font-semibold text-white" data-i18n="pricing.mobile_title">PurrPoint 贏在哪裡</p>
+              <p class="mt-1 text-base text-slate-400" data-i18n="pricing.mobile_sub">對比免費工具與 Adobe / ABBYY</p>
             </div>
             <ul class="divide-y divide-line px-6">
               <li class="py-6">
                 <div class="flex items-start gap-3">
-                  <span class="mt-0.5 shrink-0 rounded bg-ink px-2 py-0.5 text-xs font-semibold text-white">核心差異</span>
+                  <span class="mt-0.5 shrink-0 rounded bg-ink px-2 py-0.5 text-xs font-semibold text-white" data-i18n="pricing.table_core_badge">核心差異</span>
                   <div>
-                    <p class="type-body font-semibold text-ink">唯一支援掃描型 PDF</p>
-                    <p class="mt-1 text-base text-muted">免費工具與 Adobe 幾乎無法處理圖片文字，PurrPoint 透過 OCR 原位還原每個字</p>
+                    <p class="type-body font-semibold text-ink" data-i18n="pricing.mobile_core_title">唯一支援掃描型 PDF</p>
+                    <p class="mt-1 text-base text-muted" data-i18n="pricing.mobile_core_desc">免費工具與 Adobe 幾乎無法處理圖片文字，PurrPoint 透過 OCR 原位還原每個字</p>
                   </div>
                 </div>
               </li>
               <li class="py-6">
-                <p class="type-body font-semibold text-ink">✅ NT$0 月費，一次買斷</p>
-                <p class="mt-1 text-base text-muted">大廠訂閱每月 NT$450–900，三年超過 NT$16,000。PurrPoint NT$2,990 一次付清</p>
+                <p class="type-body font-semibold text-ink" data-i18n="pricing.mobile_price_title">✅ NT$0 月費，一次買斷</p>
+                <p class="mt-1 text-base text-muted" data-i18n="pricing.mobile_price_desc">大廠訂閱每月 NT$450–900，三年超過 NT$16,000。PurrPoint NT$2,990 一次付清</p>
               </li>
               <li class="py-6">
-                <p class="type-body font-semibold text-ink">✅ 100% 本機離線，不上雲</p>
-                <p class="mt-1 text-base text-muted">免費工具與 Adobe 都需上傳雲端，機密文件一旦上傳就不受控制</p>
+                <p class="type-body font-semibold text-ink" data-i18n="pricing.mobile_offline_title">✅ 100% 本機離線，不上雲</p>
+                <p class="mt-1 text-base text-muted" data-i18n="pricing.mobile_offline_desc">免費工具與 Adobe 都需上傳雲端，機密文件一旦上傳就不受控制</p>
               </li>
               <li class="py-6">
-                <p class="type-body font-semibold text-ink">✅ 終身授權，永久可用</p>
-                <p class="mt-1 text-base text-muted">訂閱制停止付費即失去使用權，PurrPoint 一次買斷，基礎功能永遠有效</p>
+                <p class="type-body font-semibold text-ink" data-i18n="pricing.mobile_lifetime_title">✅ 終身授權，永久可用</p>
+                <p class="mt-1 text-base text-muted" data-i18n="pricing.mobile_lifetime_desc">訂閱制停止付費即失去使用權，PurrPoint 一次買斷，基礎功能永遠有效</p>
               </li>
             </ul>
           </div>
@@ -562,44 +559,44 @@
           <div class="reveal mt-12 hidden lg:block overflow-hidden rounded-[2rem] border border-line bg-white shadow-soft">
             <!-- Header -->
             <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line bg-ink font-semibold text-white">
-              <div class="p-4">功能 / 服務</div>
-              <div class="border-l border-white/10 p-4 text-slate-400">免費線上工具</div>
-              <div class="border-l border-white/10 p-4 text-slate-300">傳統大廠 Adobe / ABBYY</div>
-              <div class="border-l border-white/10 bg-white/10 p-4">PurrPoint 終身版</div>
+              <div class="p-4" data-i18n="pricing.table_col_feature">功能 / 服務</div>
+              <div class="border-l border-white/10 p-4 text-slate-400" data-i18n="pricing.table_col_free">免費線上工具</div>
+              <div class="border-l border-white/10 p-4 text-slate-300" data-i18n="pricing.table_col_adobe">傳統大廠 Adobe / ABBYY</div>
+              <div class="border-l border-white/10 bg-white/10 p-4" data-i18n="pricing.table_col_purr">PurrPoint 終身版</div>
             </div>
             <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line">
-              <div class="p-4 pl-5 font-semibold text-ink">每月費用</div>
-              <div class="border-l border-line p-4 text-emerald-600">✅ NT$ 0</div>
-              <div class="border-l border-line p-4 text-rose-600">❌ NT$ 450–900 / 月</div>
-              <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700">✅ NT$ 0，一次付清</div>
+              <div class="p-4 pl-5 font-semibold text-ink" data-i18n="pricing.table_row1">每月費用</div>
+              <div class="border-l border-line p-4 text-emerald-600" data-i18n="pricing.table_free_r1">✅ NT$ 0</div>
+              <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_adobe_r1">❌ NT$ 450–900 / 月</div>
+              <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700" data-i18n="pricing.table_purr_r1">✅ NT$ 0，一次付清</div>
             </div>
             <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line">
-              <div class="p-4 pl-5 font-semibold text-ink">三年累計花費</div>
-              <div class="border-l border-line p-4 text-amber-600">⚠️ NT$ 0（資安風險難估）</div>
-              <div class="border-l border-line p-4 text-rose-600">❌ NT$ 16,200–32,400+</div>
-              <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700">✅ NT$ 2,990（省超過 5 倍）</div>
+              <div class="p-4 pl-5 font-semibold text-ink" data-i18n="pricing.table_row2">三年累計花費</div>
+              <div class="border-l border-line p-4 text-amber-600" data-i18n="pricing.table_free_r2">⚠️ NT$ 0（資安風險難估）</div>
+              <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_adobe_r2">❌ NT$ 16,200–32,400+</div>
+              <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700" data-i18n="pricing.table_purr_r2">✅ NT$ 2,990（省超過 5 倍）</div>
             </div>
             <!-- 核心差異（高亮列） -->
             <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b-2 border-t-2 border-ink">
               <div class="flex items-center gap-2 bg-ink/5 p-4 pl-5 font-bold text-ink">
-                <span class="rounded bg-ink px-2 py-0.5 text-xs text-white">核心差異</span>
-                掃描型 PDF 支援
+                <span class="rounded bg-ink px-2 py-0.5 text-xs text-white" data-i18n="pricing.table_core_badge">核心差異</span>
+                <span data-i18n="pricing.table_row3">掃描型 PDF 支援</span>
               </div>
-              <div class="border-l border-ink/20 bg-red-50 p-4 font-semibold text-rose-600">❌ 完全無法處理</div>
-              <div class="border-l border-ink/20 bg-red-50 p-4 font-semibold text-rose-600">❌ 幾乎無法處理</div>
-              <div class="border-l border-ink/20 bg-emerald-100 p-4 font-bold text-emerald-800">✅ OCR + AI 座標映射，1:1 還原</div>
+              <div class="border-l border-ink/20 bg-red-50 p-4 font-semibold text-rose-600" data-i18n="pricing.table_free_r3">❌ 完全無法處理</div>
+              <div class="border-l border-ink/20 bg-red-50 p-4 font-semibold text-rose-600" data-i18n="pricing.table_adobe_r3">❌ 幾乎無法處理</div>
+              <div class="border-l border-ink/20 bg-emerald-100 p-4 font-bold text-emerald-800" data-i18n="pricing.table_purr_r3">✅ OCR + AI 座標映射，1:1 還原</div>
             </div>
             <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line">
-              <div class="p-4 pl-5 font-semibold text-ink">更新與維護</div>
-              <div class="border-l border-line p-4 text-amber-600">⚠️ 服務可能隨時停止</div>
-              <div class="border-l border-line p-4 text-rose-600">❌ 停止付費即失去使用權</div>
-              <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700">✅ 終身授權，永久基礎維護</div>
+              <div class="p-4 pl-5 font-semibold text-ink" data-i18n="pricing.table_row4">更新與維護</div>
+              <div class="border-l border-line p-4 text-amber-600" data-i18n="pricing.table_free_r4">⚠️ 服務可能隨時停止</div>
+              <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_adobe_r4">❌ 停止付費即失去使用權</div>
+              <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700" data-i18n="pricing.table_purr_r4">✅ 終身授權，永久基礎維護</div>
             </div>
             <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr]">
-              <div class="p-4 pl-5 font-semibold text-ink">隱私安全性</div>
-              <div class="border-l border-line p-4 text-rose-600">❌ 上傳境外雲端，風險極高</div>
-              <div class="border-l border-line p-4 text-rose-600">❌ 檔案須上傳雲端</div>
-              <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700">✅ 100% 本機離線</div>
+              <div class="p-4 pl-5 font-semibold text-ink" data-i18n="pricing.table_row5">隱私安全性</div>
+              <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_free_r5">❌ 上傳境外雲端，風險極高</div>
+              <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_adobe_r5">❌ 檔案須上傳雲端</div>
+              <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700" data-i18n="pricing.table_purr_r5">✅ 100% 本機離線</div>
             </div>
           </div>
 
@@ -609,76 +606,74 @@
             <!-- 免費體驗（緊湊橫條）-->
             <div class="reveal rounded-2xl border border-emerald-200 bg-emerald-50/40 px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <span class="rounded-full border border-emerald-200 bg-white px-3 py-1 text-sm font-semibold text-emerald-700">免費體驗・無需信用卡</span>
-                <p class="mt-3 type-body font-semibold text-ink">先試用，滿意再選方案</p>
+                <span class="rounded-full border border-emerald-200 bg-white px-3 py-1 text-sm font-semibold text-emerald-700" data-i18n="pricing.free_badge">免費體驗・無需信用卡</span>
+                <p class="mt-3 type-body font-semibold text-ink" data-i18n="pricing.free_title">先試用，滿意再選方案</p>
               </div>
               <ul class="flex flex-wrap gap-x-6 gap-y-1 text-base text-muted">
-                <li>✅ 前 10 頁完整轉換</li>
-                <li>✅ 14 天完整版開放</li>
-                <li>✅ 下載即試</li>
+                <li data-i18n="pricing.free_f1">✅ 前 10 頁完整轉換</li>
+                <li data-i18n="pricing.free_f2">✅ 14 天完整版開放</li>
+                <li data-i18n="pricing.free_f3">✅ 下載即試</li>
               </ul>
             </div>
 
             <!-- 個人三方案 -->
             <div class="grid gap-5 lg:grid-cols-[1.35fr_1fr_1fr]">
               <article class="reveal relative flex flex-col rounded-3xl border-2 border-ink bg-white p-7 shadow-soft lg:col-span-1">
-                <span class="absolute right-5 top-5 rounded-full bg-ink px-3 py-1.5 text-sm font-semibold text-white">強烈推薦</span>
-                <h3 class="mt-1 type-heading font-semibold text-ink leading-tight">創始會員<br>永久版</h3>
+                <span class="absolute right-5 top-5 rounded-full bg-ink px-3 py-1.5 text-sm font-semibold text-white" data-i18n="pricing.plan_a_badge">強烈推薦</span>
+                <h3 class="mt-1 type-heading font-semibold text-ink leading-tight" data-i18n-html="pricing.plan_a_title_html">創始會員<br>永久版</h3>
                 <div class="mt-5">
-                  <p class="type-body font-semibold text-slate-400 line-through">原價 NT$ 5,990</p>
-                  <p class="type-heading font-semibold text-ink">NT$ 2,990</p>
-                  <p class="mt-1 text-base font-semibold text-amber-700">⏰ 早鳥優惠至 6/7・結束後恢復原價</p>
-                  <p class="mt-1 text-base text-muted">月訂閱用滿 11 個月即回本，之後永遠免費</p>
+                  <p class="type-body font-semibold text-slate-400 line-through" data-i18n="pricing.plan_a_original">原價 NT$ 5,990</p>
+                  <p class="type-heading font-semibold text-ink" data-i18n="pricing.plan_a_price">NT$ 2,990</p>
+                  <p class="mt-1 text-base font-semibold text-amber-700" data-i18n="pricing.plan_a_earlybird">⏰ 早鳥優惠至 6/7・結束後恢復原價</p>
+                  <p class="mt-1 text-base text-muted" data-i18n="pricing.plan_a_payback">月訂閱用滿 11 個月即回本，之後永遠免費</p>
                   <div class="mt-3 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3">
-                    <p class="type-body font-semibold text-emerald-800">填回饋問卷？獲 NT$500 回饋金</p>
-                    <p class="mt-1 text-base text-emerald-700">以 NT$2,490 購入正式版，優於原價五折・6/7 前限 100 名</p>
+                    <p class="type-body font-semibold text-emerald-800" data-i18n="pricing.plan_a_survey_title">填回饋問卷？獲 NT$500 回饋金</p>
+                    <p class="mt-1 text-base text-emerald-700" data-i18n="pricing.plan_a_survey_desc">以 NT$2,490 購入正式版，優於原價五折・6/7 前限 100 名</p>
                   </div>
                 </div>
                 <ul class="mt-6 space-y-3 type-body text-muted">
-                  <li>✅ 永久核心文字方塊復原功能</li>
-                  <li>✅ 100% 離線，機密文件不上雲</li>
-                  <li>✅ 終身基礎維護更新</li>
-                  <li>✅ 先免費試用 14 天，滿意再買</li>
+                  <li data-i18n="pricing.plan_a_f1">✅ 永久核心文字方塊復原功能</li>
+                  <li data-i18n="pricing.plan_a_f2">✅ 100% 離線，機密文件不上雲</li>
+                  <li data-i18n="pricing.plan_a_f3">✅ 終身基礎維護更新</li>
+                  <li data-i18n="pricing.plan_a_f4">✅ 先免費試用 14 天，滿意再買</li>
                 </ul>
-                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700">
+                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700" data-i18n="pricing.plan_cta">
                   待正式上線・先登記
                 </a>
               </article>
 
               <article class="reveal relative flex flex-col rounded-3xl border border-amber-200 bg-amber-50/30 p-7" style="transition-delay:0.12s">
-                <span class="absolute right-5 top-5 rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-sm font-semibold text-amber-700">短期彈性</span>
-                <h3 class="mt-1 type-heading font-semibold text-ink">月訂閱</h3>
+                <span class="absolute right-5 top-5 rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-sm font-semibold text-amber-700" data-i18n="pricing.plan_b_badge">短期彈性</span>
+                <h3 class="mt-1 type-heading font-semibold text-ink" data-i18n="pricing.plan_b_title">月訂閱</h3>
                 <div class="mt-5">
                   <p class="type-body font-semibold text-slate-300">—</p>
-                  <p class="type-heading font-semibold text-ink">NT$ 290 <span class="text-xl font-medium text-muted">/ 月</span></p>
-                  <p class="mt-2 type-body text-muted">隨時取消，無違約金</p>
+                  <p class="type-heading font-semibold text-ink">NT$ 290 <span class="text-xl font-medium text-muted" data-i18n="pricing.plan_b_unit">/ 月</span></p>
+                  <p class="mt-2 type-body text-muted" data-i18n="pricing.plan_b_cancel">隨時取消，無違約金</p>
                 </div>
                 <ul class="mt-6 space-y-3 type-body text-muted">
-                  <li>✅ 核心轉檔功能完整開放</li>
-                  <li>✅ 適合短期或臨時大量轉檔</li>
-                  <li>✅ 低門檻入門，隨時可升級</li>
-                  <li>✅ 按月計費，彈性控制支出</li>
+                  <li data-i18n="pricing.plan_b_f1">✅ 核心轉檔功能完整開放</li>
+                  <li data-i18n="pricing.plan_b_f2">✅ 適合短期或臨時大量轉檔</li>
+                  <li data-i18n="pricing.plan_b_f3">✅ 低門檻入門，隨時可升級</li>
                 </ul>
-                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700">
+                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700" data-i18n="pricing.plan_cta">
                   待正式上線・先登記
                 </a>
               </article>
 
               <article class="reveal relative flex flex-col rounded-3xl border border-blue-200 bg-blue-50/40 p-7" style="transition-delay:0.24s">
-                <span class="absolute right-5 top-5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-700">長期省最多</span>
-                <h3 class="mt-1 type-heading font-semibold text-ink">年訂閱</h3>
+                <span class="absolute right-5 top-5 rounded-full border border-blue-200 bg-blue-50 px-3 py-1.5 text-sm font-semibold text-blue-700" data-i18n="pricing.plan_c_badge">長期省最多</span>
+                <h3 class="mt-1 type-heading font-semibold text-ink" data-i18n="pricing.plan_c_title">年訂閱</h3>
                 <div class="mt-5">
-                  <p class="type-body font-semibold text-slate-400 line-through">月繳合計 NT$ 3,480</p>
-                  <p class="type-heading font-semibold text-ink">NT$ 2,690 <span class="text-xl font-medium text-muted">/ 年</span></p>
-                  <p class="mt-2 type-body font-semibold text-blue-600">比月訂閱省 NT$ 790，約 77 折</p>
+                  <p class="type-body font-semibold text-slate-400 line-through" data-i18n="pricing.plan_c_original">月繳合計 NT$ 3,480</p>
+                  <p class="type-heading font-semibold text-ink">NT$ 2,690 <span class="text-xl font-medium text-muted" data-i18n="pricing.plan_c_unit">/ 年</span></p>
+                  <p class="mt-2 type-body font-semibold text-blue-600" data-i18n="pricing.plan_c_savings">比月訂閱省 NT$ 790，約 77 折</p>
                 </div>
                 <ul class="mt-6 space-y-3 type-body text-muted">
-                  <li>✅ 完整核心轉檔功能</li>
-                  <li>✅ 年繳一次，省去每月扣款</li>
-                  <li>✅ 長期需求的最佳彈性選擇</li>
-                  <li>✅ 隨時可升級至永久版</li>
+                  <li data-i18n="pricing.plan_c_f1">✅ 年繳一次，省去每月扣款</li>
+                  <li data-i18n="pricing.plan_c_f2">✅ 長期需求的最佳彈性選擇</li>
+                  <li data-i18n="pricing.plan_c_f3">✅ 隨時可升級至永久版</li>
                 </ul>
-                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700">
+                <a href="#waitlist" class="mt-auto pt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700" data-i18n="pricing.plan_cta">
                   待正式上線・先登記
                 </a>
               </article>
@@ -688,11 +683,11 @@
             <!-- 企業方案橫條 -->
             <div class="reveal rounded-2xl border border-slate-200 bg-white px-6 py-5 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4">
               <div>
-                <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-600">企業授權</span>
-                <p class="mt-3 type-body font-semibold text-ink">企業方案</p>
-                <p class="mt-1 text-muted">N 席多人授權・優先技術支援・價格依人數議定</p>
+                <span class="rounded-full border border-slate-200 bg-slate-50 px-3 py-1 text-sm font-semibold text-slate-600" data-i18n="pricing.enterprise_badge">企業授權</span>
+                <p class="mt-3 type-body font-semibold text-ink" data-i18n="pricing.enterprise_title">企業方案</p>
+                <p class="mt-1 text-muted" data-i18n="pricing.enterprise_desc">N 席多人授權・優先技術支援・價格依人數議定</p>
               </div>
-              <a href="mailto:finleycatniplabs@gmail.com?subject=PurrPoint%20企業授權洽詢" class="shrink-0 inline-flex items-center justify-center rounded-xl border border-slate-300 bg-slate-50 px-6 py-3 text-base font-semibold text-slate-700 transition hover:bg-slate-100">
+              <a href="mailto:finleycatniplabs@gmail.com?subject=PurrPoint%20企業授權洽詢" class="shrink-0 inline-flex items-center justify-center rounded-xl border border-slate-300 bg-slate-50 px-6 py-3 text-base font-semibold text-slate-700 transition hover:bg-slate-100" data-i18n="pricing.enterprise_cta">
                 洽詢報價
               </a>
             </div>
@@ -707,97 +702,96 @@
         <div class="mx-auto max-w-5xl">
           <div class="grid gap-12 lg:grid-cols-[0.8fr_1fr] lg:items-start">
             <div>
-              <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">FAQ</p>
-              <h2 class="mt-4 type-heading font-semibold text-ink">常見問題</h2>
-              <p class="mt-4 type-body text-muted">購買前最常被問到的事，我們都寫清楚了。</p>
-              <p class="mt-6 text-base text-muted">還有疑問？<a href="mailto:finleycatniplabs@gmail.com" class="underline underline-offset-2 hover:text-ink transition">寄信給我們</a></p>
+              <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted" data-i18n="faq.eyebrow">FAQ</p>
+              <h2 class="mt-4 type-heading font-semibold text-ink" data-i18n="faq.h2">常見問題</h2>
+              <p class="mt-6 text-base text-muted"><span data-i18n="faq.contact">還有疑問？</span><a href="mailto:finleycatniplabs@gmail.com" class="underline underline-offset-2 hover:text-ink transition" data-i18n="faq.contact_link">寄信給我們</a></p>
             </div>
           <div class="divide-y divide-line border-y border-line bg-white">
             <article class="accordion-item" data-open="true">
               <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="true">
-                <span>轉換後的文字可以自由編輯嗎？</span>
+                <span data-i18n="faq.q1">轉換後的文字可以自由編輯嗎？</span>
                 <span class="accordion-icon type-body leading-none transition">+</span>
               </button>
               <div class="accordion-panel px-6 sm:px-8">
-                <p class="pb-6 leading-7 text-muted">是的。所有文字段落都會轉換為獨立的文字方塊，位置與原始 PDF 1:1 對應，可直接在 PowerPoint 或 Keynote 中點選編輯。</p>
+                <p class="pb-6 leading-7 text-muted" data-i18n="faq.a1">是的。所有文字段落都會轉換為獨立的文字方塊，位置與原始 PDF 1:1 對應，可直接在 PowerPoint 或 Keynote 中點選編輯。</p>
               </div>
             </article>
             <article class="accordion-item" data-open="false">
               <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
-                <span>軟體需要連網才能使用嗎？</span>
+                <span data-i18n="faq.q2">軟體需要連網才能使用嗎？</span>
                 <span class="accordion-icon type-body leading-none transition">+</span>
               </button>
               <div class="accordion-panel px-6 sm:px-8">
-                <p class="pb-6 leading-7 text-muted">完全不需要。PurrPoint 採 100% 本機離線運作，所有 OCR 與轉換處理都在你的 Mac 上完成，沒有任何檔案會上傳至雲端。</p>
+                <p class="pb-6 leading-7 text-muted" data-i18n="faq.a2">完全不需要。PurrPoint 採 100% 本機離線運作，所有 OCR 與轉換處理都在你的 Mac 上完成，沒有任何檔案會上傳至雲端。</p>
               </div>
             </article>
             <article class="accordion-item" data-open="false">
               <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
-                <span>買斷後未來版本需要額外付費嗎？</span>
+                <span data-i18n="faq.q3">買斷後未來版本需要額外付費嗎？</span>
                 <span class="accordion-icon type-body leading-none transition">+</span>
               </button>
               <div class="accordion-panel px-6 sm:px-8">
-                <p class="pb-6 leading-7 text-muted">不需要。創始會員永久版包含終身基礎維護更新，核心轉換功能永久可用。若未來推出重大功能升級版本，創始會員將享有優先折扣資格。</p>
+                <p class="pb-6 leading-7 text-muted" data-i18n="faq.a3">不需要。創始會員永久版包含終身基礎維護更新，核心轉換功能永久可用。</p>
               </div>
             </article>
             <article class="accordion-item" data-open="false">
               <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
-                <span>打開時 Mac 說「無法驗證開發者」，怎麼辦？</span>
+                <span data-i18n="faq.q4">打開時 Mac 說「無法驗證開發者」，怎麼辦？</span>
                 <span class="accordion-icon type-body leading-none transition">+</span>
               </button>
               <div class="accordion-panel px-6 sm:px-8">
-                <p class="pb-6 leading-7 text-muted">這是正常現象。PurrPoint 目前尚未申請 Apple 開發者憑證，macOS Gatekeeper 會顯示此警告。解法：在 Finder 找到 PurrPoint.app，<strong class="text-ink">按右鍵 → 選「打開」</strong>，在彈出視窗再選「打開」一次即可，之後不會再出現。軟體完全本機運作，無網路存取，無法讀取你的其他檔案。</p>
+                <p class="pb-6 leading-7 text-muted" data-i18n-html="faq.a4_html">正常現象。在 Finder 找到 PurrPoint.app，<strong class="text-ink">按右鍵 → 選「打開」</strong>，彈出視窗再選「打開」即可，之後不會再出現。</p>
               </div>
             </article>
             <article class="accordion-item" data-open="false">
               <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
-                <span>PDF 裡的圖表（長條圖、圓餅圖）可以編輯嗎？</span>
+                <span data-i18n="faq.q5">PDF 裡的圖表（長條圖、圓餅圖）可以編輯嗎？</span>
                 <span class="accordion-icon type-body leading-none transition">+</span>
               </button>
               <div class="accordion-panel px-6 sm:px-8">
-                <p class="pb-6 leading-7 text-muted">圖表會以圖片形式完整保留在 PPTX 中，位置與原始 PDF 對應，但<strong class="text-ink">無法點入修改數據</strong>。這是刻意的設計取捨：圖表數據的來源有其嚴謹性，若能在簡報層輕易改動，反而容易扭曲原始資料的意義。若確實需要修改圖表數字，建議在 PowerPoint 重新製作，以確保數據可信度。文字內容（標題、說明、數字標籤）仍可正常編輯。</p>
+                <p class="pb-6 leading-7 text-muted" data-i18n-html="faq.a5_html">圖表以圖片形式保留在 PPTX 中，但<strong class="text-ink">無法點入修改數據</strong>。若需修改圖表數字，請在 PowerPoint 重新製作。文字標籤（標題、說明）仍可正常編輯。</p>
               </div>
             </article>
             <article class="accordion-item" data-open="false">
               <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
-                <span>什麼時候可以開始測試？購買後不滿意怎麼辦？</span>
+                <span data-i18n="faq.q6">什麼時候可以開始測試？購買後不滿意怎麼辦？</span>
                 <span class="accordion-icon type-body leading-none transition">+</span>
               </button>
               <div class="accordion-panel px-6 sm:px-8">
-                <p class="pb-6 leading-7 text-muted">我們預計 5/24 開放第一波 Mac 封測，請留下 Email 加入創始會員名單，優先取得 10 頁免費試用與 14 天完整版體驗。我們建議先完整試用再決定購買，14 天已足夠評估所有核心功能。</p>
+                <p class="pb-6 leading-7 text-muted" data-i18n="faq.a6">正在開放創始會員名單登記，留下 Email 即可第一時間收到封測邀請，優先取得 10 頁免費試用與 14 天完整版體驗。建議先充分試用再決定購買，14 天已足夠評估所有核心功能。</p>
               </div>
             </article>
           </div>
           </div>
 
           <div class="reveal mt-16 border-t border-line pt-12 text-center">
-            <h2 class="type-heading font-semibold text-ink">立刻告別手動排版的夢魘</h2>
-            <p class="mx-auto mt-4 max-w-xl leading-7 text-muted">下一次遇到改不了的 PDF，你已經有答案了。</p>
-            <p class="mt-3 type-body font-semibold text-ink">現正開放登記・前 100 名填問卷享 NT$500 折扣</p>
+            <h2 class="type-heading font-semibold text-ink" data-i18n="faq.final_h2">立刻告別手動排版的夢魘</h2>
+            <p class="mx-auto mt-4 max-w-xl leading-7 text-muted" data-i18n="faq.final_sub">下一次遇到改不了的 PDF，你已經有答案了。</p>
+            <p class="mt-3 type-body font-semibold text-ink" data-i18n="faq.final_note">現正開放登記・前 100 名填問卷享 NT$500 折扣</p>
             <form id="final-waitlist" class="mx-auto mt-8 w-full max-w-xl rounded-2xl border border-line bg-white p-3 shadow-sm" action="https://script.google.com/macros/s/AKfycbxu7B59EcfAlwYmgAk-EtScACoPCZC15hgs8mQdZJiuaCX1N2t3D7s9LiD9jCMDDKIhQg/exec" method="post" target="form-hidden-iframe">
               <div class="hidden"><input name="website" type="text" tabindex="-1" autocomplete="off"></div>
               <div class="flex flex-col gap-2 sm:flex-row">
                 <label class="sr-only" for="final-email">Email</label>
-                <input id="final-email" name="email" type="email" required placeholder="輸入 Email" class="min-h-12 flex-1 rounded-xl border border-transparent px-4 type-body outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-4 focus:ring-slate-100"/>
-                <button type="submit" class="min-h-12 rounded-xl bg-ink px-6 type-body font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy focus:outline-none focus:ring-4 focus:ring-slate-300">成為創始會員</button>
+                <input id="final-email" name="email" type="email" required placeholder="輸入 Email" class="min-h-12 flex-1 rounded-xl border border-transparent px-4 type-body outline-none transition placeholder:text-slate-400 focus:border-slate-300 focus:ring-4 focus:ring-slate-100" data-i18n-placeholder="hero.form_placeholder"/>
+                <button type="submit" class="min-h-12 rounded-xl bg-ink px-6 type-body font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy focus:outline-none focus:ring-4 focus:ring-slate-300" data-i18n="hero.form_cta">成為創始會員</button>
               </div>
               <div class="mt-3 flex flex-wrap gap-2 px-1">
                 <label class="platform-toggle cursor-pointer select-none">
                   <input type="checkbox" name="mac" value="true" checked class="sr-only">
                   <span class="flex items-center gap-2.5 rounded-xl border-2 border-line bg-white px-4 py-2 text-base text-muted transition">
                     <span class="platform-check"></span>
-                    Mac 用戶
+                    <span data-i18n="hero.mac_label">Mac 用戶</span>
                   </span>
                 </label>
                 <label class="platform-toggle cursor-pointer select-none">
                   <input type="checkbox" name="windows" value="true" class="sr-only">
                   <span class="flex items-center gap-2.5 rounded-xl border-2 border-line bg-white px-4 py-2 text-base text-muted transition">
                     <span class="platform-check"></span>
-                    Windows 用戶 <span class="text-sm opacity-50">上線通知</span>
+                    <span data-i18n="hero.windows_label">Windows 用戶</span> <span class="text-sm opacity-50" data-i18n="hero.windows_note">上線通知</span>
                   </span>
                 </label>
               </div>
-              <div id="final-waitlist-success" class="mt-3 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700">✅ 登記成功！請查收你的 Email。</div>
+              <div id="final-waitlist-success" class="mt-3 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700" data-i18n="hero.form_success">✅ 登記成功！請查收你的 Email。</div>
             </form>
           </div>
         </div>
@@ -809,14 +803,14 @@
       <div class="mx-auto max-w-5xl">
         <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
           <div>
-            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted">About</p>
-            <h2 class="mt-4 type-heading font-semibold text-ink">芬利貓草創意<br>Finley Catnip Labs</h2>
-            <p class="mt-4 type-body text-muted">獨立開發者・台灣</p>
-            <p class="mt-4 text-base italic text-muted">養隻貓，伸個懶腰，好好吃飯好好睡覺。</p>
-            <p class="mt-6 type-body text-muted">finleycatniplabs@gmail.com</p>
+            <p class="type-body font-semibold uppercase tracking-[0.22em] text-muted" data-i18n="about.eyebrow">About</p>
+            <h2 class="mt-4 type-heading font-semibold text-ink" data-i18n-html="about.h2_html">芬利貓草創意<br>Finley Catnip Labs</h2>
+            <p class="mt-4 type-body text-muted" data-i18n="about.location">獨立開發者・台灣</p>
+            <p class="mt-4 text-base italic text-muted" data-i18n="about.slogan">養隻貓，伸個懶腰，好好吃飯好好睡覺。</p>
+            <p class="mt-6 type-body text-muted" data-i18n="about.email">finleycatniplabs@gmail.com</p>
           </div>
           <div class="type-body text-muted leading-8">
-            <p>有一天，我用 NotebookLM 生成了一份七頁投影片。其中一頁有個字——「醫」——被辨識成另一個字。其他都還行，我只想改那一個字。但 PPT 改不了。我不想跟 AI 重新來回，怕又跑出另一個版本的錯誤。我只想打開檔案，把那個字改掉，繼續過我的人生。所以我自己做了 PurrPoint。</p>
+            <p data-i18n="about.story">有一天，我用 NotebookLM 生成了一份七頁投影片。其中一頁有個字——「醫」——被辨識成另一個字。其他都還行，我只想改那一個字。但 PPT 改不了。我不想跟 AI 重新來回，怕又跑出另一個版本的錯誤。我只想打開檔案，把那個字改掉，繼續過我的人生。所以我自己做了 PurrPoint。</p>
           </div>
         </div>
       </div>
@@ -825,15 +819,15 @@
     <footer class="border-t border-line bg-white px-6 py-8 lg:px-8">
       <div class="mx-auto max-w-5xl">
         <div class="flex flex-col items-center justify-between gap-4 type-body text-muted sm:flex-row">
-          <p>© 2026 PurrPoint. All rights reserved.</p>
+          <p data-i18n="footer.copyright">© 2026 PurrPoint. All rights reserved.</p>
           <div class="flex gap-5 type-body">
-            <a href="#about" class="transition hover:text-ink">關於我們</a>
-            <a href="privacy.html" target="_blank" class="transition hover:text-ink">隱私政策</a>
-            <a href="terms.html" target="_blank" class="transition hover:text-ink">使用條款</a>
+            <a href="#about" class="transition hover:text-ink" data-i18n="footer.about_link">關於我們</a>
+            <a href="privacy.html" target="_blank" class="transition hover:text-ink" data-i18n="footer.privacy_link">隱私政策</a>
+            <a href="terms.html" target="_blank" class="transition hover:text-ink" data-i18n="footer.terms_link">使用條款</a>
           </div>
         </div>
-        <p class="mt-4 text-center text-sm italic text-muted">養隻貓，伸個懶腰，好好吃飯好好睡覺。</p>
-        <p class="mt-3 text-center text-sm text-muted">PurrPoint 為 PDF 格式轉換工具，協助使用者處理其合法持有之文件。使用者須自行確認對所轉換之檔案具有合法使用或修改權限，本軟體不鼓勵任何著作權侵害行為。</p>
+        <p class="mt-4 text-center text-sm italic text-muted" data-i18n="footer.slogan">養隻貓，伸個懶腰，好好吃飯好好睡覺。</p>
+        <p class="mt-3 text-center text-sm text-muted" data-i18n="footer.legal">PurrPoint 為 PDF 格式轉換工具，協助使用者處理其合法持有之文件。使用者須自行確認對所轉換之檔案具有合法使用或修改權限，本軟體不鼓勵任何著作權侵害行為。</p>
       </div>
     </footer>
 
@@ -919,5 +913,6 @@
         initForm('final-waitlist', 'final-waitlist-success');
       })();
     </script>
+    <script src="translations/i18n.js"></script>
   </body>
 </html>
