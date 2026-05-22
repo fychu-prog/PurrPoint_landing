@@ -212,11 +212,12 @@
             <span class="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted shadow-sm" data-i18n="hero.badge_offline">本機離線處理</span>
             <span class="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted shadow-sm" data-i18n="hero.badge_cjk">繁中排版優化</span>
             <span class="rounded-full border border-line bg-white px-3 py-1.5 text-sm text-muted shadow-sm" data-i18n="hero.badge_editable">文字方塊可編輯</span>
+            <span class="rounded-full border border-amber-200 bg-amber-50 px-3 py-1.5 text-sm text-amber-700 shadow-sm" data-i18n="hero.badge_no_ai">不走 AI API・無 Token 費用・資料不外洩</span>
           </div>
           <!-- title: full width -->
           <h1 class="mt-5 lg:col-span-2 type-display font-semibold text-ink">
             <span class="block" data-i18n="hero.h1_line1">PDF 能選字，卻還是改不了？</span>
-            <span class="block text-muted" data-i18n="hero.h1_line2">30 秒轉好，每個字直接改，不用重排版</span>
+            <span class="block text-muted" data-i18n="hero.h1_line2">30 秒，每個字直接改，不用重排版</span>
           </h1>
           <!-- left: desc + form -->
           <div class="mt-6">
@@ -339,6 +340,10 @@
               </div>
             </div>
           </div>
+        </div>
+
+        <div class="reveal mt-8 border-l-4 border-red-400 bg-red-50 py-4 pl-5 pr-4 rounded-r-2xl">
+          <p class="type-body text-ink">一個月遇到三次，一年就是 <strong>90 小時</strong>、超過兩個工作週——全部消失在沒有意義的重排版裡。</p>
         </div>
 
         <div class="mt-8 grid gap-5 md:grid-cols-2">
@@ -510,7 +515,11 @@
               </article>
               <article class="reveal py-6" style="transition-delay:0.3s">
                 <h3 class="type-title font-semibold" data-i18n="features.f4_title">macOS 原生 Vision 技術背書</h3>
-                <p class="mt-3 leading-7 text-muted" data-i18n="features.f4_desc">Apple Vision 技術，文字原位還原成可編輯方塊，精準不跑位。</p>
+                <p class="mt-3 leading-7 text-muted" data-i18n="features.f4_desc">iPhone 掃描名片、macOS 即時翻譯背後都是同一套 Apple Vision 技術——PurrPoint 用它還原你的簡報文字，精準不跑位。</p>
+              </article>
+              <article class="reveal py-6" style="transition-delay:0.4s">
+                <h3 class="type-title font-semibold" data-i18n="features.f5_title">不走 AI API，Token 零消耗，資料不外洩</h3>
+                <p class="mt-3 leading-7 text-muted" data-i18n="features.f5_desc">轉換過程完全不呼叫任何生成式 AI 模型或外部 API。你的文件只在本機處理，不會被送進任何模型——每次轉換沒有額外 token 費用，也沒有資料外洩的疑慮。</p>
               </article>
             </div>
           </div>
@@ -529,7 +538,7 @@
           <div class="reveal mt-12 block lg:hidden overflow-hidden rounded-[2rem] border border-line bg-white shadow-soft">
             <div class="bg-ink px-6 py-5">
               <p class="type-body font-semibold text-white" data-i18n="pricing.mobile_title">PurrPoint 贏在哪裡</p>
-              <p class="mt-1 text-base text-slate-400" data-i18n="pricing.mobile_sub">對比免費工具與 Adobe / ABBYY</p>
+              <p class="mt-1 text-base text-slate-400" data-i18n="pricing.mobile_sub">對比免費工具與付費訂閱大廠</p>
             </div>
             <ul class="divide-y divide-line px-6">
               <li class="py-6">
@@ -537,7 +546,7 @@
                   <span class="mt-0.5 shrink-0 rounded bg-ink px-2 py-0.5 text-xs font-semibold text-white" data-i18n="pricing.table_core_badge">核心差異</span>
                   <div>
                     <p class="type-body font-semibold text-ink" data-i18n="pricing.mobile_core_title">唯一支援掃描型 PDF</p>
-                    <p class="mt-1 text-base text-muted" data-i18n="pricing.mobile_core_desc">免費工具與 Adobe 幾乎無法處理圖片文字，PurrPoint 透過 OCR 原位還原每個字</p>
+                    <p class="mt-1 text-base text-muted" data-i18n="pricing.mobile_core_desc">免費工具與付費訂閱大廠幾乎無法處理圖片文字，PurrPoint 透過 OCR 原位還原每個字</p>
                   </div>
                 </div>
               </li>
@@ -547,7 +556,7 @@
               </li>
               <li class="py-6">
                 <p class="type-body font-semibold text-ink" data-i18n="pricing.mobile_offline_title">✅ 100% 本機離線，不上雲</p>
-                <p class="mt-1 text-base text-muted" data-i18n="pricing.mobile_offline_desc">免費工具與 Adobe 都需上傳雲端，機密文件一旦上傳就不受控制</p>
+                <p class="mt-1 text-base text-muted" data-i18n="pricing.mobile_offline_desc">免費工具與訂閱大廠都需上傳雲端，機密文件一旦上傳就不受控制</p>
               </li>
               <li class="py-6">
                 <p class="type-body font-semibold text-ink" data-i18n="pricing.mobile_lifetime_title">✅ 終身授權，永久可用</p>
@@ -559,43 +568,43 @@
           <!-- 桌機版：完整比較表格 -->
           <div class="reveal mt-12 hidden lg:block overflow-hidden rounded-[2rem] border border-line bg-white shadow-soft">
             <!-- Header -->
-            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line bg-ink font-semibold text-white">
+            <div class="grid grid-cols-[0.95fr_1fr_1fr_1.05fr] border-b border-line bg-ink font-semibold text-white">
               <div class="p-4" data-i18n="pricing.table_col_feature">功能 / 服務</div>
               <div class="border-l border-white/10 p-4 text-slate-400" data-i18n="pricing.table_col_free">免費線上工具</div>
-              <div class="border-l border-white/10 p-4 text-slate-300" data-i18n="pricing.table_col_adobe">傳統大廠 Adobe / ABBYY</div>
+              <div class="border-l border-white/10 p-4 text-slate-300" data-i18n="pricing.table_col_adobe">付費訂閱大廠</div>
               <div class="border-l border-white/10 bg-white/10 p-4" data-i18n="pricing.table_col_purr">PurrPoint 終身版</div>
             </div>
-            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line">
+            <div class="grid grid-cols-[0.95fr_1fr_1fr_1.05fr] border-b border-line">
               <div class="p-4 pl-5 font-semibold text-ink" data-i18n="pricing.table_row1">每月費用</div>
               <div class="border-l border-line p-4 text-emerald-600" data-i18n="pricing.table_free_r1">✅ NT$ 0</div>
               <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_adobe_r1">❌ NT$ 450–900 / 月</div>
               <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700" data-i18n="pricing.table_purr_r1">✅ NT$ 0，一次付清</div>
             </div>
-            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line">
+            <div class="grid grid-cols-[0.95fr_1fr_1fr_1.05fr] border-b border-line">
               <div class="p-4 pl-5 font-semibold text-ink" data-i18n="pricing.table_row2">三年累計花費</div>
-              <div class="border-l border-line p-4 text-amber-600" data-i18n="pricing.table_free_r2">⚠️ NT$ 0（資安風險難估）</div>
+              <div class="border-l border-line p-4 text-amber-600" data-i18n="pricing.table_free_r2">⚠️ NT$ 0（有資安疑慮）</div>
               <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_adobe_r2">❌ NT$ 16,200–32,400+</div>
-              <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700" data-i18n="pricing.table_purr_r2">✅ NT$ 2,990（省超過 5 倍）</div>
+              <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700" data-i18n="pricing.table_purr_r2">✅ NT$ 2,990（省逾 5 倍）</div>
             </div>
             <!-- 核心差異（高亮列） -->
-            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b-2 border-t-2 border-ink">
+            <div class="grid grid-cols-[0.95fr_1fr_1fr_1.05fr] border-b-2 border-t-2 border-ink">
               <div class="flex items-center gap-2 bg-ink/5 p-4 pl-5 font-bold text-ink">
                 <span class="rounded bg-ink px-2 py-0.5 text-xs text-white" data-i18n="pricing.table_core_badge">核心差異</span>
                 <span data-i18n="pricing.table_row3">掃描型 PDF 支援</span>
               </div>
               <div class="border-l border-ink/20 bg-red-50 p-4 font-semibold text-rose-600" data-i18n="pricing.table_free_r3">❌ 完全無法處理</div>
               <div class="border-l border-ink/20 bg-red-50 p-4 font-semibold text-rose-600" data-i18n="pricing.table_adobe_r3">❌ 幾乎無法處理</div>
-              <div class="border-l border-ink/20 bg-emerald-100 p-4 font-bold text-emerald-800" data-i18n="pricing.table_purr_r3">✅ OCR + AI 座標映射，1:1 還原</div>
+              <div class="border-l border-ink/20 bg-emerald-100 p-4 font-bold text-emerald-800" data-i18n="pricing.table_purr_r3">✅ OCR + AI，1:1 原位還原</div>
             </div>
-            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr] border-b border-line">
+            <div class="grid grid-cols-[0.95fr_1fr_1fr_1.05fr] border-b border-line">
               <div class="p-4 pl-5 font-semibold text-ink" data-i18n="pricing.table_row4">更新與維護</div>
               <div class="border-l border-line p-4 text-amber-600" data-i18n="pricing.table_free_r4">⚠️ 服務可能隨時停止</div>
               <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_adobe_r4">❌ 停止付費即失去使用權</div>
               <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700" data-i18n="pricing.table_purr_r4">✅ 終身授權，永久基礎維護</div>
             </div>
-            <div class="grid grid-cols-[1.2fr_1fr_1.1fr_1.1fr]">
+            <div class="grid grid-cols-[0.95fr_1fr_1fr_1.05fr]">
               <div class="p-4 pl-5 font-semibold text-ink" data-i18n="pricing.table_row5">隱私安全性</div>
-              <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_free_r5">❌ 上傳境外雲端，風險極高</div>
+              <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_free_r5">❌ 上傳境外雲端</div>
               <div class="border-l border-line p-4 text-rose-600" data-i18n="pricing.table_adobe_r5">❌ 檔案須上傳雲端</div>
               <div class="border-l border-line bg-emerald-50 p-4 font-semibold text-emerald-700" data-i18n="pricing.table_purr_r5">✅ 100% 本機離線</div>
             </div>
@@ -625,7 +634,11 @@
                 <div class="mt-5">
                   <p class="type-body font-semibold text-slate-400 line-through" data-i18n="pricing.plan_a_original">原價 NT$ 5,990</p>
                   <p class="type-heading font-semibold text-ink" data-i18n="pricing.plan_a_price">NT$ 2,990</p>
-                  <p class="mt-1 text-base font-semibold text-amber-700" data-i18n="pricing.plan_a_earlybird">⏰ 早鳥優惠至 6/7・結束後恢復原價</p>
+                  <p class="mt-0.5 text-sm text-slate-400">≈ 大廠訂閱 6 個月費用，之後永遠免費</p>
+                  <div class="mt-1 flex flex-wrap items-center gap-2">
+                    <p class="text-base font-semibold text-amber-700" data-i18n="pricing.plan_a_earlybird">⏰ 6/7 後漲回 NT$5,990，差 NT$3,000</p>
+                    <span id="earlybird-countdown" class="rounded-full bg-amber-100 border border-amber-200 px-2.5 py-0.5 text-sm font-semibold text-amber-800"></span>
+                  </div>
                   <p class="mt-1 text-base text-muted" data-i18n="pricing.plan_a_payback">月訂閱用滿 11 個月即回本，之後永遠免費</p>
                   <div class="mt-3 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3">
                     <p class="type-body font-semibold text-emerald-800" data-i18n="pricing.plan_a_survey_title">填回饋問卷？獲 NT$500 回饋金</p>
@@ -666,7 +679,7 @@
                 <div class="mt-5">
                   <p class="type-body font-semibold text-slate-400 line-through" data-i18n="pricing.plan_c_original">月繳合計 NT$ 3,480</p>
                   <p class="type-heading font-semibold text-ink">NT$ 2,690 <span class="text-xl font-medium text-muted" data-i18n="pricing.plan_c_unit">/ 年</span></p>
-                  <p class="mt-2 type-body font-semibold text-blue-600" data-i18n="pricing.plan_c_savings">比月訂閱省 NT$ 790，約 77 折</p>
+                  <p class="mt-2 type-body font-semibold text-blue-600" data-i18n="pricing.plan_c_savings">比月訂閱省 NT$790，約77折</p>
                 </div>
                 <ul class="mt-6 space-y-3 type-body text-muted">
                   <li data-i18n="pricing.plan_c_f1">✅ 年繳一次，省去每月扣款</li>
@@ -754,6 +767,15 @@
             </article>
             <article class="accordion-item" data-open="false">
               <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
+                <span data-i18n="faq.q7">轉換結果一定百分之百準確嗎？</span>
+                <span class="accordion-icon type-body leading-none transition">+</span>
+              </button>
+              <div class="accordion-panel px-6 sm:px-8">
+                <p class="pb-6 leading-7 text-muted" data-i18n="faq.a7">OCR 識別準確度受原始 PDF 品質、掃描解析度與字型複雜度影響，偶有個別字元辨識錯誤的情況。這正是我們提供 10 頁免費試用的原因——建議先用你的實際文件測試，確認結果符合需求再決定購買。</p>
+              </div>
+            </article>
+            <article class="accordion-item" data-open="false">
+              <button class="flex w-full items-center justify-between gap-6 px-6 py-6 text-left font-semibold sm:px-8" type="button" aria-expanded="false">
                 <span data-i18n="faq.q6">什麼時候可以開始測試？購買後不滿意怎麼辦？</span>
                 <span class="accordion-icon type-body leading-none transition">+</span>
               </button>
@@ -793,6 +815,7 @@
               </div>
               <div id="final-waitlist-success" class="mt-3 hidden rounded-xl border border-emerald-200 bg-emerald-50 p-3 text-center text-sm font-medium text-emerald-700" data-i18n="hero.form_success">✅ 登記成功！請查收你的 Email。</div>
             </form>
+            <p class="mt-4 text-sm text-slate-400">先免費試用 10 頁 · 不滿意就不買 · 沒有任何損失</p>
           </div>
         </div>
       </section>
@@ -911,6 +934,19 @@
         }
         initForm('waitlist', 'waitlist-success');
         initForm('final-waitlist', 'final-waitlist-success');
+      })();
+
+      // 早鳥倒計時
+      (function () {
+        var el = document.getElementById('earlybird-countdown');
+        if (!el) return;
+        function tick() {
+          var diff = new Date('2026-06-07T23:59:59+08:00') - new Date();
+          if (diff <= 0) { el.textContent = '優惠已結束'; return; }
+          el.textContent = '還有 ' + Math.floor(diff / 86400000) + ' 天';
+        }
+        tick();
+        setInterval(tick, 60000);
       })();
     </script>
     <script src="translations/i18n.js"></script>
