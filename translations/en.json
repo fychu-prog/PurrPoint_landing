@@ -22,6 +22,9 @@
     "badge_no_ai": "No AI API · Zero Token Cost · Your Data Stays Local",
     "h1_line1": "Your PDF has selectable text — so why can't you edit it?",
     "h1_line2": "30 seconds. Every word editable.",
+    "unit_hours": "hrs",
+    "unit_sec": "sec",
+    "stat_note": "based on a 15-slide deck",
     "before_sub": "Manual reformatting",
     "after_sub": "With PurrPoint",
     "form_placeholder": "Enter your email",
@@ -202,7 +205,7 @@
     "location": "Independent developer · Taiwan",
     "slogan": "Get a cat. Stretch. Eat well. Sleep well.",
     "email": "finleycatniplabs@gmail.com",
-    "story": "One day I used NotebookLM to generate a seven-page slide deck. One page had a character — "醫" (medicine) — misrecognized as something else. Everything else was fine. I just wanted to fix that one character. But PPT wouldn't let me edit it. I didn't want to go back and forth with the AI — afraid a whole new set of errors would show up. I just wanted to open the file, fix the word, and get on with my life. So I built PurrPoint."
+    "story": "One day I used NotebookLM to generate a seven-page slide deck. One page had a character — \"醫\" (medicine) — misrecognized as something else. Everything else was fine. I just wanted to fix that one character. But PPT wouldn't let me edit it. I didn't want to go back and forth with the AI — afraid a whole new set of errors would show up. I just wanted to open the file, fix the word, and get on with my life. So I built PurrPoint."
   },
   "footer": {
     "copyright": "© 2026 PurrPoint. All rights reserved.",
