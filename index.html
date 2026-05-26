@@ -12,6 +12,7 @@
       content="PurrPoint 是專為管顧業、法務與 AI 簡報使用者打造的 Mac 單機版 PDF 轉 PPTX 工具，100% 離線處理，完整還原可編輯文字方塊。"
     />
     <title>PurrPoint | PDF 轉 PPTX 告別手動重拉</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23111827'/><text x='50' y='72' font-family='system-ui,sans-serif' font-size='62' font-weight='700' fill='white' text-anchor='middle'>P</text></svg>">
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -636,13 +637,13 @@
                   <p class="type-heading font-semibold text-ink" data-i18n="pricing.plan_a_price">NT$ 2,990</p>
                   <p class="mt-0.5 text-sm text-slate-400">≈ 大廠訂閱 6 個月費用，之後永遠免費</p>
                   <div class="mt-1 flex flex-wrap items-center gap-2">
-                    <p class="text-base font-semibold text-amber-700" data-i18n="pricing.plan_a_earlybird">⏰ 6/7 後漲回 NT$5,990，差 NT$3,000</p>
+                    <p class="text-base font-semibold text-amber-700" data-i18n="pricing.plan_a_earlybird">⏰ 6/15 後漲回 NT$5,990，差 NT$3,000</p>
                     <span id="earlybird-countdown" class="rounded-full bg-amber-100 border border-amber-200 px-2.5 py-0.5 text-sm font-semibold text-amber-800"></span>
                   </div>
                   <p class="mt-1 text-base text-muted" data-i18n="pricing.plan_a_payback">月訂閱用滿 11 個月即回本，之後永遠免費</p>
                   <div class="mt-3 rounded-xl border border-emerald-200 bg-emerald-50 px-4 py-3">
                     <p class="type-body font-semibold text-emerald-800" data-i18n="pricing.plan_a_survey_title">填回饋問卷？獲 NT$500 回饋金</p>
-                    <p class="mt-1 text-base text-emerald-700" data-i18n="pricing.plan_a_survey_desc">以 NT$2,490 購入正式版，優於原價五折・6/7 前限 100 名</p>
+                    <p class="mt-1 text-base text-emerald-700" data-i18n="pricing.plan_a_survey_desc">以 NT$2,490 購入正式版，優於原價五折・6/15 前限 100 名</p>
                   </div>
                 </div>
                 <ul class="mt-6 space-y-3 type-body text-muted">
@@ -944,7 +945,7 @@
           var prefix = (t && t.countdown_prefix != null) ? t.countdown_prefix : '還有 ';
           var suffix = (t && t.countdown_suffix) || ' 天';
           var expired = (t && t.countdown_expired) || '優惠已結束';
-          var diff = new Date('2026-06-07T23:59:59+08:00') - new Date();
+          var diff = new Date('2026-06-15T23:59:59+08:00') - new Date();
           if (diff <= 0) { el.textContent = expired; return; }
           el.textContent = prefix + Math.floor(diff / 86400000) + suffix;
         }
