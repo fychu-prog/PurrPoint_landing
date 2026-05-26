@@ -267,7 +267,7 @@
             <div class="conversion-preview-placeholder relative h-full min-h-[260px] rounded-[1.5rem] border border-slate-200 bg-white/70 p-5 backdrop-blur-sm sm:min-h-[340px]">
               <div class="mb-5 flex items-center justify-between">
                 <div>
-                  <p class="type-body font-semibold text-muted">Before / After</p>
+                  <p class="type-body font-semibold text-muted" data-i18n="hero.preview_label">Before / After</p>
                   <p class="type-body font-semibold text-ink" data-i18n="hero.preview_title">PDF 轉可編輯 PPTX</p>
                 </div>
                 <span class="rounded-full bg-emerald-50 px-3 py-1 type-body font-semibold text-emerald-700" data-i18n="hero.preview_badge">1:1 座標映射</span>
@@ -650,7 +650,7 @@
                   <li data-i18n="pricing.plan_a_f2">✅ 100% 離線，機密文件不上雲</li>
                   <li data-i18n="pricing.plan_a_f3">✅ 終身基礎維護更新</li>
                 </ul>
-                <a href="#waitlist" class="mt-auto mt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700" data-i18n="pricing.plan_cta">
+                <a href="#waitlist" class="mt-auto inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700" data-i18n="pricing.plan_cta">
                   待正式上線・先登記
                 </a>
               </article>
@@ -668,7 +668,7 @@
                   <li data-i18n="pricing.plan_b_f2">✅ 適合短期或臨時大量轉檔</li>
                   <li data-i18n="pricing.plan_b_f3">✅ 低門檻入門，隨時可升級</li>
                 </ul>
-                <a href="#waitlist" class="mt-auto mt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700" data-i18n="pricing.plan_cta">
+                <a href="#waitlist" class="mt-auto inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700" data-i18n="pricing.plan_cta">
                   待正式上線・先登記
                 </a>
               </article>
@@ -679,14 +679,14 @@
                 <div class="mt-5">
                   <p class="type-body font-semibold text-slate-400 line-through" data-i18n="pricing.plan_c_original">月繳合計 NT$ 3,480</p>
                   <p class="type-heading font-semibold text-ink">NT$ 2,690 <span class="text-xl font-medium text-muted" data-i18n="pricing.plan_c_unit">/ 年</span></p>
-                  <p class="mt-2 type-body font-semibold text-blue-600" data-i18n="pricing.plan_c_savings">比月訂閱省 NT$790，約77折</p>
+                  <p class="mt-2 type-body font-semibold text-blue-600" data-i18n="pricing.plan_c_savings">比月訂閱省 NT$ 790，約 77 折</p>
                 </div>
                 <ul class="mt-6 space-y-3 type-body text-muted">
                   <li data-i18n="pricing.plan_c_f1">✅ 年繳一次，省去每月扣款</li>
                   <li data-i18n="pricing.plan_c_f2">✅ 長期需求的最佳彈性選擇</li>
                   <li data-i18n="pricing.plan_c_f3">✅ 隨時可升級至永久版</li>
                 </ul>
-                <a href="#waitlist" class="mt-auto mt-7 inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700" data-i18n="pricing.plan_cta">
+                <a href="#waitlist" class="mt-auto inline-flex w-full items-center justify-center rounded-2xl bg-slate-100 px-6 py-4 type-body font-semibold text-slate-500 transition hover:bg-slate-200 hover:text-slate-700" data-i18n="pricing.plan_cta">
                   待正式上線・先登記
                 </a>
               </article>
@@ -819,10 +819,8 @@
           </div>
         </div>
       </section>
-    </main>
-
-    <!-- About -->
-    <section id="about" class="border-t border-line bg-white px-6 py-20 lg:px-8">
+      <!-- About -->
+      <section id="about" class="border-t border-line bg-white px-6 py-20 lg:px-8">
       <div class="mx-auto max-w-5xl">
         <div class="grid gap-12 lg:grid-cols-[1fr_1.4fr] lg:items-start">
           <div>
@@ -837,7 +835,8 @@
           </div>
         </div>
       </div>
-    </section>
+      </section>
+    </main>
 
     <footer class="border-t border-line bg-white px-6 py-8 lg:px-8">
       <div class="mx-auto max-w-5xl">
@@ -941,10 +940,15 @@
         var el = document.getElementById('earlybird-countdown');
         if (!el) return;
         function tick() {
+          var t = window.__t && window.__t.pricing;
+          var prefix = (t && t.countdown_prefix != null) ? t.countdown_prefix : '還有 ';
+          var suffix = (t && t.countdown_suffix) || ' 天';
+          var expired = (t && t.countdown_expired) || '優惠已結束';
           var diff = new Date('2026-06-07T23:59:59+08:00') - new Date();
-          if (diff <= 0) { el.textContent = '優惠已結束'; return; }
-          el.textContent = '還有 ' + Math.floor(diff / 86400000) + ' 天';
+          if (diff <= 0) { el.textContent = expired; return; }
+          el.textContent = prefix + Math.floor(diff / 86400000) + suffix;
         }
+        window.refreshCountdown = tick;
         tick();
         setInterval(tick, 60000);
       })();

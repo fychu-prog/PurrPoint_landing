@@ -12,6 +12,7 @@
   }
 
   function apply(t) {
+    window.__t = t;
     // textContent
     document.querySelectorAll('[data-i18n]').forEach(function (el) {
       var val = getVal(t, el.getAttribute('data-i18n'));
@@ -34,9 +35,16 @@
     });
     // page <title>
     if (t.meta && t.meta.title) document.title = t.meta.title;
+    // meta description
+    if (t.meta && t.meta.description) {
+      var metaDesc = document.querySelector('meta[name="description"]');
+      if (metaDesc) metaDesc.setAttribute('content', t.meta.description);
+    }
     // html lang attribute
     var langMap = { 'en': 'en', 'ja': 'ja', 'ko': 'ko' };
     document.documentElement.lang = langMap[lang] || 'zh-Hant';
+    // notify countdown widget
+    window.refreshCountdown && window.refreshCountdown();
   }
 
   fetch('translations/' + lang + '.json')
