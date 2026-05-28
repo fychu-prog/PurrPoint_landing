@@ -80,20 +80,22 @@
     "step1_desc": "拖曳 PDF 進軟體，支援批次多頁。",
     "step2_label": "Step 2",
     "step2_title": "精準解析",
-    "step2_desc": "Apple Vision OCR 識別，文字座標原位還原。",
+    "step2_desc": "Apple Vision 識別每個字的位置，1:1 還原進 PPTX——打開直接改，不需要重拉任何方框。",
     "step3_label": "Step 3",
     "step3_title": "完美輸出",
-    "step3_desc": "輸出可完整編輯的 .pptx，排版原位對齊。"
+    "step3_desc": "輸出 .pptx，每個字都是獨立文字方塊——點哪裡改哪裡，不需要截圖、不需要重排版。"
   },
   "features": {
     "eyebrow": "Features",
-    "h2": "專為嚴謹工作流程打造",
+    "h2": "轉完就能用，不留任何收尾工作",
     "f1_title": "100% 本機離線運作",
+    "f1_desc": "所有轉換都在你的 Mac 上完成，檔案從不離開電腦——公司機密、客戶資料，轉完即用，沒有資料外洩的後顧之憂。",
     "f2_title": "20 頁 PDF，30 秒完成轉換",
+    "f2_desc": "比開啟 PowerPoint 還快。開會前五分鐘要臨時改一個數字——時間夠的。",
     "f3_title": "繁體中文環境優化",
     "f3_desc": "針對 AI 工具常見的中文斷行與標點問題調整，轉出後幾乎不需要手動修正。",
     "f4_title": "macOS 原生 Vision 技術背書",
-    "f4_desc": "iPhone 掃描名片、macOS 即時翻譯背後都是同一套 Apple Vision 技術——PurrPoint 用它還原你的簡報文字，精準不跑位。",
+    "f4_desc": "iPhone 掃描名片、macOS 即時翻譯背後都是同一套 Apple Vision 技術——PurrPoint 用它還原你的簡報文字，精準不跑位，轉完就信得過，不用逐字核對。",
     "f5_title": "不走 AI API，Token 零消耗，資料不外洩",
     "f5_desc": "轉換過程完全不呼叫任何生成式 AI 模型或外部 API。你的文件只在本機處理，不會被送進任何模型——每次轉換沒有額外 token 費用，也沒有資料外洩的疑慮。"
   },

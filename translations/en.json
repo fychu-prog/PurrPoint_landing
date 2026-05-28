@@ -80,20 +80,22 @@
     "step1_desc": "Drag your PDF into the app. Batch multi-page files supported.",
     "step2_label": "Step 2",
     "step2_title": "Parse",
-    "step2_desc": "Apple Vision OCR detects text and maps every character to its original coordinates.",
+    "step2_desc": "Apple Vision maps every character to its exact position in the original PDF — restored 1:1 into PPTX. Open and edit directly, no repositioning needed.",
     "step3_label": "Step 3",
     "step3_title": "Export",
-    "step3_desc": "Get a fully editable .pptx with layout intact — pixel-perfect positioning."
+    "step3_desc": "Get a .pptx where every word is its own text box — click anywhere and type. No screenshotting, no reformatting."
   },
   "features": {
     "eyebrow": "Features",
-    "h2": "Built for serious workflows",
+    "h2": "Ready to use the moment it's done — no cleanup needed",
     "f1_title": "100% local — nothing leaves your Mac",
+    "f1_desc": "Every conversion happens entirely on your Mac — files never leave your computer. Confidential documents, client materials: convert and use immediately, with zero data exposure risk.",
     "f2_title": "20-page PDF converted in 30 seconds",
+    "f2_desc": "Faster than opening PowerPoint. Need to change a number five minutes before a meeting? You've got time.",
     "f3_title": "Optimized for CJK typography",
     "f3_desc": "Fine-tuned for common line-break and punctuation issues in AI-generated Chinese slides — minimal manual cleanup after conversion.",
     "f4_title": "Powered by Apple Vision framework",
-    "f4_desc": "The same Apple Vision tech behind iPhone card scanning and macOS Live Text — PurrPoint uses it to restore your slide text, positioned exactly where it was.",
+    "f4_desc": "The same Apple Vision tech behind iPhone card scanning and macOS Live Text — PurrPoint uses it to restore your slide text, positioned exactly where it was. Trust the output. No need to proofread every character.",
     "f5_title": "No AI API calls — zero token cost, zero data exposure",
     "f5_desc": "The conversion never calls any generative AI model or external API. Your document is processed entirely on your Mac — no token fees per conversion, and no risk of your data being sent anywhere."
   },
