@@ -43,8 +43,6 @@
     // html lang attribute
     var langMap = { 'en': 'en', 'ja': 'ja', 'ko': 'ko' };
     document.documentElement.lang = langMap[lang] || 'zh-Hant';
-    // notify countdown widget
-    window.refreshCountdown && window.refreshCountdown();
   }
 
   fetch('translations/' + lang + '.json')

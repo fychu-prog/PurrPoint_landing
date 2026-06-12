@@ -1,7 +1,7 @@
 {
   "meta": {
-    "title": "PurrPoint | PDF 轉 PPTX 告別手動重拉",
-    "description": "PurrPoint 是專為管顧業、法務與 AI 簡報使用者打造的 Mac 單機版 PDF 轉 PPTX 工具，100% 離線處理，完整還原可編輯文字方塊。"
+    "title": "PurrPoint｜PDF 轉可編輯 PPTX，NotebookLM 簡報也能改（Mac 離線工具）",
+    "description": "NotebookLM 生成的簡報無法編輯？PurrPoint 讓你 30 秒把 PDF 轉成可編輯 PPTX，每個字都是獨立文字方塊。100% Mac 本機離線處理，檔案不上雲端。"
   },
   "nav": {
     "pain": "痛點",
@@ -146,10 +146,10 @@
     "plan_a_title": "創始會員永久版",
     "plan_a_original": "原價 NT$ 5,990",
     "plan_a_price": "NT$ 2,990",
-    "plan_a_earlybird": "⏰ 6/15 後漲回 NT$5,990，差 NT$3,000",
+    "plan_a_earlybird": "⏰ 早鳥限定價，之後將逐步調回原價 NT$5,990",
     "plan_a_payback": "月訂閱用滿 11 個月即回本，之後永遠免費",
     "plan_a_survey_title": "填回饋問卷？獲 NT$500 回饋金",
-    "plan_a_survey_desc": "以 NT$2,490 購入正式版，優於原價五折・6/15 前限 100 名",
+    "plan_a_survey_desc": "以 NT$2,490 購入正式版，優於原價五折・限前 100 名",
     "plan_a_f1": "✅ 永久核心文字方塊復原功能",
     "plan_a_f2": "✅ 100% 離線，機密文件不上雲",
     "plan_a_f3": "✅ 終身基礎維護更新",
@@ -168,10 +168,7 @@
     "plan_c_f1": "✅ 年繳一次，省去每月扣款",
     "plan_c_f2": "✅ 長期需求的最佳彈性選擇",
     "plan_c_f3": "✅ 隨時可升級至永久版",
-    "plan_cta": "待正式上線・先登記",
-    "countdown_prefix": "還有 ",
-    "countdown_suffix": " 天",
-    "countdown_expired": "優惠已結束",
+    "plan_cta": "即將上線・先登記",
     "enterprise_badge": "企業授權",
     "enterprise_title": "企業方案",
     "enterprise_desc": "N 席多人授權・優先技術支援・價格依人數議定",
@@ -195,7 +192,7 @@
     "q7": "轉換結果一定百分之百準確嗎？",
     "a7": "OCR 識別準確度受原始 PDF 品質、掃描解析度與字型複雜度影響，偶有個別字元辨識錯誤的情況。這正是我們提供 10 頁免費試用的原因——建議先用你的實際文件測試，確認結果符合需求再決定購買。",
     "q6": "什麼時候可以開始測試？購買後不滿意怎麼辦？",
-    "a6": "正在開放創始會員名單登記，留下 Email 即可第一時間收到封測邀請，優先取得 10 頁免費試用與 14 天完整版體驗。建議先充分試用再決定購買，14 天已足夠評估所有核心功能。",
+    "a6": "正在開放創始會員名單登記，正式上線日將以 Email 第一時間通知。登記後即可在上線當天下載，取得 10 頁免費試用與 14 天完整版體驗——試用期內就能用早鳥價購買。建議先充分試用再決定。",
     "final_h2": "立刻告別手動排版的夢魘",
     "final_sub": "下一次遇到改不了的 PDF，你已經有答案了。",
     "final_note": "現正開放登記・前 100 名填問卷享 NT$500 折扣"
@@ -210,6 +207,7 @@
   },
   "footer": {
     "copyright": "© 2026 PurrPoint. All rights reserved.",
+    "blog_link": "NotebookLM 簡報不能編輯？",
     "about_link": "關於我們",
     "privacy_link": "隱私政策",
     "terms_link": "使用條款",

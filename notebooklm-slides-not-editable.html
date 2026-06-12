@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>NotebookLM 簡報不能編輯怎麼辦？原因解析與 3 種解決方法（2026）</title>
+    <meta
+      name="description"
+      content="NotebookLM 生成的簡報是 PDF，文字看起來能選卻改不了？本文解釋為什麼 NotebookLM 投影片無法編輯，並比較 3 種把它轉成可編輯 PPTX 的方法，包含 Mac 本機離線轉換的做法。"
+    />
+    <link rel="canonical" href="https://fychu-prog.github.io/PurrPoint_landing/notebooklm-slides-not-editable.html" />
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="NotebookLM 簡報不能編輯怎麼辦？原因解析與 3 種解決方法" />
+    <meta property="og:description" content="NotebookLM 生成的簡報是 PDF，文字看起來能選卻改不了？解釋原因，並比較 3 種轉成可編輯 PPTX 的方法。" />
+    <meta property="og:url" content="https://fychu-prog.github.io/PurrPoint_landing/notebooklm-slides-not-editable.html" />
+    <meta property="og:locale" content="zh_TW" />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%23111827'/><text x='50' y='72' font-family='system-ui,sans-serif' font-size='62' font-weight='700' fill='white' text-anchor='middle'>P</text></svg>">
+    <script defer src="https://cloud.umami.is/script.js" data-website-id="94b67a61-e7a9-4b6c-ab57-124739b27fb3"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              ink: '#111827',
+              muted: '#5b6472',
+              cloud: '#f7f8fb',
+              line: '#e6e8ee',
+              navy: '#0b1f3a',
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "SF Pro Display", "Noto Sans TC", "Helvetica Neue", Arial, sans-serif;
+        font-size: 1.125rem;
+        line-height: 1.85;
+        overflow-wrap: break-word;
+      }
+      h1, h2, h3 { text-wrap: balance; }
+      article a { text-decoration: underline; text-underline-offset: 3px; }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "NotebookLM 簡報不能編輯怎麼辦？原因解析與 3 種解決方法",
+      "inLanguage": "zh-Hant",
+      "datePublished": "2026-06-12",
+      "dateModified": "2026-06-12",
+      "author": { "@type": "Organization", "name": "Finley Catnip Labs" },
+      "publisher": { "@type": "Organization", "name": "Finley Catnip Labs" },
+      "mainEntityOfPage": "https://fychu-prog.github.io/PurrPoint_landing/notebooklm-slides-not-editable.html"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "為什麼 NotebookLM 生成的簡報不能編輯？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NotebookLM 的影片簡報與投影片輸出是渲染好的 PDF 或圖片，文字已經被「畫」在頁面上，不是可編輯的文字物件。在 Mac 上看起來能選字，是因為 macOS 的「原況文字」會自動對圖片做 OCR，但這不代表檔案本身可以編輯。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "NotebookLM 的 PDF 可以轉成 PPTX 嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以，但一般免費線上轉換器只能處理「數位 PDF」，遇到 NotebookLM 這種圖片型頁面會整頁變成一張圖，轉出來還是不能改字。需要透過 OCR 把每個字的內容與位置辨識出來，再原位重建成 PPTX 文字方塊，才能真正編輯。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "把 NotebookLM 簡報上傳到線上轉換工具安全嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "NotebookLM 簡報通常是用你自己的筆記、文件或公司資料生成的。上傳到來路不明的免費線上工具，你無法確認檔案被儲存在哪裡、保留多久。若內容涉及機密，建議使用在本機離線執行的轉換軟體。"
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "可以叫 NotebookLM 重新生成來修正錯字嗎？",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "可以，但重新生成是「重抽一次」而不是「修改」：AI 可能改掉你原本滿意的其他頁面，或產生新的錯誤。如果只想改一兩個字、一個數字，把 PDF 轉成可編輯的 PPTX 直接改，通常更快也更可控。"
+          }
+        }
+      ]
+    }
+    </script>
+  </head>
+  <body class="bg-white text-ink antialiased">
+    <header class="sticky top-0 z-50 border-b border-line/80 bg-white/80 backdrop-blur-xl">
+      <nav class="mx-auto flex max-w-3xl items-center justify-between px-6 py-4" aria-label="Main navigation">
+        <a href="index.html" class="flex items-center gap-3 font-semibold tracking-tight text-ink">
+          <span class="grid h-9 w-9 place-items-center rounded-xl bg-ink text-lg font-bold text-white">P</span>
+          <span>PurrPoint</span>
+        </a>
+        <a href="index.html#waitlist" class="rounded-full bg-ink px-5 py-2.5 text-base font-semibold text-white shadow-sm transition hover:-translate-y-0.5 hover:bg-navy">
+          成為創始會員
+        </a>
+      </nav>
+    </header>
+
+    <main class="mx-auto max-w-3xl px-6 py-14">
+      <article>
+        <p class="text-base font-semibold uppercase tracking-[0.22em] text-muted">NotebookLM 教學</p>
+        <h1 class="mt-3 text-3xl font-semibold leading-snug sm:text-4xl">NotebookLM 簡報不能編輯怎麼辦？<br class="hidden sm:block">原因解析與 3 種解決方法</h1>
+        <p class="mt-4 text-base text-muted">更新日期：2026 年 6 月 12 日 · 閱讀時間約 5 分鐘</p>
+
+        <p class="mt-8 text-muted">
+          你用 NotebookLM 生成了一份不錯的簡報，下載後想改一個錯字、換一個數字——卻發現
+          <strong class="text-ink">每一頁都改不了</strong>。文字明明可以用游標選取，貼到 PowerPoint 或 Keynote 之後，排版整個壞掉，或者根本只是一張圖。
+        </p>
+        <p class="mt-4 text-muted">
+          這不是你操作錯誤，也不是檔案壞掉。這篇文章會解釋<strong class="text-ink">為什麼 NotebookLM 的簡報無法編輯</strong>，以及目前可行的三種解決方法，幫你挑出最適合自己的做法。
+        </p>
+
+        <h2 class="mt-12 text-2xl font-semibold">為什麼 NotebookLM 的簡報改不了？</h2>
+        <p class="mt-4 text-muted">
+          NotebookLM 輸出的投影片（包括影片簡報的逐頁畫面）本質上是<strong class="text-ink">渲染完成的 PDF 或圖片</strong>。也就是說，AI 在生成時已經把文字「畫」在頁面上，輸出的檔案裡並沒有可編輯的文字物件——就像一張海報的照片，而不是海報的原始檔。
+        </p>
+        <p class="mt-4 text-muted">
+          更容易讓人混淆的是：<strong class="text-ink">在 Mac 上這些文字看起來可以選取</strong>。這是因為 macOS 的「原況文字」（Live Text）功能會自動對圖片做即時 OCR，讓你能選字、複製。但這只是系統層的便利功能——檔案本身仍然是圖片，所以：
+        </p>
+        <ul class="mt-4 list-disc space-y-2 pl-6 text-muted">
+          <li>用任何軟體打開，文字都<strong class="text-ink">無法直接修改</strong></li>
+          <li>複製貼上到 PPT，只會得到沒有排版的純文字，<strong class="text-ink">版面要全部重拉</strong></li>
+          <li>一般免費的「PDF 轉 PPT」線上工具，會把整頁當成一張圖塞進投影片，<strong class="text-ink">轉完還是不能改</strong></li>
+        </ul>
+
+        <h2 class="mt-12 text-2xl font-semibold">三種解決方法比較</h2>
+
+        <h3 class="mt-8 text-xl font-semibold">方法一：請 NotebookLM 重新生成</h3>
+        <p class="mt-3 text-muted">
+          最直覺的做法是回到 NotebookLM，下指令請它修正後重新輸出。<strong class="text-ink">適合</strong>：要大幅改動結構或內容方向的時候。
+        </p>
+        <p class="mt-3 text-muted">
+          <strong class="text-ink">缺點</strong>：重新生成是「重抽一次」，不是「修改」。AI 可能把你原本滿意的其他頁面也改掉，或產生新的錯誤。如果只是想改一個錯字、一個數字，來回好幾輪反而更花時間，而且永遠拿不回上一版。
+        </p>
+
+        <h3 class="mt-8 text-xl font-semibold">方法二：免費線上 PDF 轉 PPT 工具</h3>
+        <p class="mt-3 text-muted">
+          Smallpdf、iLovePDF 這類線上工具可以把 PDF 轉成 PPTX。<strong class="text-ink">適合</strong>：處理「數位 PDF」——也就是從 Word、Google 簡報直接匯出、文字本來就是文字物件的檔案。
+        </p>
+        <p class="mt-3 text-muted">
+          <strong class="text-ink">缺點</strong>：NotebookLM 的輸出是圖片型頁面，這類工具轉出來通常整頁還是一張圖，問題沒有解決。另外，檔案必須上傳到對方的雲端伺服器——如果簡報是用你的筆記、研究資料或公司文件生成的，<strong class="text-ink">資料安全是實際的風險</strong>。
+        </p>
+
+        <h3 class="mt-8 text-xl font-semibold">方法三：用 OCR 在本機把文字「原位重建」成 PPTX</h3>
+        <p class="mt-3 text-muted">
+          要真正解決圖片型簡報，需要的是：用 OCR 辨識出每個字的<strong class="text-ink">內容和座標位置</strong>，然後在 PPTX 裡的相同位置重建成獨立的文字方塊。轉出來的檔案打開就能點哪裡、改哪裡，不需要重新排版。
+        </p>
+        <p class="mt-3 text-muted">
+          這正是 <a href="index.html" class="font-semibold text-ink">PurrPoint</a> 在做的事——一款 Mac 上的單機軟體：
+        </p>
+        <ul class="mt-4 list-disc space-y-2 pl-6 text-muted">
+          <li><strong class="text-ink">100% 本機離線處理</strong>：用 Apple Vision（iPhone 掃描文件背後的同一套技術）做 OCR，檔案從不離開你的電腦，沒有上傳雲端的疑慮</li>
+          <li><strong class="text-ink">1:1 原位還原</strong>：每段文字轉成獨立文字方塊，位置和原始 PDF 對應，打開 PowerPoint 或 Keynote 直接改</li>
+          <li><strong class="text-ink">30 秒轉完 20 頁</strong>：改一個字不用五秒，不用截圖、不用重拉版面</li>
+          <li><strong class="text-ink">繁體中文優化</strong>：針對 AI 工具常見的中文斷行與標點問題調整</li>
+        </ul>
+        <p class="mt-3 text-muted">
+          <strong class="text-ink">缺點</strong>：目前僅支援 Mac（Windows 版開發中），且 OCR 準確度受原始檔案品質影響，偶有個別字元需要手動修正——所以提供 10 頁免費試用，建議先用自己的檔案實測。
+        </p>
+
+        <h2 class="mt-12 text-2xl font-semibold">快速比較表</h2>
+        <div class="mt-6 overflow-x-auto">
+          <table class="w-full min-w-[560px] border-collapse text-base">
+            <thead>
+              <tr class="bg-ink text-left text-white">
+                <th class="rounded-tl-xl p-3 font-semibold">方法</th>
+                <th class="p-3 font-semibold">能改字？</th>
+                <th class="p-3 font-semibold">保留原排版？</th>
+                <th class="rounded-tr-xl p-3 font-semibold">資料安全</th>
+              </tr>
+            </thead>
+            <tbody class="text-muted">
+              <tr class="border-b border-line">
+                <td class="p-3 font-semibold text-ink">NotebookLM 重新生成</td>
+                <td class="p-3">⚠️ 內容會重抽，不可控</td>
+                <td class="p-3">❌ 每次版面都不同</td>
+                <td class="p-3">✅ 留在 Google</td>
+              </tr>
+              <tr class="border-b border-line">
+                <td class="p-3 font-semibold text-ink">免費線上轉換工具</td>
+                <td class="p-3">❌ 圖片型頁面轉不動</td>
+                <td class="p-3">⚠️ 整頁變一張圖</td>
+                <td class="p-3">❌ 須上傳雲端</td>
+              </tr>
+              <tr>
+                <td class="p-3 font-semibold text-ink">PurrPoint（本機 OCR 重建）</td>
+                <td class="p-3">✅ 每個字獨立文字方塊</td>
+                <td class="p-3">✅ 1:1 原位還原</td>
+                <td class="p-3">✅ 100% 離線</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <h2 class="mt-12 text-2xl font-semibold">常見問題</h2>
+        <div class="mt-6 space-y-6">
+          <div>
+            <h3 class="text-lg font-semibold">NotebookLM 之後會不會直接支援匯出可編輯的 PPTX？</h3>
+            <p class="mt-2 text-muted">有可能，但截至 2026 年 6 月，NotebookLM 的投影片輸出仍以渲染後的 PDF / 影片為主。在官方支援之前，OCR 原位重建是少數能保留版面又能改字的做法。</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">Gamma、Manus 等其他 AI 簡報工具輸出的 PDF 也適用嗎？</h3>
+            <p class="mt-2 text-muted">適用。只要是「文字被畫在頁面上」的 PDF——不管來自哪個 AI 工具、或是掃描的紙本文件——都是同一類問題，處理方式相同。</p>
+          </div>
+          <div>
+            <h3 class="text-lg font-semibold">轉出來的 PPTX 可以在 Keynote 或 Google 簡報開嗎？</h3>
+            <p class="mt-2 text-muted">可以。PPTX 是通用格式，PowerPoint、Keynote、Google 簡報都能開啟並編輯文字方塊。</p>
+          </div>
+        </div>
+
+        <!-- CTA -->
+        <div class="mt-14 rounded-3xl border border-line bg-cloud p-8 text-center">
+          <h2 class="text-2xl font-semibold">下一次遇到改不了的簡報，30 秒解決</h2>
+          <p class="mx-auto mt-3 max-w-md text-muted">PurrPoint 即將上線。現在登記創始會員，上線當天搶先取得 10 頁免費試用與 14 天完整版體驗。</p>
+          <a href="index.html#waitlist" class="mt-6 inline-flex items-center justify-center rounded-2xl bg-ink px-8 py-4 font-semibold text-white transition hover:-translate-y-0.5 hover:bg-navy">
+            免費登記，搶先試用
+          </a>
+          <p class="mt-3 text-sm text-slate-400">不需信用卡 · 不滿意就不買 · 沒有任何損失</p>
+        </div>
+      </article>
+    </main>
+
+    <footer class="border-t border-line bg-white px-6 py-8">
+      <div class="mx-auto flex max-w-3xl flex-col items-center justify-between gap-4 text-base text-muted sm:flex-row">
+        <p>© 2026 PurrPoint. All rights reserved.</p>
+        <div class="flex gap-5">
+          <a href="index.html" class="transition hover:text-ink">回到首頁</a>
+          <a href="privacy.html" class="transition hover:text-ink">隱私政策</a>
+          <a href="terms.html" class="transition hover:text-ink">使用條款</a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://fychu-prog.github.io/PurrPoint_landing/sitemap.xml
