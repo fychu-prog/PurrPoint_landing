@@ -2,7 +2,7 @@
 
 Marketing site for **PurrPoint**, a Mac-native PDF-to-PPTX converter built for consultants, educators, and AI power users.
 
-**Live:** https://fychu-prog.github.io/landing_page_for_pdfToEdit
+**Live:** https://fychu-prog.github.io/PurrPoint_landing/
 
 ---
 
@@ -40,8 +40,11 @@ Then visit `http://localhost:8000`.
 
 ```
 index.html          Main landing page
+notebooklm-slides-not-editable.html   SEO article page
 privacy.html        Privacy policy
 terms.html          Terms of use
+sitemap.xml         Sitemap for search engines
+robots.txt          Crawler directives
 translations/
   zh-TW.json        Traditional Chinese strings
   en.json           English strings
